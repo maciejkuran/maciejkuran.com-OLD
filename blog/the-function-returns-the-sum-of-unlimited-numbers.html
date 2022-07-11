@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The function that returns the sum of unlimited numbers passed as arguments - JavaScript</title>
+    <meta
+      name="description"
+      content="I am writing the function that returns the sum of unlimited numbers passed as arguments when function is called, using 'Rest' parameter
+     "
+    />
+    <link rel="stylesheet" href="https://use.typekit.net/pig0nkd.css" />
+    <link rel="stylesheet" href="/public/css/style.css" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SZF313ENVP"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'G-SZF313ENVP');
+    </script>
+  </head>
+  <body>
+    <my-header></my-header>
+    <a href="/blog">
+      <div class="backBlogPage container">
+        <i class="fa-solid fa-arrow-left-long"></i>
+        <p>back to blog page</p>
+      </div>
+    </a>
+    <main class="container">
+      <div class="titleAndBlogPostInfo">
+        <h1>The function that returns the sum of unlimited numbers passed as arguments</h1>
+        <p class="date">05-05-2022 <span>JavaScript</span> <span>Exercise</span></p>
+      </div>
+      <article>
+        <section class="sectionDivider">
+          <p>
+            I am writing the function that returns the sum of unlimited numbers passed as arguments when function is
+            called, using the 'rest' parameter.
+          </p>
+          <p>
+            The 'Rest' can be used as a parameter if we do not know how many arguments will be passed when a function is
+            called. <br />The documentation about 'rest' parameter is
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters "
+              target="_blank"
+            >
+              available here</a
+            >.
+          </p>
+          <pre>
+            let sumResult = 0;
+
+const calc = function (...numbers) {
+  for (let i = 0; i &lt; numbers.length; i++) {
+    sumResult += numbers[i];
+  }
+  return sumResult;
+};
+
+console.log(calc(2, 2, 5, 1)); //OUTPUT: 10
+
+              
+              </pre
+          >
+        </section>
+      </article>
+    </main>
+    <my-footer></my-footer>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js"
+      integrity="sha512-6PM0qYu5KExuNcKt5bURAoT6KCThUmHRewN3zUFNaoI6Di7XJPTMoT6K0nsagZKk2OB4L7E3q1uQKHNHd4stIQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script type="module" src="/js/components.js"></script>
+    <script type="module" src="/js/main.js"></script>
+  </body>
+</html>

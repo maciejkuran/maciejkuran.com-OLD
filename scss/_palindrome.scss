@@ -1,0 +1,70 @@
+.palindromContainer {
+  min-height: 80vh;
+}
+
+.palindromeH1Header {
+  color: #f4900b;
+}
+
+.palindromeThinkingFace {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+}
+
+.palindromeSadFace {
+  @extend .palindromeThinkingFace;
+  display: none;
+}
+
+.palindromeHappyFace {
+  @extend .palindromeSadFace;
+}
+
+.palindromeWrapper {
+  display: flex;
+  max-width: 30rem;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.clearBtnWrapper {
+  max-width: 30rem;
+
+  display: flex;
+  justify-content: flex-end;
+  margin-left: auto;
+  margin-right: auto;
+
+  .palindromeClearBtn {
+    padding: 0.8rem;
+    font-size: 1rem;
+    margin-top: 1.2rem;
+  }
+}
+
+.palindromeCheckBtn {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+}
+
+.palindromeOutput {
+  max-width: 30rem;
+  display: none;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 4rem;
+  color: var(--clr-green);
+}
+
+.palindromeFeatured {
+  font-size: 1.3rem;
+  a {
+    @extend .palindromeFeatured;
+    color: var(--clr-green);
+  }
+}

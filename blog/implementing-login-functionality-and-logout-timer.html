@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi"
+    />
+    <title>Implementing basic log-in functionality and an automatic log-out timer - JavaScript</title>
+    <meta
+      name="description"
+      content="In this exercise, I am implementing basic log-in functionality and an automatic log-out timer. Our users are
+      data written directly in the source code."
+    />
+    <link rel="stylesheet" href="https://use.typekit.net/pig0nkd.css" />
+    <link rel="stylesheet" href="/public/css/style.css" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SZF313ENVP"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'G-SZF313ENVP');
+    </script>
+  </head>
+  <body>
+    <my-header></my-header>
+    <a href="/blog">
+      <div class="backBlogPage container">
+        <i class="fa-solid fa-arrow-left-long"></i>
+        <p>back to blog page</p>
+      </div>
+    </a>
+    <main class="container">
+      <div class="titleAndBlogPostInfo">
+        <h1>Implementing basic log-in functionality and an automatic log-out timer</h1>
+        <p class="date">17-06-2022 <span>JavaScript</span> <span>Exercise</span></p>
+      </div>
+      <article>
+        <section class="sectionDivider">
+          <p>
+            In this exercise, I am implementing basic log-in functionality and an automatic log-out timer. Our users are
+            data written directly in the source code. The flowchart shown below explains the entire concept of this
+            exercise. <br /><b class="check--login-functionality">Check out and test this functionality below.</b>
+          </p>
+          <img
+            class="loginFlowchart"
+            src="/img/Flowchart - implementing login and timer.png"
+            alt="implementing basic login and logout timer JavaScript"
+          />
+        </section>
+        <section class="sectionDivider">
+          <h3>User data</h3>
+          <p>Please use the data below to log in.</p>
+          <pre>
+const user1 = {
+            name: 'John',
+            login: 'user1',
+            password: '1111',
+          };
+          
+          const user2 = {
+            name: 'Katie',
+            login: 'user2',
+            password: '2222',
+          };</pre
+          >
+        </section>
+        <section class="sectionDivider loginArea" id="log-in-form">
+          <h2 class="welcomeMsg">Log-in to Get Started</h2>
+          <p class="shortNotice"></p>
+          <div class="loginWrapper">
+            <input class="loginInput inputLogin" type="text" placeholder="Login" />
+            <input class="passwordInput inputLogin" type="password" placeholder="Password" />
+            <button class="loginBtn"><i class="fa-solid fa-arrow-right-long"></i></button>
+          </div>
+          <p class="timeCounter"></p>
+        </section>
+        <section class="sectionDivider loginExGithub">
+          <a
+            target="_blank"
+            href="https://github.com/maciejkuran/Implementing-Basic-Login-Functionality-And-Logout-Timer"
+          >
+            <h3><i class="fa-solid fa-arrow-right-long"></i> GitHub Repository</h3>
+          </a>
+        </section>
+      </article>
+    </main>
+    <my-footer></my-footer>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js"
+      integrity="sha512-6PM0qYu5KExuNcKt5bURAoT6KCThUmHRewN3zUFNaoI6Di7XJPTMoT6K0nsagZKk2OB4L7E3q1uQKHNHd4stIQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script type="module" src="/js/components.js"></script>
+    <script type="module" src="/js/main.js"></script>
+    <script type="module" src="/js/loginTimerEx.js"></script>
+  </body>
+</html>

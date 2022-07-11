@@ -1,0 +1,250 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --clr-green: #02c2a9;
+  --clr-grey1: #afafaf;
+  --clr-grey2: #979797;
+  --clr-grey3: #5e5e5e;
+  --clr-grey4: #2d2d2d;
+  --clr-grey5: #191919;
+  --clr-grey6: #101010;
+  --clr-white: white;
+}
+
+html {
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+  font-size: 62.5%;
+  font-family: soleil, sans-serif;
+  font-style: normal;
+}
+
+body {
+  max-width: 120rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1.5rem;
+}
+
+h1,
+h2,
+h3 {
+  padding: 3rem 0 2rem 0;
+}
+
+h1 {
+  font-weight: 400;
+  font-size: 3.5rem;
+  color: var(--clr-grey1);
+
+  span {
+    font-weight: 400;
+    font-size: 3.5rem;
+    color: var(--clr-grey3);
+  }
+}
+
+h2,
+h3 {
+  font-weight: 500;
+  font-size: 2.5rem;
+  color: var(--clr-grey3);
+}
+
+//USED IN h2-h3 HEADERS GREEN <SPAN> TAG
+.headerh2h3Span {
+  color: var(--clr-green);
+  font-weight: 400;
+}
+
+p {
+  padding-bottom: 1.5rem;
+  font-size: 1.8rem;
+  font-weight: 300;
+  line-height: 22px;
+  color: var(--clr-grey2);
+
+  b {
+    font-size: 1.8rem;
+    color: var(--clr-green);
+    font-family: monospace;
+  }
+
+  span {
+    font-size: 1.8rem;
+    color: var(--clr-white);
+  }
+
+  i {
+    color: var(--clr-grey2);
+    font-size: 1.8rem;
+  }
+}
+
+a {
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: var(--clr-grey2);
+  text-decoration: none;
+}
+
+a:hover {
+  transition-duration: 300ms;
+  color: var(--clr-white);
+}
+
+ul {
+  padding-bottom: 3rem;
+
+  li {
+    font-size: 1.8rem;
+    color: var(--clr-grey2);
+    list-style: none;
+    font-weight: 300;
+
+    span {
+      color: var(--clr-green);
+    }
+  }
+}
+
+img {
+  max-width: 100%;
+  border-radius: 10px;
+  margin: 1rem 0 1rem 0;
+  filter: drop-shadow(20px 20px 15px #121212);
+}
+
+strong {
+  font-size: 1.8rem;
+  color: var(--clr-grey1);
+}
+
+i {
+  color: var(--clr-grey4);
+  filter: drop-shadow(20px 20px 15px #121212);
+}
+
+button {
+  --moz-appearance: none;
+  --webkit-appearance: none;
+  margin: 2rem 0 2rem 0;
+  padding: 1.5rem 3rem 1.5rem 3rem;
+  outline: none;
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--clr-grey1);
+  background-color: #00000000;
+  border: solid 0.1rem var(--clr-grey1);
+  border-radius: 10px;
+}
+
+button:hover {
+  border: solid 0.1rem var(--clr-white);
+  color: white;
+  transition-duration: 300ms;
+  cursor: pointer;
+}
+
+//<article> is wrapped inside div with a class of container
+.container {
+  max-width: 95rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+//!!!<article> repeatable elements like img, icon, section spacing
+
+.iconArticle {
+  color: var(--clr-grey3);
+  font-size: 7rem;
+  display: flex;
+  margin-right: auto;
+  margin-left: auto;
+  filter: drop-shadow(5px 10px 50px #02c2a9);
+}
+
+.imgArticle {
+  max-width: 75rem;
+  margin: 3rem 0;
+  display: flex;
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 10px;
+}
+//section spacing / divider
+.sectionDivider {
+  margin: 4rem 0;
+}
+
+.sectionFlex {
+  display: flex;
+  div:nth-child(1) {
+    width: 50%;
+  }
+  div:nth-child(2) {
+    padding-left: 6rem;
+    width: 50%;
+  }
+}
+
+pre {
+  max-width: 100%;
+  max-height: 25rem;
+  background-color: var(--clr-grey5);
+  color: var(--clr-grey1);
+  font-size: 1.4rem;
+  padding: 1rem 0 2rem 3rem;
+  margin: 1.5rem 0 4rem 0;
+  overflow: scroll;
+  border-radius: 10px;
+  box-shadow: 20px 20px 50px #121212;
+  white-space: pre-line;
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--clr-grey5);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--clr-grey4);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--clr-grey4);
+}
+
+::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+input {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  border: none;
+  outline: none;
+  background-color: var(--clr-grey5);
+  color: var(--clr-white);
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+textarea {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  border: none;
+  outline: none;
+  background-color: var(--clr-grey5);
+  color: var(--clr-grey1);
+  padding: 1rem;
+  border-radius: 10px;
+  font-size: 1.4rem;
+  box-shadow: 20px 20px 50px #121212;
+}

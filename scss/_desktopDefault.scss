@@ -1,4 +1,4 @@
-header {
+.header-elements {
   max-height: 15rem;
   padding: 2rem 2rem 2rem 0;
   display: flex;
@@ -141,6 +141,18 @@ footer {
   display: flex;
   margin-left: auto;
   margin-right: auto;
+}
+
+.unit-converted-case-study-logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.unit-converted-case-study-logo {
+  max-width: 35rem;
+  border-radius: 0;
+  padding: 2rem;
 }
 
 .contactPageEmailIcon {

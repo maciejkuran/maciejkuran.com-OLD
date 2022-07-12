@@ -4,7 +4,7 @@
 
 class myHeader extends HTMLElement {
   connectedCallback() {
-    this.innerHTML = ` <header>
+    this.innerHTML = ` <header class="header-elements">
         <a href="/"
           ><img src="/img/Maciej Kuran-Janowski logo.png" alt="Maciej Kuran-Janowski logo"
         /></a>

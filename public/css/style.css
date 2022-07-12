@@ -253,7 +253,7 @@ textarea {
           box-shadow: 20px 20px 50px #121212;
 }
 
-header {
+.header-elements {
   max-height: 15rem;
   padding: 2rem 2rem 2rem 0;
   display: -webkit-box;
@@ -268,14 +268,14 @@ header {
           align-items: center;
   position: relative;
 }
-header .hamburgerMenu {
+.header-elements .hamburgerMenu {
   display: none;
 }
-header img {
+.header-elements img {
   margin-top: 3rem;
   width: 250px;
 }
-header nav a {
+.header-elements nav a {
   margin-left: 2rem;
   -webkit-filter: drop-shadow(2px 15px 30px #02c2a9);
           filter: drop-shadow(2px 15px 30px #02c2a9);
@@ -414,6 +414,24 @@ footer p {
   display: flex;
   margin-left: auto;
   margin-right: auto;
+}
+
+.unit-converted-case-study-logo-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.unit-converted-case-study-logo {
+  max-width: 35rem;
+  border-radius: 0;
+  padding: 2rem;
 }
 
 .contactPageEmailIcon {
@@ -1299,7 +1317,7 @@ footer p {
   h1 span {
     font-size: 2.7rem;
   }
-  header nav a {
+  .header-elements nav a {
     font-size: 1.8rem;
   }
   .homePageTopSection h1 span {
@@ -1351,13 +1369,16 @@ h3 {
   }
 }
 @media (max-width: 767.98px) {
-  header img {
+  .header-elements {
+    padding: 0;
+  }
+  .header-elements img {
     margin-top: 1.7rem;
   }
-  header nav {
+  .header-elements nav {
     display: none;
   }
-  header .showNav {
+  .header-elements .showNav {
     z-index: 2;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1377,14 +1398,14 @@ h3 {
             filter: drop-shadow(20px 20px 20px #121212);
     margin-right: 2rem;
   }
-  header .showNav a {
+  .header-elements .showNav a {
     display: block;
     padding: 1rem;
   }
-  header .showNav .fa-github {
+  .header-elements .showNav .fa-github {
     margin-left: 0rem;
   }
-  header .hamburgerMenu {
+  .header-elements .hamburgerMenu {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1393,8 +1414,9 @@ h3 {
         -ms-flex-direction: column;
             flex-direction: column;
     border: none;
+    padding: 0;
   }
-  header .hamburgerMenu .line {
+  .header-elements .hamburgerMenu .line {
     padding: 0.1rem;
     background-color: var(--clr-grey3);
     margin: 0.4rem;
@@ -1407,16 +1429,16 @@ h3 {
     display: -ms-flexbox;
     display: flex;
   }
-  header .hamburgerMenu.active .line:first-child {
+  .header-elements .hamburgerMenu.active .line:first-child {
     -webkit-transform: translateY(-300px);
             transform: translateY(-300px);
   }
-  header .hamburgerMenu.active .line:nth-child(2) {
+  .header-elements .hamburgerMenu.active .line:nth-child(2) {
     -webkit-transform: rotate(0) translateY(0);
             transform: rotate(0) translateY(0);
     background-color: var(--clr-green);
   }
-  header .hamburgerMenu.active .line:nth-child(3) {
+  .header-elements .hamburgerMenu.active .line:nth-child(3) {
     -webkit-transform: rotate(90deg) translateX(-10px);
             transform: rotate(90deg) translateX(-10px);
     background-color: var(--clr-green);
@@ -1505,11 +1527,11 @@ h1 span {
   .homePage2ndSection h2 {
     font-size: 2.2rem;
   }
-  header img {
+  .header-elements img {
     width: 200px;
     margin-left: 0;
   }
-  header nav {
+  .header-elements nav {
     margin-top: 2rem;
     top: 12vh;
     left: 35vw;
@@ -1668,10 +1690,10 @@ h1 span {
   }
 }
 @media (max-width: 374.98px) {
-  header {
+  .header-elements {
     padding: 0;
   }
-  header nav {
+  .header-elements nav {
     top: 2vh;
     left: 25vw;
     min-width: 20rem;
@@ -1681,6 +1703,9 @@ h1 span {
   }
   .homePageTopSection h1 span {
     font-size: 2rem;
+  }
+  .unit-converted-case-study-logo {
+    max-width: 30rem;
   }
   .fa-xmark {
     font-size: 2.5rem;

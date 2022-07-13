@@ -839,7 +839,8 @@ footer p {
 
 .tag {
   background-color: var(--clr-grey4);
-  margin: 0.5rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
   padding: 0.7rem;
   border-radius: 10px;
   font-family: ff-nexus-typewriter, sans-serif;
@@ -999,6 +1000,7 @@ footer p {
 .myProjectsContainer {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: "featured-project featured-project featured-project";
   -webkit-column-gap: 4rem;
      -moz-column-gap: 4rem;
           column-gap: 4rem;
@@ -1055,6 +1057,50 @@ footer p {
   color: var(--clr-white);
   -webkit-transition: 500ms;
   transition: 500ms;
+}
+
+.featured-project {
+  grid-area: featured-project;
+  background-color: #f5fefe;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.featured-project img {
+  max-width: 20rem;
+  -webkit-filter: none;
+          filter: none;
+}
+.featured-project h2 {
+  font-weight: 600;
+  background-color: var(--clr-grey4);
+  color: #f5fefe;
+  border-radius: 5px;
+  padding: 0.2rem;
+  margin-bottom: 2rem;
+}
+.featured-project .project-buttons p:hover {
+  color: black;
+  font-weight: 600;
+}
+
+.featured-project-wrapper1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.featured-project-wrapper1 video {
+  max-width: 60rem;
+  border-radius: 12px;
 }
 
 .entityInput {
@@ -1305,9 +1351,13 @@ footer p {
   }
   .myProjectsContainer {
     grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "featured-project featured-project";
   }
   .about-grid-single-block {
     padding: 2rem;
+  }
+  .featured-project-wrapper1 video {
+    max-width: 50rem;
   }
 }
 @media (max-width: 864.98px) {
@@ -1366,6 +1416,9 @@ h3 {
   .about-page-grid {
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas: "item1 item1" "item2 item3" "item4 item4" "item5 item5";
+  }
+  .featured-project-wrapper1 video {
+    max-width: 40rem;
   }
 }
 @media (max-width: 767.98px) {
@@ -1502,6 +1555,27 @@ h3 {
     max-width: 100%;
   }
 }
+@media (max-width: 719.98px) {
+  .featured-project {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .featured-project h2 {
+    max-width: 20rem;
+  }
+  .featured-project-wrapper1 {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .featured-project-wrapper1 video {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+  }
+}
 @media (max-width: 575.98px) {
   button {
     padding: 1.4rem 2rem 1.4rem 2rem;
@@ -1624,6 +1698,11 @@ h1 span {
   }
   .myProjectsContainer {
     grid-template-columns: repeat(1, 1fr);
+    grid-template-areas: "featured-project";
+  }
+  .featured-project h2 {
+    font-size: 2rem;
+    max-width: 16rem;
   }
   .home_introduction {
     margin-top: 4rem;

@@ -496,7 +496,8 @@ footer {
 
 .tag {
   background-color: var(--clr-grey4);
-  margin: 0.5rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
   padding: 0.7rem;
   border-radius: 10px;
   font-family: ff-nexus-typewriter, sans-serif;
@@ -650,6 +651,7 @@ footer {
 .myProjectsContainer {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: 'featured-project featured-project featured-project';
   column-gap: 4rem;
   row-gap: 4rem;
   margin-top: 4rem;
@@ -703,5 +705,44 @@ footer {
   p:hover {
     color: var(--clr-white);
     transition: 500ms;
+  }
+}
+
+.featured-project {
+  grid-area: featured-project;
+  background-color: #f5fefe;
+  display: flex;
+  justify-content: space-between;
+
+  img {
+    max-width: 20rem;
+    filter: none;
+  }
+
+  h2 {
+    font-weight: 600;
+    background-color: var(--clr-grey4);
+    color: #f5fefe;
+    border-radius: 5px;
+    padding: 0.2rem;
+    margin-bottom: 2rem;
+  }
+
+  .project-buttons {
+    p:hover {
+      color: black;
+      font-weight: 600;
+    }
+  }
+}
+
+.featured-project-wrapper1 {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  video {
+    max-width: 60rem;
+    border-radius: 12px;
   }
 }

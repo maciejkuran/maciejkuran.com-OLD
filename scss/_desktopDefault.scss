@@ -201,27 +201,6 @@ footer {
     color: var(--clr-grey1);
     transition: 500ms;
   }
-
-  p {
-    font-family: ff-nexus-typewriter, sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    b {
-      font-size: 1.3rem;
-      background-color: var(--clr-grey4);
-      padding: 0.7rem;
-      border-radius: 10px;
-    }
-
-    span {
-      color: var(--clr-grey2);
-      font-size: 1.3rem;
-      margin-left: 1rem;
-      background-color: var(--clr-grey4);
-      padding: 0.7rem;
-      border-radius: 10px;
-    }
-  }
 }
 
 .generalContainer {
@@ -304,7 +283,7 @@ footer {
 }
 
 .category {
-  font-family: monospace;
+  font-family: ff-nexus-typewriter, sans-serif;
   font-size: 1.3rem;
   background-color: var(--clr-grey4);
   color: var(--clr-white);
@@ -503,7 +482,7 @@ footer {
   font-family: ff-nexus-typewriter, sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   font-weight: 600;
   color: var(--clr-grey1);
   background-color: var(--clr-grey4);
@@ -670,7 +649,8 @@ footer {
 
   .important-tag {
     color: var(--clr-grey5);
-    background-color: #ffdc71;
+    // background-color: #ffdc71;
+    background-color: #a6fddf;
   }
 }
 

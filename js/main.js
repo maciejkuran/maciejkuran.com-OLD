@@ -37,7 +37,8 @@ const calc = preTags.forEach(function (preTag) {
     .replaceAll('if ', '<span style="color:#FC3535">if </span>')
     .replaceAll('else if ', '<span style="color:#FC3535">else if </span>')
     .replaceAll('else ', '<span style="color:#FC3535">else </span>')
-    .replaceAll('return', '<span style="color:#EF593B">return</span>');
+    .replaceAll('return', '<span style="color:#EF593B">return</span>')
+    .replaceAll('addEventListener', '<span style="color:#fe00fe">addEventListener</span>');
 
   preTag.innerHTML = newString;
 });

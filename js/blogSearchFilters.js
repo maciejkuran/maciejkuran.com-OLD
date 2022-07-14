@@ -26,5 +26,5 @@ const chooseCategory = function (category) {
 };
 
 categoryJavascript.addEventListener('click', function () {
-  chooseCategory('Javascript');
+  chooseCategory('JavaScript');
 });

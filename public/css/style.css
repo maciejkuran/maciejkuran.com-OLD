@@ -253,6 +253,10 @@ textarea {
           box-shadow: 20px 20px 50px #121212;
 }
 
+.hide {
+  display: none;
+}
+
 .header-elements {
   max-height: 15rem;
   padding: 2rem 2rem 2rem 0;
@@ -1006,7 +1010,7 @@ footer p {
 }
 .project-tags .important-tag {
   color: var(--clr-grey5);
-  background-color: #a6fddf;
+  background-color: var(--clr-grey3);
 }
 
 .project-date-and-title {
@@ -1082,6 +1086,34 @@ footer p {
 .featured-project-wrapper1 video {
   max-width: 60rem;
   border-radius: 12px;
+}
+
+.tab-component-btns-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.tab-btn {
+  border-radius: 0;
+}
+
+.tab-component-content-wrapper {
+  position: relative;
+  min-width: 100%;
+  min-height: 50rem;
+}
+
+.tab-content {
+  position: absolute;
+  min-width: 100%;
+  min-height: 100%;
 }
 
 .entityInput {

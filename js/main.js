@@ -20,7 +20,7 @@ const calc = preTags.forEach(function (preTag) {
     .replaceAll('function', '<span style="color:#B5FFFE">function</span>')
     .replaceAll('const', '<span style="color:#0AFFFB">const</span>')
     .replaceAll('let ', '<span style="color:#0AFFFB">let </span>')
-    .replaceAll('class', '<span style="color:#0AFFFB">class</span>')
+    .replaceAll('class=', '<span style="color:#0AFFFB">class=</span>')
     .replaceAll(' = ', '<span style="color:#E53613"> = </span>')
     .replaceAll(' + ', '<span style="color:#E53613"> + </span>')
     .replaceAll(' += ', '<span style="color:#E53613"> += </span>')
@@ -38,7 +38,9 @@ const calc = preTags.forEach(function (preTag) {
     .replaceAll('else if ', '<span style="color:#FC3535">else if </span>')
     .replaceAll('else ', '<span style="color:#FC3535">else </span>')
     .replaceAll('return', '<span style="color:#EF593B">return</span>')
-    .replaceAll('addEventListener', '<span style="color:#fe00fe">addEventListener</span>');
+    .replaceAll('addEventListener', '<span style="color:#E8704B">addEventListener</span>')
+    .replaceAll('div', '<span style="color:#E8704B">div</span>')
+    .replaceAll('h1', '<span style="color:#F66F0B">h1</span>');
 
   preTag.innerHTML = newString;
 });

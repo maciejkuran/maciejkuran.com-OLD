@@ -649,8 +649,7 @@ footer {
 
   .important-tag {
     color: var(--clr-grey5);
-    // background-color: #ffdc71;
-    background-color: #a6fddf;
+    background-color: var(--clr-grey3);
   }
 }
 
@@ -725,4 +724,26 @@ footer {
     max-width: 60rem;
     border-radius: 12px;
   }
+}
+
+.tab-component-btns-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tab-btn {
+  border-radius: 0;
+}
+
+.tab-component-content-wrapper {
+  position: relative;
+  min-width: 100%;
+  min-height: 50rem;
+}
+
+.tab-content {
+  position: absolute;
+  min-width: 100%;
+  min-height: 100%;
 }

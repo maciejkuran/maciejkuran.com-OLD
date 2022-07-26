@@ -614,7 +614,6 @@ footer p {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  position: relative;
   position: fixed;
   background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
   padding: 2rem;
@@ -1461,6 +1460,17 @@ footer p {
   }
   h1 span {
     font-size: 2.7rem;
+  }
+  .homepage {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+    padding: 0;
   }
   .header-elements nav a {
     font-size: 1.8rem;

@@ -608,14 +608,21 @@ footer p {
 }
 
 .homepage {
-  min-height: 100vh;
+  height: 100%;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   position: relative;
+  position: fixed;
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+  padding: 2rem;
 }
 
 .homeImg {
   max-width: 100%;
-  height: auto;
-  background-position: center;
+  max-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -692,10 +699,8 @@ footer p {
   }
 }
 .home_navigation {
-  border: 1px solid var(--clr-green);
   padding: 1rem;
   border-radius: 10px;
-  margin-top: 5rem;
   display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -749,6 +754,10 @@ footer p {
   -webkit-transition: 500ms;
   transition: 500ms;
   cursor: pointer;
+}
+
+.home-page-header {
+  height: 100vh;
 }
 
 .top_home {

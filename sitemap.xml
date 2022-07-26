@@ -9,172 +9,182 @@
 
 <url>
   <loc>https://maciejkuran.com/</loc>
-  <lastmod>2022-06-15T18:05:18+00:00</lastmod>
+  <lastmod>2022-07-26T19:11:12+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://maciejkuran.com/about</loc>
-  <lastmod>2022-06-19T11:50:34+00:00</lastmod>
+  <lastmod>2022-07-15T10:16:32+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://maciejkuran.com/my-projects</loc>
-  <lastmod>2022-06-09T10:45:18+00:00</lastmod>
+  <lastmod>2022-07-13T19:20:22+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://maciejkuran.com/blog/</loc>
-  <lastmod>2022-06-18T17:59:34+00:00</lastmod>
+  <lastmod>2022-07-26T17:30:44+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://maciejkuran.com/contact</loc>
-  <lastmod>2022-06-09T10:46:16+00:00</lastmod>
+  <lastmod>2022-07-12T19:38:46+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://maciejkuran.com/my-story</loc>
-  <lastmod>2022-06-12T13:58:58+00:00</lastmod>
+  <lastmod>2022-07-12T20:16:24+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://maciejkuran.com/title-case-converter</loc>
-  <lastmod>2022-06-09T10:42:48+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://maciejkuran.com/html-entities-encoder-and-decoder</loc>
-  <lastmod>2022-06-16T18:25:42+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://maciejkuran.com/palindrome-checker</loc>
-  <lastmod>2022-06-09T10:43:34+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://maciejkuran.com/case-study-unit-converted</loc>
-  <lastmod>2022-06-16T20:32:24+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://maciejkuran.com/blog/function-computes-number-of-days-between-dates</loc>
-  <lastmod>2022-06-18T17:50:08+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://maciejkuran.com/blog/function-checks-if-number-is-even</loc>
-  <lastmod>2022-06-18T17:47:02+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://maciejkuran.com/blog/implementing-login-functionality-and-logout-timer</loc>
-  <lastmod>2022-06-18T16:29:40+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://maciejkuran.com/blog/function-checks-if-number-is-in-array-of-arrays</loc>
-  <lastmod>2022-06-18T16:42:00+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://maciejkuran.com/blog/creating-dynamically-array-that-contains-100-random-numbers</loc>
-  <lastmod>2022-06-18T16:42:32+00:00</lastmod>
+  <lastmod>2022-07-12T20:19:28+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://maciejkuran.com/blog/title-case-converter-function</loc>
-  <lastmod>2022-06-18T16:34:36+00:00</lastmod>
+  <lastmod>2022-07-12T17:48:36+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://maciejkuran.com/blog/function-computes-overal-family-income</loc>
-  <lastmod>2022-06-18T16:41:44+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://maciejkuran.com/blog/function-finds-users-over-18-years</loc>
-  <lastmod>2022-06-18T16:41:08+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://maciejkuran.com/blog/function-returns-highest-number-array-javascript</loc>
-  <lastmod>2022-06-18T16:40:42+00:00</lastmod>
+  <loc>https://maciejkuran.com/palindrome-checker</loc>
+  <lastmod>2022-07-13T10:35:02+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://maciejkuran.com/blog/palindrome-checker-functions-javascript</loc>
-  <lastmod>2022-06-18T16:40:22+00:00</lastmod>
+  <lastmod>2022-07-12T17:59:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://maciejkuran.com/html-entities-encoder-and-decoder</loc>
+  <lastmod>2022-07-12T20:26:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://maciejkuran.com/case-study-unit-converted.html</loc>
+  <lastmod>2022-07-26T17:22:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://maciejkuran.com/blog/implementing-tab-component-js</loc>
+  <lastmod>2022-07-26T17:08:50+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://maciejkuran.com/blog/creating-slider-component-javascript</loc>
+  <lastmod>2022-07-26T17:05:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://maciejkuran.com/blog/function-computes-number-of-days-between-dates</loc>
+  <lastmod>2022-07-12T19:15:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://maciejkuran.com/blog/function-checks-if-number-is-even</loc>
+  <lastmod>2022-07-12T19:16:50+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://maciejkuran.com/blog/implementing-login-functionality-and-logout-timer</loc>
+  <lastmod>2022-07-12T19:11:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://maciejkuran.com/blog/function-checks-if-number-is-in-array-of-arrays</loc>
+  <lastmod>2022-07-12T19:16:24+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://maciejkuran.com/blog/creating-dynamically-array-that-contains-100-random-numbers</loc>
+  <lastmod>2022-07-12T19:17:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://maciejkuran.com/blog/function-computes-overal-family-income</loc>
+  <lastmod>2022-07-12T19:15:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://maciejkuran.com/blog/function-finds-users-over-18-years</loc>
+  <lastmod>2022-07-12T19:14:32+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://maciejkuran.com/blog/function-returns-highest-number-array-javascript</loc>
+  <lastmod>2022-07-12T19:13:40+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://maciejkuran.com/blog/function-calculates-percentage-of-nationality</loc>
-  <lastmod>2022-06-18T16:42:12+00:00</lastmod>
+  <lastmod>2022-07-12T19:17:08+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://maciejkuran.com/blog/part-2-tax-calculator-javascript</loc>
-  <lastmod>2022-06-18T16:39:44+00:00</lastmod>
+  <lastmod>2022-07-12T17:58:02+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://maciejkuran.com/blog/part-1-tax-calculator-javascript</loc>
-  <lastmod>2022-06-18T16:40:00+00:00</lastmod>
+  <lastmod>2022-07-12T17:58:28+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://maciejkuran.com/blog/bank-deposit-for-12-months</loc>
-  <lastmod>2022-06-18T16:43:00+00:00</lastmod>
+  <lastmod>2022-07-12T19:18:02+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://maciejkuran.com/blog/converting-unordered-string-into-clean-formatted-output</loc>
-  <lastmod>2022-06-18T16:42:44+00:00</lastmod>
+  <lastmod>2022-07-12T19:17:46+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://maciejkuran.com/blog/the-ticket-number-generator-function</loc>
-  <lastmod>2022-06-18T16:36:38+00:00</lastmod>
+  <lastmod>2022-07-12T17:52:08+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://maciejkuran.com/blog/function-masks-credit-card-digits</loc>
-  <lastmod>2022-06-18T16:40:56+00:00</lastmod>
+  <lastmod>2022-07-12T19:14:12+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://maciejkuran.com/blog/function-converts-the-first-value-of-each-word-uppercase</loc>
-  <lastmod>2022-06-18T16:41:22+00:00</lastmod>
+  <lastmod>2022-07-12T19:14:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://maciejkuran.com/blog/text-checker-function</loc>
-  <lastmod>2022-06-18T16:39:32+00:00</lastmod>
+  <lastmod>2022-07-12T17:57:08+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://maciejkuran.com/blog/the-function-that-checks-for-capital-letters-spaces</loc>
-  <lastmod>2022-06-18T16:38:24+00:00</lastmod>
+  <lastmod>2022-07-12T17:54:46+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://maciejkuran.com/blog/the-function-that-returns-corrected-first-name</loc>
-  <lastmod>2022-06-18T16:38:10+00:00</lastmod>
+  <lastmod>2022-07-12T17:53:36+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://maciejkuran.com/blog/the-function-returns-the-sum-of-unlimited-numbers</loc>
-  <lastmod>2022-06-18T16:38:40+00:00</lastmod>
+  <lastmod>2022-07-12T17:56:00+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://maciejkuran.com/blog/part-1-tax-calculator-javascript.html</loc>
-  <lastmod>2022-06-18T16:40:00+00:00</lastmod>
+  <lastmod>2022-07-12T17:58:28+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://maciejkuran.com/blog/part-2-tax-calculator-javascript.html</loc>
-  <lastmod>2022-06-18T16:39:44+00:00</lastmod>
+  <lastmod>2022-07-12T17:58:02+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 

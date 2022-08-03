@@ -216,10 +216,11 @@
   }
 
   footer {
+    justify-content: center;
+    padding: 1;
     div {
       a {
         font-size: 1.5rem;
-        margin-top: 2rem;
       }
     }
 
@@ -274,10 +275,6 @@
 @media (max-width: 719.98px) {
   .featured-project {
     flex-direction: column;
-
-    h2 {
-      max-width: 20rem;
-    }
   }
 
   .featured-project-wrapper1 {
@@ -447,7 +444,6 @@
   .featured-project {
     h2 {
       font-size: 2rem;
-      max-width: 16rem;
     }
   }
 

@@ -28,6 +28,7 @@ body {
   margin-left: auto;
   margin-right: auto;
   padding: 1.5rem;
+  min-height: 100vh;
 }
 
 h1,
@@ -1003,7 +1004,7 @@ footer p {
 
 .singleProject {
   background-color: var(--clr-grey5);
-  padding: 3rem;
+  padding: 2rem;
   border-radius: 10px;
   -webkit-filter: drop-shadow(20px 20px 20px #121212);
           filter: drop-shadow(20px 20px 20px #121212);
@@ -1017,8 +1018,7 @@ footer p {
       flex-wrap: wrap;
 }
 .project-tags .important-tag {
-  color: var(--clr-grey5);
-  background-color: var(--clr-grey3);
+  color: var(--clr-green);
 }
 
 .project-date-and-title {
@@ -1054,7 +1054,7 @@ footer p {
 
 .featured-project {
   grid-area: featured-project;
-  background-color: #f5fefe;
+  background-color: var(--clr-white);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1069,11 +1069,7 @@ footer p {
 }
 .featured-project h2 {
   font-weight: 600;
-  background-color: var(--clr-grey4);
-  color: #f5fefe;
-  border-radius: 5px;
-  padding: 0.2rem;
-  margin-bottom: 2rem;
+  color: var(--clr-grey5);
 }
 .featured-project .project-buttons p:hover {
   color: black;
@@ -1094,6 +1090,20 @@ footer p {
 .featured-project-wrapper1 video {
   max-width: 60rem;
   border-radius: 12px;
+}
+
+.project-listing-img {
+  position: relative;
+}
+.project-listing-img img {
+  margin-top: 0;
+  margin-bottom: 2rem;
+  height: 24rem;
+  min-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 
 .tab-component-btns-wrapper {
@@ -1614,9 +1624,14 @@ h3 {
     max-width: 60rem;
     margin-top: 1rem;
   }
+  footer {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 1;
+  }
   footer div a {
     font-size: 1.5rem;
-    margin-top: 2rem;
   }
   footer p {
     font-size: 1.2rem;
@@ -1666,9 +1681,6 @@ h3 {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-  }
-  .featured-project h2 {
-    max-width: 20rem;
   }
   .featured-project-wrapper1 {
     -webkit-box-pack: center;
@@ -1807,7 +1819,6 @@ h1 span {
   }
   .featured-project h2 {
     font-size: 2rem;
-    max-width: 16rem;
   }
   .home_introduction {
     margin-top: 4rem;

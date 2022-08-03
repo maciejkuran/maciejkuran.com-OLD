@@ -645,7 +645,7 @@ footer {
 
 .singleProject {
   background-color: var(--clr-grey5);
-  padding: 3rem;
+  padding: 2rem;
   border-radius: 10px;
   filter: drop-shadow(20px 20px 20px #121212);
 }
@@ -655,8 +655,7 @@ footer {
   flex-wrap: wrap;
 
   .important-tag {
-    color: var(--clr-grey5);
-    background-color: var(--clr-grey3);
+    color: var(--clr-green);
   }
 }
 
@@ -696,7 +695,7 @@ footer {
 
 .featured-project {
   grid-area: featured-project;
-  background-color: #f5fefe;
+  background-color: var(--clr-white);
   display: flex;
   justify-content: space-between;
 
@@ -707,11 +706,7 @@ footer {
 
   h2 {
     font-weight: 600;
-    background-color: var(--clr-grey4);
-    color: #f5fefe;
-    border-radius: 5px;
-    padding: 0.2rem;
-    margin-bottom: 2rem;
+    color: var(--clr-grey5);
   }
 
   .project-buttons {
@@ -730,6 +725,19 @@ footer {
   video {
     max-width: 60rem;
     border-radius: 12px;
+  }
+}
+
+.project-listing-img {
+  position: relative;
+
+  img {
+    margin-top: 0;
+    margin-bottom: 2rem;
+    height: 24rem;
+    min-width: 100%;
+    object-fit: cover;
+    object-position: center;
   }
 }
 

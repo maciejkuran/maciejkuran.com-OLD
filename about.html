@@ -3,9 +3,163 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>About me - Maciej Kuran-Janowski</title>
+    <meta
+      name="description"
+      content="I try to end each day with small successes because I know that the secret of success lies in small wins. I rely on discipline and consistency"
+    />
+    <!-- ---GOOGLE FONTS--- -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500;600;700&family=Roboto+Mono:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- _________________________________ -->
+    <!-- ---Font Awesome--- -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/js/all.min.js"
+      integrity="sha512-naukR7I+Nk6gp7p5TMA4ycgfxaZBJ7MO5iC3Fp6ySQyKFHOGfpkSZkYVWV5R7u7cfAicxanwYQ5D1e17EfJcMA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- _____________ -->
+    <!-- My scripts with defer attribute load async -->
+    <script defer type="module" src="/js/components.js"></script>
     <script defer type="module" src="/js/main.js"></script>
+
+    <!-- -- CSS-- -->
+    <link rel="stylesheet" href="css/main.css" />
   </head>
-  <body></body>
+  <body>
+    <web-navbar></web-navbar>
+
+    <main>
+      <header class="about-page-header">
+        <h1>About me</h1>
+        <div class="seperator"></div>
+        <div class="header-wrapper">
+          <img src="/img/Maciej Kuran-Janowski avatar.png" alt="Maciej Kuran-Janowski avatar" />
+          <div class="person-data">
+            <h2>Maciej Kuran-Janowski</h2>
+            <p>frontend web developer</p>
+            <p class="coding-from">coding from January 2022</p>
+          </div>
+          <div class="home-icons social-icons">
+            <a target="_blank" href="https://github.com/maciejkuran"><i class="fa-brands fa-github"></i></a>
+            <a target="_blank" href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a target="_blank" href="https://www.buymeacoffee.com/maciejkuran"
+              ><img src="./img/buy-me-a-cofffe-icon.svg" alt=""
+            /></a>
+            <a href="mailto:maciejkuran@gmail.com"><i class="fa-solid fa-at"></i></a>
+          </div>
+        </div>
+      </header>
+      <section class="about-section--1">
+        <div class="about-grid-container">
+          <div class="item">
+            <img src="/img/icons/my drive.png" alt="my drive - Maciej Kuran-Janowski" />
+            <div class="item-content">
+              <h3>My drive</h3>
+              <p>
+                I try to end each day with small successes because I know that the secret of success lies in small wins.
+                I rely on discipline and consistency.
+              </p>
+              <p>
+                A project I thought was perfect a week ago, I can see better solutions for today. Being better at what I
+                do drives me because it opens up new opportunities.
+              </p>
+            </div>
+          </div>
+
+          <div class="item">
+            <img src="/img/icons/hard skills.png" alt="hard skills - Maciej Kuran-Janowski" />
+            <div class="item-content">
+              <h3>Hard skills</h3>
+              <div class="tag-cloud">
+                <p class="tag-primary">HTML5</p>
+                <p class="tag-primary">CSS</p>
+                <p class="tag-primary">SASS</p>
+                <p class="tag-primary">Bootstrap</p>
+                <p class="tag-primary">JavaScript</p>
+                <p class="tag-primary">Git</p>
+                <p class="tag-primary">GitHub</p>
+                <p class="tag-primary">Adobe xD</p>
+                <p class="tag-primary">Illustrator</p>
+                <p class="tag-primary">Photoshop</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <img src="/img/icons/soft skills.png" alt="soft skills - Maciej Kuran-Janowski" />
+            <div class="item-content">
+              <h3>Soft skills</h3>
+              <div class="tag-cloud">
+                <p class="tag-primary">Discipline</p>
+                <p class="tag-primary">Independence</p>
+                <p class="tag-primary">Problem solving</p>
+                <p class="tag-primary">Time management</p>
+                <p class="tag-primary">Creativity</p>
+                <p class="tag-primary">Patience</p>
+                <p class="tag-primary">Commitment</p>
+                <p class="tag-primary">Loyalty</p>
+                <p class="tag-primary">Positivity</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <img src="/img/icons/education.png" alt="education - Maciej Kuran-Janowski" />
+            <div class="item-content">
+              <h3>Education</h3>
+              <p class="education">
+                (2022 - ...) Computer Science, engineering studies (Business Application Developer specialty) at School
+                of Business National Louis University
+              </p>
+
+              <button class="primary-button coursework-btn">
+                coursework<i class="fa-solid fa-arrow-right-long"></i>
+              </button>
+
+              <button class="primary-button coursework-btn">
+                other education<i class="fa-solid fa-arrow-right-long"></i>
+              </button>
+              <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+              TODO:TUTAJ WSTAWIĆ POPUPY COURSEWORK I OTHER EDUCATION -->
+            </div>
+          </div>
+        </div>
+        <picture class="img-banner about-img-banner">
+          <img src="/img/Maciej Kuran-Janowski_2.jpg" alt="Maciej Kuran-Janowski web developer" />
+        </picture>
+
+        <div class="item hobbies">
+          <img src="/img/icons/hobbies.png" alt="time off activities - Maciej Kuran-Janowski" />
+          <div class="item-content">
+            <h3>Time off activities</h3>
+            <p>I enjoy cooking with my wife 🍲</p>
+            <p>I care for my Bonsai trees 🌳</p>
+            <p>I play and watch football ⚽</p>
+            <p>I am crazy with my 2 pugs 🧸🧸🧡</p>
+          </div>
+        </div>
+
+        <div class="flex-btn">
+          <a href="/my-projects">
+            <button class="primary-button">my projects<i class="fa-solid fa-arrow-right-long"></i></button
+          ></a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="web-footer">
+      <p>Copyright©, maciejkuran.com. All Rights Reserved</p>
+
+      <a href="/privacy-policy">Privacy policy</a>
+    </footer>
+
+    <div class="background-overlay hide"></div>
+  </body>
 </html>

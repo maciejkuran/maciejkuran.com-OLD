@@ -25,13 +25,15 @@ h4,
 h5,
 h6 {
   font-family: "Josefin Sans", sans-serif;
+  color: var(--color-black);
 }
 
 p,
 a,
 ul,
 button,
-span {
+span,
+div {
   font-family: "Roboto Mono", monospace;
   color: var(--color-black);
   text-decoration: none;
@@ -47,8 +49,14 @@ h1 span {
   font-family: "Josefin Sans", sans-serif;
 }
 
+h2,
+h3 {
+  font-size: 3.5rem;
+}
+
 p,
-li {
+li,
+a {
   font-size: 2rem;
   font-weight: 400;
 }
@@ -202,7 +210,7 @@ button {
   text-align: center;
 }
 
-.home-header-animation {
+.home-header-animation, .about-page-header h1 {
   background-image: -webkit-gradient(linear, right top, left top, from(#2ecc71), color-stop(#3498db), color-stop(#9b59b6), to(#f39c12));
   background-image: linear-gradient(to left, #2ecc71, #3498db, #9b59b6, #f39c12);
   -webkit-background-clip: text;
@@ -324,7 +332,7 @@ button {
 
 .background-overlay {
   position: fixed;
-  background-color: rgba(0, 0, 0, 0.822);
+  background-color: rgba(0, 0, 0, 0.729);
   min-height: 100%;
   min-width: 100%;
   -webkit-transform: translate(-50%, -50%);
@@ -336,6 +344,165 @@ button {
 
 .hide {
   display: none;
+}
+
+.about-page-header {
+  padding: 0 1rem;
+  margin-top: 15rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+.about-page-header .seperator {
+  background-color: var(--grey-tag-border);
+  height: 0.1rem;
+  width: 20rem;
+  margin: 0 2rem;
+}
+
+.header-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.header-wrapper img {
+  max-width: 25rem;
+}
+
+.person-data {
+  margin: 0 3rem;
+}
+.person-data p {
+  margin-left: 0.2rem;
+  font-weight: 600;
+}
+.person-data .coding-from {
+  color: var(--grey-icons);
+  font-size: 1.5rem;
+}
+
+.about-section--1 {
+  margin-top: 5rem;
+}
+
+.about-grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5rem;
+  padding: 3rem;
+  margin-bottom: 5rem;
+}
+
+.item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: var(--grey-background);
+  padding: 3rem;
+  border-radius: 5px;
+  border: 1px solid var(--grey-background-2);
+}
+.item img {
+  max-width: 10rem;
+  max-height: 10rem;
+}
+.item .item-content {
+  margin-left: 3rem;
+}
+.item h3 {
+  margin-bottom: 3rem;
+  border-bottom: solid 1px var(--grey-tag-border);
+}
+
+.tag-cloud {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.tag-primary {
+  background-color: var(--grey-tag-background);
+  border: 1px solid var(--grey-tag-border);
+  font-size: 2rem;
+  padding: 0.6rem 1.3rem;
+  margin-right: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 5px;
+}
+
+.education {
+  padding-bottom: 2rem;
+  border-bottom: solid 1px var(--grey-tag-border);
+  margin-bottom: 2rem;
+}
+
+.about-img-banner img {
+  max-height: 60rem;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.hobbies {
+  max-width: 80rem;
+  margin: auto;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.flex-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.web-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem;
+  margin-top: 10rem;
+}
+.web-footer a {
+  right: 1%;
+  position: absolute;
+  padding: 0 0.5rem;
+}
+.web-footer a:hover {
+  background-color: var(--grey-background-2);
+}
+.web-footer p {
+  margin-bottom: 0;
+  color: var(--grey-icons);
+  font-size: 1.5rem;
 }
 
 @media (max-width: 849.98px) {

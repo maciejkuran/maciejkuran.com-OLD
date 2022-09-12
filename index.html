@@ -25,6 +25,10 @@
       referrerpolicy="no-referrer"
     ></script>
     <!-- _____________ -->
+    <!-- My scripts with defer attribute load async -->
+    <script defer type="module" src="/js/main.js"></script>
+
+    <!-- -- CSS-- -->
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
@@ -32,15 +36,19 @@
       <div class="nav-items">
         <a href="/"><img src="./img/Logo Maciej Kuran-Janowski.png" alt="logo Maciej Kuran-Janowski" /></a>
 
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/about">About</a></li>
-          <li><a href="/my-projects">Projects</a></li>
-          <li><a href="/blog">Blog</a></li>
-          <li><a target="_blank" href="https://github.com/maciejkuran">GitHub</a></li>
-          <li><a href="mailto:maciejkuran@gmail.com">Email_me</a></li>
-        </ul>
-        <button class="nav-list-btn">
+        <div class="nav-list">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/my-projects">Projects</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a target="_blank" href="https://github.com/maciejkuran">GitHub</a></li>
+            <li><a href="mailto:maciejkuran@gmail.com">Email_me</a></li>
+          </ul>
+          <button class="close-nav-btn"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+
+        <button class="nav-hamburger-btn">
           <i class="fa-solid fa-ellipsis"></i>
         </button>
       </div>
@@ -85,5 +93,6 @@
         <img src="/img/Maciej Kuran-Janowski_1.jpg" alt="Maciej Kuran-Janowski web developer" />
       </picture>
     </main>
+    <div class="background-overlay hide"></div>
   </body>
 </html>

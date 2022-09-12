@@ -133,6 +133,10 @@ button {
   background: linear-gradient(to left, #ff0080, #ff8c00, #40e0d0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
+.nav-list-btn {
+  display: none;
+}
+
 .nav-items {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -186,7 +190,44 @@ button {
       -ms-flex-direction: column;
           flex-direction: column;
 }
+.home-main h1 {
+  text-align: center;
+}
 
+.home-header-animation {
+  background-image: -webkit-gradient(linear, right top, left top, from(#2ecc71), color-stop(#3498db), color-stop(#9b59b6), to(#f39c12));
+  background-image: linear-gradient(to left, #2ecc71, #3498db, #9b59b6, #f39c12);
+  -webkit-background-clip: text;
+          background-clip: text;
+  background-size: 500%;
+  color: transparent;
+  -webkit-animation: animateHeader 5s linear infinite;
+          animation: animateHeader 5s linear infinite;
+}
+
+@-webkit-keyframes animateHeader {
+  0% {
+    background-position: 0 100%;
+  }
+  50% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: 0 100%;
+  }
+}
+
+@keyframes animateHeader {
+  0% {
+    background-position: 0 100%;
+  }
+  50% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: 0 100%;
+  }
+}
 .home-container {
   margin-top: 15rem;
   display: -webkit-box;
@@ -271,4 +312,67 @@ button {
   -o-object-position: center;
      object-position: center;
   vertical-align: middle;
+}
+
+@media (max-width: 849.98px) {
+  h1 {
+    font-size: 4rem;
+  }
+  p,
+.primary-button {
+    font-size: 1.8rem;
+  }
+  .nav-items {
+    margin: 0rem;
+  }
+  .home-container {
+    padding: 1rem;
+  }
+}
+@media (max-width: 752.98px) {
+  .nav-items ul {
+    display: none;
+  }
+  .nav-list-btn {
+    display: inline;
+    padding: 0.3rem;
+    background-color: var(--grey-background-2);
+    border-radius: 5px;
+  }
+  .nav-list-btn svg {
+    font-size: 4rem;
+  }
+}
+@media (max-width: 500.98px) {
+  .home-container {
+    margin-top: 11rem;
+  }
+  .nav-items img {
+    max-width: 6rem;
+  }
+  h1 {
+    font-size: 3.5rem;
+  }
+  p {
+    font-size: 1.6rem;
+  }
+  .home-main-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .home-icons {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin-right: 0;
+  }
+  .home-icons svg {
+    margin: 0 1rem;
+  }
+  .home-icons img {
+    min-width: 5rem;
+  }
 }

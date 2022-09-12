@@ -1,0 +1,16 @@
+The application author under the following URL (https://maciejkuran.com/html-entities-encoder-and-decoder) is Maciej Kuran-Janowski. This file indicates the fields in which the creation is protected in terms of copyright.
+
+What you CAN:
+
+You can copy the code or share it for purposes of: 
+
+- Learning (without restriction unless you decide to publish the project on the internet. If you do, follow the points written below); - Use the programming concepts in the process of creating your web application for commercial/non-commercial purposes. However, the source code must be significantly changed and the nature of the application must ultimately be different.
+
+
+What you CAN NOT: 
+
+- You agree not to reproduce this web application unless you receive permission; 
+- You agree not to copy the design of this web application unless you receive permission.
+
+Copyright ©maciejkuran.com
+For inquiries please contact: maciejkuran@gmail.com

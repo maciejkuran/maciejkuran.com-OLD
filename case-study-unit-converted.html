@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Case Study - UnitConverted.com</title>
+    <meta
+      name="description"
+      content="The main goal of the project was to design and build an application/unit converter from
+      scratch. No, it's not a startup, much less anything innovative. I just wanted to face a
+      lot of programming problems "
+    />
+    <link rel="stylesheet" href="https://use.typekit.net/pig0nkd.css" />
+    <link rel="stylesheet" href="/public/css/style.css" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SZF313ENVP"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'G-SZF313ENVP');
+    </script>
+  </head>
+  <body>
+    <my-header></my-header>
+    <main class="mainWrapper">
+      <article>
+        <header>
+          <div class="myProjectsPageTopSection">
+            <div>
+              <h1>UnitConverted.com <br /><span>Case Study</span></h1>
+              <p>
+                The goal of this project was to design and build an application. I chose to develop a Unit Converter
+                from scratch. I wanted to challenge myself and try to build a scalable application, a size, and
+                complexity which would be difficult for any novice programmer.
+              </p>
+            </div>
+          </div>
+        </header>
+
+        <section class="homePage4thSection sectionDivider caseStudyUnitConvertedTopBottomSection">
+          <div>
+            <p>
+              I did my best and worked diligently to accomplish this project. I am aware that this app could have been
+              done better however,
+              <b>this is my first project ever done completely by myself - being a total JS beginner</b> 😉. My goal in
+              developing this app was to challenge myself, design a modern interface, and develop it from scratch. All
+              suggestions are welcome.
+            </p>
+            <a href="https://unitconverted.com" target="_blank"><button>Live app</button></a>
+          </div>
+        </section>
+
+        <div class="container">
+          <section>
+            <div class="unit-converted-case-study-logo-container">
+              <img
+                class="unit-converted-case-study-logo"
+                src="/img/unitconverted logo.svg"
+                alt="UnitConverted.com logo picture"
+              />
+            </div>
+            <h3>Let's start from the beginning - what is UnitConverted.com ?</h3>
+            <p>
+              UnitConverted.com is a free unit converter where you can easily convert all common types of units: length,
+              temperature, area, volume, weight, time, and speed. It is a super helpful tool if you expect to have some
+              units converted fast. In addition, you can read the definitions of each unit with direct reference to
+              scientific sources.
+            </p>
+          </section>
+          <section class="sectionDivider">
+            <h3>Tools</h3>
+            <ul>
+              <li>- HTML5</li>
+              <li>- SASS / SCSS</li>
+              <li>- JavaScript</li>
+            </ul>
+          </section>
+          <section class="sectionDivider">
+            <h3>Project Timeline</h3>
+            <p>
+              I was excited to develop my first web application after just 1 month of learning JavaScript - actually my
+              first programming language. The entire application development process went successfully as intended.
+              However, this was a constant work, around 8 hours/day, 6 days/week.
+            </p>
+            <img
+              class="imgArticle"
+              src="/img/UnitConverted.com in time.png"
+              alt="UnitConverted.com app project timeline"
+            />
+          </section>
+          <section class="sectionDivider">
+            <h3>Programming problems to solve</h3>
+            <ul>
+              <li>- program the category search filter</li>
+              <li>
+                - write functions that will convert a user input value and return converted value when the "convert"
+                button is clicked
+              </li>
+              <li>- program select options so a user can change units easily in the app's interface</li>
+              <li>
+                - access DOM elements to display dynamically a calculation result and formula of calculation on the
+                screen
+              </li>
+            </ul>
+          </section>
+          <section class="sectionDivider">
+            <h3>General designing concepts</h3>
+            <ul>
+              <li>- dark color scheme</li>
+              <li>- modern and clean UI</li>
+              <li>- easy to navigate interface</li>
+              <li>- design that is memorable and stands out from competing applications</li>
+            </ul>
+            <img src="/img/UI UnitConverted.com.jpg" class="imgArticle" alt="UI design web app UnitConverted.com" />
+            <img
+              src="/img/UI color and fonts UnitConverted.jpg"
+              class="imgArticle"
+              alt="UI colors and fonts UnitConverted.com"
+            />
+          </section>
+
+          <section class="sectionDivider">
+            <h3>Problems I encountered during the development process</h3>
+            <p>
+              Honestly, I didn't encounter many problems while coding. To a surprise, with a little bit of analyzing I
+              was actually able to match javascript concepts very fast to solve any problems. However, I got stuck for a
+              while styling website ...
+            </p>
+            <p><span>SCSS and nested classes</span></p>
+            <p>
+              What I love about SCSS are nested classes. I just find it comfortable to create some sort of "class
+              trees". I say it's comfortable because anytime I am back to a specific class to add some extra styling,
+              someway I can easily locate this class, without using the built VS Code 'search' tool. Certainly, there
+              are other advantages of nesting classes such as clean code and not having to repeat code. For example, if
+              div with a class of 'flex' is inside a div with a class of 'wrapper', and there's a &lt;p&gt; tag inside
+              that div 'flex', you may write it that way.
+            </p>
+            <pre>
+            .wrapper {
+
+            .flex {
+            
+            p { }
+            
+            }
+            
+            }
+            
+            //instead of
+            
+            .wrapper {}
+            
+            .flex p {}
+            
+            .flex {}
+            </pre>
+            <p>
+              However, nested classes can be tricky especially when you want to override some styles. That's what I
+              experienced.
+            </p>
+            <p>
+              I tried to override some styles, especially doing media queries, and even though I added styles to a
+              certain HTML element with a class of 'x', the styles were not overridden.
+            </p>
+            <p>
+              Well, it's all because I ignored initially declared nested classes. What I mean, based on the random
+              example given above is if you declared initially div with a class of 'flex' to be nested inside the
+              'wrapper', the compiled result of this nesting in the style.css sheet will be:
+            </p>
+            <pre>
+            .wrapper .flex {}
+
+            .wrapper .flex p {}
+              </pre
+            >
+            <p>
+              So in fact if you want to override any styles doing for example media queries, you should use previously
+              declared nested classes.
+            </p>
+          </section>
+          <section class="sectionDivider">
+            <h3>Overall feelings</h3>
+            <p>
+              I am happy that I was able to write my first application. It is not something innovative, but it is mine,
+              from A to Z designed and coded by me. I am aware that it could be coded way better so I hope to come back
+              to this project one day and refactor this long code.
+            </p>
+          </section>
+          <section class="homePage4thSection sectionDivider">
+            <div>
+              <h2>App Repository</h2>
+              <a href="https://github.com/maciejkuran/UnitConverted.com" target="_blank"><button>GitHub</button></a>
+            </div>
+          </section>
+        </div>
+      </article>
+    </main>
+    <my-footer></my-footer>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js"
+      integrity="sha512-6PM0qYu5KExuNcKt5bURAoT6KCThUmHRewN3zUFNaoI6Di7XJPTMoT6K0nsagZKk2OB4L7E3q1uQKHNHd4stIQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script type="module" src="js/components.js"></script>
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Implementing tab component - JavaScript</title>
+    <meta
+      name="description"
+      content="In this exercise, I am creating a tab component with vanilla javascript that can be used in any website development"
+    />
+
+    <link rel="stylesheet" href="https://use.typekit.net/pig0nkd.css" />
+    <link rel="stylesheet" href="/public/css/style.css" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SZF313ENVP"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'G-SZF313ENVP');
+    </script>
+  </head>
+  <body>
+    <my-header></my-header>
+    <a href="/blog">
+      <div class="backBlogPage container">
+        <i class="fa-solid fa-arrow-left-long"></i>
+        <p>back to blog page</p>
+      </div>
+    </a>
+    <main class="container">
+      <article>
+        <header>
+          <div class="titleAndBlogPostInfo">
+            <h1>Implementing tab component - vanilla JS</h1>
+            <p class="date">26-07-2022 <span>JavaScript</span> <span>Exercise</span></p>
+          </div>
+        </header>
+
+        <section class="sectionDivider">
+          <p>
+            In this exercise, I am creating a simple tab component that can be useful in any website creation. It will
+            be all done with vanilla JavaScript.
+            <b
+              >The source code is available in the tabs. Please note that I implemented it with JS in 2 different
+              ways.</b
+            >
+          </p>
+
+          <div class="tab-component-btns-wrapper">
+            <button data-tab="1" class="tab-btn">HTML</button>
+            <button data-tab="2" class="tab-btn">SCSS</button>
+            <button data-tab="3" class="tab-btn">JS</button>
+          </div>
+          <div class="tab-component-content-wrapper">
+            <pre class="tab-content tab-content-1">
+              <h3>HTML</h3>
+              &lt;div class=&quot;tab-component-btns-wrapper&quot;&gt;
+              &lt;button data-tab=&quot;1&quot; class=&quot;tab-btn&quot;&gt;HTML&lt;/button&gt;
+              &lt;button data-tab=&quot;2&quot; class=&quot;tab-btn&quot;&gt;SCSS&lt;/button&gt;
+              &lt;button data-tab=&quot;3&quot; class=&quot;tab-btn&quot;&gt;JS&lt;/button&gt;
+            &lt;/div&gt;
+
+
+            &lt;div class=&quot;tab-component-content-wrapper&quot;&gt;
+              &lt;pre class=&quot;tab-content tab-content-1&quot;&gt;
+                &lt;h1&gt;html code&lt;/h1&gt;
+              &lt;/pre&gt;
+              &lt;pre class=&quot;tab-content tab-content-2 hide&quot;&gt;
+                &lt;h1&gt;scss code&lt;/h1&gt;
+              &lt;/pre&gt;
+              &lt;pre class=&quot;tab-content tab-content-3 hide&quot;&gt;
+                &lt;h1&gt;js code&lt;/h1&gt;
+              &lt;/pre&gt;
+            &lt;/div&gt;
+            </pre>
+            <pre class="tab-content tab-content-2 hide">
+              <h3>SCSS</h3>
+              .tab-component-btns-wrapper {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              }
+              
+              .tab-btn {
+                border-radius: 0;
+              }
+              
+              .tab-component-content-wrapper {
+                position: relative;
+                min-width: 100%;
+                min-height: 40rem;
+              }
+              
+              .tab-content {
+                position: absolute;
+                min-width: 100%;
+                min-height: 100%;
+              }
+            </pre>
+            <pre class="tab-content tab-content-3 hide">
+              <h3>JS</h3>
+              //DOM elements
+              const tabBtns = document.querySelectorAll('.tab-btn');
+              const tabBtnsWrapper = document.querySelector('.tab-component-btns-wrapper');
+              const tabContent = document.querySelectorAll('.tab-content');
+
+              //1st WAY OF DOING THIS
+tabBtnsWrapper.addEventListener('click', (e) =&gt; {
+  tabContent.forEach((tab) =&gt; tab.classList.add('hide'));
+  tabBtns.forEach((btn) =&gt; {
+    addStyles(btn, '', '');
+  });
+
+  if (!e.target.closest('.tab-btn')) {
+    tabContent[0].classList.remove('hide');
+    addStyles(tabBtns[0], '1px solid white', 'white');
+  }
+
+  if (e.target.closest('.tab-btn')) {
+    let currentBtn = e.target;
+    const item = document.querySelector(`.tab-content-${currentBtn.dataset.tab}`);
+    item.classList.remove('hide');
+    addStyles(currentBtn, '1px solid white', 'white');
+  }
+});
+
+const addStyles = (el, border, color) =&gt; {
+  el.style.border = border;
+  el.style.color = color;
+};
+
+//2nd WAY OF DOING THIS
+const addStyles = (el, border, color) =&gt; {
+  el.style.border = border;
+  el.style.color = color;
+};
+
+tabBtns.forEach((btn, i) =&gt; {
+  addStyles(tabBtns[0], '1px solid white', 'white');
+
+  btn.addEventListener('click', () =&gt; {
+    tabBtns.forEach((btn) =&gt; addStyles(btn, '', ''));
+    tabContent.forEach((tab) =&gt; tab.classList.add('hide'));
+
+    const target = tabBtns[i];
+
+    if (!target) return false;
+
+    if (target) {
+      tabContent[i].classList.remove('hide');
+      addStyles(target, '1px solid white', 'white');
+    }
+  });
+});
+            </pre>
+          </div>
+        </section>
+      </article>
+    </main>
+    <my-footer></my-footer>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js"
+      integrity="sha512-6PM0qYu5KExuNcKt5bURAoT6KCThUmHRewN3zUFNaoI6Di7XJPTMoT6K0nsagZKk2OB4L7E3q1uQKHNHd4stIQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script type="module" src="/js/components.js"></script>
+    <script type="module" src="/js/main.js"></script>
+    <script type="module" src="/js/tab-component.js"></script>
+  </body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      The function that returns corrected first name/last name in case the user unnecessary will capitalize some letters
+      - JavaScript
+    </title>
+    <meta
+      name="description"
+      content="This function converts any name passed as an argument. The first letter of a string will be returned as the capital and all the other letters will be converted to lower case.
+     "
+    />
+    <link rel="stylesheet" href="https://use.typekit.net/pig0nkd.css" />
+    <link rel="stylesheet" href="/public/css/style.css" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SZF313ENVP"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'G-SZF313ENVP');
+    </script>
+  </head>
+  <body>
+    <my-header></my-header>
+    <a href="/blog">
+      <div class="backBlogPage container">
+        <i class="fa-solid fa-arrow-left-long"></i>
+        <p>back to blog page</p>
+      </div>
+    </a>
+    <main class="container">
+      <article>
+        <header>
+          <div class="titleAndBlogPostInfo">
+            <h1>
+              The function that returns corrected first name/last name in case the user unnecessary will capitalize some
+              letters
+            </h1>
+            <p class="date">05-05-2022 <span>JavaScript</span> <span>Exercise</span></p>
+          </div>
+        </header>
+        <section class="sectionDivider">
+          <p>
+            This function converts any name passed as an argument. The first letter of a string will be returned as the
+            capital and all the other letters will be converted to lowercase.
+          </p>
+          <pre>
+            const nameCorrect = function (name) {
+                const toLowerCase = name.toLowerCase();
+                const correctName = toLowerCase[0].toUpperCase() + toLowerCase.slice(1);
+                return correctName;
+              };
+              
+              console.log(nameCorrect('mACieJ')); //OUTPUT: Maciej
+              
+              </pre
+          >
+        </section>
+      </article>
+    </main>
+    <my-footer></my-footer>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js"
+      integrity="sha512-6PM0qYu5KExuNcKt5bURAoT6KCThUmHRewN3zUFNaoI6Di7XJPTMoT6K0nsagZKk2OB4L7E3q1uQKHNHd4stIQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script type="module" src="/js/components.js"></script>
+    <script type="module" src="/js/main.js"></script>
+  </body>
+</html>

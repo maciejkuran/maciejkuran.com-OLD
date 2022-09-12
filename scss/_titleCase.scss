@@ -1,0 +1,26 @@
+.h1TitleCaseApp {
+  font-family: relation-two, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 5rem;
+  color: var(--clr-grey1);
+}
+
+.titleCaseAppCopyBtn {
+  margin-left: 1rem;
+}
+
+.titleCaseAppOutput {
+  max-width: 30rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 4rem;
+  color: var(--clr-green);
+  display: none;
+}
+
+.TitleCaseBackround {
+  background-color: var(--clr-grey6);
+  padding: 2rem;
+  border-radius: 10px;
+}

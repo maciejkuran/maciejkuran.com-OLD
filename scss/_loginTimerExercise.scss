@@ -1,0 +1,68 @@
+.loginBtn {
+  border: none;
+  padding-left: 1rem;
+  font-size: 2rem;
+}
+
+.loginBtn:hover {
+  border: none;
+}
+
+.shortNotice {
+  margin-left: 0.5rem;
+}
+
+.welcomeMsg {
+  @extend .shortNotice;
+  color: var(--clr-white);
+}
+
+.timeCounter {
+  @extend .shortNotice;
+  color: var(--clr-green);
+}
+
+.inputLogin {
+  @extend .shortNotice;
+  padding: 2rem;
+  border: 1px solid var(--clr-grey3);
+}
+
+.loginArea {
+  background-color: var(--clr-grey5);
+  box-shadow: 20px 20px 50px #121212;
+  padding: 5rem;
+  border-radius: 10px;
+  max-width: 70rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+
+  h2 {
+    padding-top: 0;
+  }
+}
+
+.loginFlowchart {
+  max-width: 80%;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.loginExGithub {
+  text-align: center;
+  max-width: 40rem;
+  padding: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+
+  h3:hover {
+    color: var(--clr-white);
+    transition: 500ms;
+  }
+}
+
+.check--login-functionality {
+  cursor: pointer;
+}

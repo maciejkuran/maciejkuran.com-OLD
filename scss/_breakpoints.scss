@@ -1,0 +1,611 @@
+// @media (max-width: 1199.98px) {
+// }
+
+@media (max-width: 991.98px) {
+  h1 {
+    font-size: 3rem;
+    span {
+      font-size: 3rem;
+    }
+  }
+
+  .homePageTopSection {
+    h1 {
+      text-align: center;
+    }
+
+    span {
+      font-size: 3rem;
+    }
+  }
+
+  footer {
+    flex-direction: column;
+
+    p {
+      margin-top: 2rem;
+      font-size: 1.5rem;
+    }
+  }
+
+  .myProjectsContainer {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 'featured-project featured-project';
+  }
+
+  .about-grid-single-block {
+    padding: 2rem;
+  }
+
+  .featured-project-wrapper1 {
+    video {
+      max-width: 50rem;
+    }
+  }
+}
+
+@media (max-width: 864.98px) {
+  h1 {
+    font-size: 2.7rem;
+    span {
+      font-size: 2.7rem;
+    }
+  }
+
+  .homepage {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+    padding: 0;
+  }
+
+  .header-elements {
+    nav {
+      a {
+        font-size: 1.8rem;
+      }
+    }
+  }
+
+  .homePageTopSection {
+    h1 {
+      span {
+        font-size: 2.7rem;
+      }
+    }
+  }
+
+  h2,
+  h3 {
+    font-size: 2.3rem;
+  }
+
+  .homePage2ndSection {
+    flex-wrap: wrap;
+    img {
+      margin-top: 3rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  .myStoryPageTopSection {
+    flex-direction: column;
+    :first-child {
+      padding-right: 0;
+    }
+
+    .myStoryPageMyPhoto {
+      display: flex;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  .myPhotoAboutMePage {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+
+  .imgArticle {
+    max-width: 60rem;
+  }
+
+  .about-page-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      'item1 item1'
+      'item2 item3'
+      'item4 item4'
+      'item5 item5';
+  }
+
+  .featured-project-wrapper1 {
+    video {
+      max-width: 40rem;
+    }
+  }
+}
+
+@media (max-width: 767.98px) {
+  .header-elements {
+    padding: 0;
+    img {
+      margin-top: 1.7rem;
+    }
+    nav {
+      display: none;
+    }
+
+    .showNav {
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 12vh;
+      min-width: 20rem;
+      padding: 2rem;
+      border-radius: 10px;
+      margin-left: auto;
+      background-color: var(--clr-grey6);
+      filter: drop-shadow(20px 20px 20px #121212);
+      margin-right: 2rem;
+
+      a {
+        display: block;
+        padding: 1rem;
+      }
+
+      .fa-github {
+        margin-left: 0rem;
+      }
+    }
+
+    .hamburgerMenu {
+      display: flex;
+      flex-direction: column;
+      border: none;
+      padding: 0;
+
+      .line {
+        padding: 0.1rem;
+        background-color: var(--clr-grey3);
+        margin: 0.4rem;
+        width: 3rem;
+        height: 0.1rem;
+        transition: 0.3s ease-in-out;
+        border-radius: 10px;
+        display: flex;
+      }
+    }
+    .hamburgerMenu.active {
+      .line:first-child {
+        transform: translateY(-300px);
+      }
+
+      .line:nth-child(2) {
+        transform: rotate(0) translateY(0);
+        background-color: var(--clr-green);
+      }
+
+      .line:nth-child(3) {
+        transform: rotate(90deg) translateX(-10px);
+        background-color: var(--clr-green);
+      }
+    }
+  }
+
+  .hamburgerMenu:focus {
+    outline: none;
+    box-shadow: none;
+    border: none;
+  }
+
+  .myStoryPageTopSection {
+    margin-top: 2rem;
+  }
+
+  .myProjectsPageTopSection {
+    max-width: 60rem;
+    margin-top: 1rem;
+  }
+
+  footer {
+    justify-content: center;
+    padding: 1;
+    div {
+      a {
+        font-size: 1.5rem;
+      }
+    }
+
+    p {
+      font-size: 1.2rem;
+    }
+  }
+
+  .sectionFlex {
+    flex-direction: column;
+    div:nth-child(1) {
+      width: 100%;
+    }
+    div:nth-child(2) {
+      padding-left: 0;
+      width: 100%;
+    }
+  }
+
+  .puzzleImg {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .imgArticle {
+    max-width: 50rem;
+    // padding: 2rem;
+  }
+
+  .postsContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .articlesSearchInput {
+    min-width: 30rem;
+  }
+
+  .homeImg {
+    padding-top: 15rem;
+  }
+
+  .loginArea {
+    padding: 2rem;
+  }
+
+  .loginFlowchart {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 719.98px) {
+  .featured-project {
+    flex-direction: column;
+  }
+
+  .featured-project-wrapper1 {
+    justify-content: center;
+
+    video {
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+    }
+  }
+}
+
+@media (max-width: 575.98px) {
+  button {
+    padding: 1.4rem 2rem 1.4rem 2rem;
+    font-size: 1.8rem;
+  }
+
+  h1,
+  h1 span {
+    font-size: 2.2rem;
+  }
+
+  .homePageTopSection {
+    min-height: 40rem;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 8rem;
+    h1 {
+      span {
+        font-size: 2.2rem;
+      }
+    }
+  }
+
+  .homePage2ndSection h2 {
+    font-size: 2.2rem;
+  }
+
+  .header-elements {
+    img {
+      width: 200px;
+      margin-left: 0;
+    }
+    nav {
+      margin-top: 2rem;
+      top: 12vh;
+      left: 35vw;
+      min-width: 20rem;
+    }
+  }
+
+  .homePage2ndSection {
+    img {
+      max-width: 30rem;
+      max-height: 30rem;
+    }
+  }
+
+  .mainWrapper {
+    min-height: 40rem;
+  }
+
+  .myStoryPageTopSection {
+    margin-top: 0;
+    p {
+      b {
+        font-size: 1.4rem;
+      }
+    }
+    .myStoryPageMyPhoto {
+      max-width: 37rem;
+      max-width: 100%;
+    }
+  }
+
+  .imgArticle {
+    max-width: 40rem;
+    max-width: 100%;
+    margin: 1rem 0;
+  }
+
+  .sectionDivider {
+    margin: 1rem 0;
+  }
+
+  .caseStudyUnitConvertedTopBottomSection {
+    margin-bottom: 8rem;
+  }
+
+  .myProjectsPageTopSection {
+    max-width: 60rem;
+    margin-top: 0;
+  }
+
+  .contactPageMainWrapper {
+    min-height: 40rem;
+    h1 {
+      font-size: 2.2rem;
+
+      span {
+        font-size: 2.2rem;
+      }
+    }
+  }
+
+  .encoderDecoderPageFlex {
+    flex-wrap: wrap;
+  }
+
+  .encoderDecoderClearBtn {
+    padding: 0.8rem;
+    margin-right: 0;
+    font-size: 1.2rem;
+  }
+
+  .encoderDecoderCopyBtn {
+    margin-right: 2rem;
+  }
+
+  .entityImg {
+    border-radius: 0;
+    margin-bottom: 5rem;
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 75%;
+  }
+
+  .postsContainer {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .backBlogPage {
+    margin-top: 1rem;
+
+    p {
+      font-size: 1.5rem;
+    }
+  }
+
+  .preBlogExtendedViewCode {
+    max-height: 50rem;
+  }
+
+  .titleAndBlogPostInfo {
+    h1 {
+      font-size: 2.1rem;
+    }
+  }
+
+  .palindromContainer {
+    margin-bottom: 7rem;
+  }
+
+  .articlesSearchInput {
+    min-width: 20rem;
+    font-size: 1.8rem;
+  }
+
+  .myProjectsContainer {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-areas: 'featured-project';
+  }
+
+  .featured-project {
+    h2 {
+      font-size: 2rem;
+    }
+  }
+
+  .home_introduction {
+    margin-top: 4rem;
+  }
+
+  .home_navigation {
+    margin-top: 0;
+  }
+
+  .fa-xmark {
+    font-size: 3rem;
+  }
+
+  .top_home {
+    img {
+      max-width: 7rem;
+    }
+    p {
+      font-size: 3rem;
+    }
+
+    h1 {
+      font-size: 1.7rem;
+    }
+  }
+
+  .bottom_home {
+    h2 {
+      font-size: 1.7rem;
+    }
+  }
+
+  .home_nav {
+    line-height: 45px;
+
+    a {
+      font-size: 2.1rem;
+    }
+  }
+
+  .click_to_start {
+    font-size: 2rem;
+    padding: 2.2rem 4rem 2.2rem 4rem;
+  }
+
+  .loginArea {
+    margin-top: 3rem;
+  }
+
+  .about-page-grid {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-areas:
+      'item1'
+      'item2'
+      'item3'
+      'item4'
+      'item5';
+  }
+
+  .about-grid-item1 {
+    div {
+      margin-left: 0;
+    }
+
+    img {
+      margin-right: 2.3rem;
+      max-width: 10rem;
+    }
+
+    h2 {
+      font-size: 1.7rem;
+    }
+
+    p {
+      font-size: 1.4rem;
+
+      b {
+        font-size: 1.4rem;
+      }
+    }
+
+    .about-icons {
+      font-size: 3rem;
+    }
+  }
+
+  .tag {
+    padding: 0.7rem;
+  }
+
+  .about-my-story-section {
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 374.98px) {
+  .header-elements {
+    padding: 0;
+
+    nav {
+      top: 2vh;
+      left: 25vw;
+      min-width: 20rem;
+    }
+  }
+
+  .homePageTopSection {
+    h1 {
+      font-size: 2rem;
+      span {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  .unit-converted-case-study-logo {
+    max-width: 30rem;
+  }
+
+  .fa-xmark {
+    font-size: 2.5rem;
+  }
+
+  .top_home {
+    img {
+      max-width: 6rem;
+    }
+    p {
+      font-size: 2.5rem;
+    }
+
+    h1 {
+      font-size: 1.6rem;
+    }
+  }
+
+  .bottom_home {
+    h2 {
+      font-size: 1.6rem;
+    }
+  }
+
+  .home_nav {
+    line-height: 40px;
+
+    a {
+      font-size: 2.5rem;
+    }
+  }
+
+  .about-grid-single-block {
+    padding: 1rem;
+  }
+
+  .about-grid-item1 {
+    h2 {
+      font-size: 1.5rem;
+    }
+    img {
+      max-width: 8rem;
+    }
+  }
+}

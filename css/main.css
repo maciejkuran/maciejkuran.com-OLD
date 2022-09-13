@@ -61,6 +61,12 @@ a {
   font-weight: 400;
 }
 
+li {
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--grey-background-2);
+}
+
 p {
   margin-bottom: 1.5rem;
 }
@@ -127,6 +133,15 @@ button {
   left: 0;
   width: 100%;
   background-color: rgba(255, 255, 255, 0.972);
+  -webkit-transition: -webkit-transform 500ms ease;
+  transition: -webkit-transform 500ms ease;
+  transition: transform 500ms ease;
+  transition: transform 500ms ease, -webkit-transform 500ms ease;
+}
+
+.primary-nav-hide {
+  -webkit-transform: translateY(-150%);
+          transform: translateY(-150%);
 }
 
 .primary-nav:before {
@@ -176,6 +191,7 @@ button {
 }
 .nav-items ul li {
   margin: 0 0.5rem;
+  border-bottom: none;
 }
 .nav-items ul li a {
   padding: 0.5rem 2rem;
@@ -510,6 +526,34 @@ button {
   text-align: center;
 }
 
+.course-work-container, .other-education-container {
+  position: fixed;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 5px;
+  border: 1px solid var(--grey-tag-border);
+  min-width: 90rem;
+  max-height: 40rem;
+  overflow-y: scroll;
+  z-index: 3;
+}
+
+.close-popup-btn {
+  font-size: 2.5rem;
+  position: absolute;
+  top: 1%;
+  right: 1%;
+  padding: 0 1rem;
+}
+
+.close-popup-btn:hover {
+  background-color: var(--grey-background-2);
+}
+
 @media (max-width: 1366.98px) {
   .tag-primary {
     font-size: 1.6rem;
@@ -538,6 +582,14 @@ button {
             transform: translateY(25%);
   }
 }
+@media (max-width: 938.98px) {
+  .course-work-container {
+    min-width: 90%;
+  }
+  .other-education-container {
+    min-width: 90%;
+  }
+}
 @media (max-width: 849.98px) {
   h1 {
     font-size: 4rem;
@@ -547,7 +599,8 @@ h3 {
     font-size: 2.8rem;
   }
   p,
-.primary-button {
+.primary-button,
+li {
     font-size: 1.8rem;
   }
   .nav-items {
@@ -698,7 +751,8 @@ h3 {
   h1 {
     font-size: 3.5rem;
   }
-  p {
+  p,
+li {
     font-size: 1.6rem;
   }
   .home-main-wrapper {

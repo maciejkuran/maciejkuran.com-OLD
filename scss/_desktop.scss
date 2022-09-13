@@ -12,6 +12,11 @@
   left: 0;
   width: 100%;
   background-color: rgba(255, 255, 255, 0.972);
+  transition: transform 500ms ease;
+}
+
+.primary-nav-hide {
+  transform: translateY(-150%);
 }
 
 .primary-nav:before {
@@ -51,6 +56,7 @@
 
     li {
       margin: 0 0.5rem;
+      border-bottom: none;
       a {
         padding: 0.5rem 2rem;
         font-size: 1.8rem;
@@ -303,4 +309,35 @@
     font-size: 1.5rem;
     text-align: center;
   }
+}
+
+.course-work-container {
+  position: fixed;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 5px;
+  border: 1px solid var(--grey-tag-border);
+  min-width: 90rem;
+  max-height: 40rem;
+  overflow-y: scroll;
+  z-index: 3;
+}
+
+.other-education-container {
+  @extend .course-work-container;
+}
+
+.close-popup-btn {
+  font-size: 2.5rem;
+  position: absolute;
+  top: 1%;
+  right: 1%;
+  padding: 0 1rem;
+}
+
+.close-popup-btn:hover {
+  background-color: var(--grey-background-2);
 }

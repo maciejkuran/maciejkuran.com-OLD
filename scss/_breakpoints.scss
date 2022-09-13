@@ -29,6 +29,16 @@
   }
 }
 
+@media (max-width: 938.98px) {
+  .course-work-container {
+    min-width: 90%;
+  }
+
+  .other-education-container {
+    min-width: 90%;
+  }
+}
+
 @media (max-width: 849.98px) {
   h1 {
     font-size: 4rem;
@@ -40,7 +50,8 @@
   }
 
   p,
-  .primary-button {
+  .primary-button,
+  li {
     font-size: 1.8rem;
   }
 
@@ -193,7 +204,8 @@
     font-size: 3.5rem;
   }
 
-  p {
+  p,
+  li {
     font-size: 1.6rem;
   }
 

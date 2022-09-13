@@ -61,6 +61,7 @@
         padding: 0.5rem 2rem;
         font-size: 1.8rem;
         border-radius: 5px;
+        border-bottom: none;
       }
     }
 
@@ -172,10 +173,6 @@
   top: 50%;
   left: 50%;
   z-index: 2;
-}
-
-.hide {
-  display: none;
 }
 
 .about-page-header {
@@ -340,4 +337,34 @@
 
 .close-popup-btn:hover {
   background-color: var(--grey-background-2);
+}
+
+.cookies-container {
+  position: fixed;
+  @include flexCenter();
+  flex-wrap: wrap;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+  padding: 1rem;
+  border: solid 1px var(--grey-tag-border);
+
+  p,
+  h3 {
+    text-align: center;
+    margin-bottom: 0;
+    margin: 0 1rem;
+  }
+
+  p a {
+    font-size: 1.6rem;
+  }
+
+  div {
+    @include flexCenter();
+  }
+}
+
+.hide {
+  display: none;
 }

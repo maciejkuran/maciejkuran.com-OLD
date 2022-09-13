@@ -67,14 +67,17 @@ li {
   border-bottom: 1px solid var(--grey-background-2);
 }
 
-p {
+p,
+li {
   margin-bottom: 1.5rem;
 }
-p a {
+p a,
+li a {
   border-bottom: 1px solid var(--grey-icons);
   padding: 0 0.2rem;
 }
-p a:hover {
+p a:hover,
+li a:hover {
   background-color: var(--grey-background-2);
 }
 
@@ -197,6 +200,7 @@ button {
   padding: 0.5rem 2rem;
   font-size: 1.8rem;
   border-radius: 5px;
+  border-bottom: none;
 }
 .nav-items ul a:hover {
   background-color: var(--grey-background-2);
@@ -356,10 +360,6 @@ button {
   top: 50%;
   left: 50%;
   z-index: 2;
-}
-
-.hide {
-  display: none;
 }
 
 .about-page-header {
@@ -554,6 +554,50 @@ button {
   background-color: var(--grey-background-2);
 }
 
+.cookies-container {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+  padding: 1rem;
+  border: solid 1px var(--grey-tag-border);
+}
+.cookies-container p,
+.cookies-container h3 {
+  text-align: center;
+  margin-bottom: 0;
+  margin: 0 1rem;
+}
+.cookies-container p a {
+  font-size: 1.6rem;
+}
+.cookies-container div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hide {
+  display: none;
+}
+
 @media (max-width: 1366.98px) {
   .tag-primary {
     font-size: 1.6rem;
@@ -601,6 +645,12 @@ h3 {
   p,
 .primary-button,
 li {
+    font-size: 1.8rem;
+  }
+  p a {
+    font-size: 1.8rem;
+  }
+  li a {
     font-size: 1.8rem;
   }
   .nav-items {
@@ -753,6 +803,12 @@ h3 {
   }
   p,
 li {
+    font-size: 1.6rem;
+  }
+  p a {
+    font-size: 1.6rem;
+  }
+  li a {
     font-size: 1.6rem;
   }
   .home-main-wrapper {

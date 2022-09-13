@@ -32,7 +32,6 @@ class webNavbar extends HTMLElement {
 customElements.define('web-navbar', webNavbar);
 
 //Footer
-
 class webFooter extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
@@ -46,3 +45,20 @@ class webFooter extends HTMLElement {
 }
 
 customElements.define('web-footer', webFooter);
+
+//Cookies popup
+class cookiesPopup extends HTMLElement {
+  connectedCallback() {
+    this.innerHTML = `
+    <div class="cookies-container hide">
+      <h3>Cookies 🍪</h3>
+      <p>My website can use cookies! Privacy policy section is <a href="/privacy-policy">available here.</a></p>
+      <div>
+        <button class="primary-button accept-cookies-btn">ACCEPT<i class="fa-solid fa-arrow-right-long"></i></button>
+      </div>
+    </div>
+    `;
+  }
+}
+
+customElements.define('cookies-popup', cookiesPopup);

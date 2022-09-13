@@ -76,3 +76,26 @@ otherEducationBtn?.addEventListener('click', displayPopup);
 courseworkBtn?.addEventListener('click', displayPopup);
 closeBtns?.forEach((btn) => btn.addEventListener('click', hidePopup));
 backgroundOverlay?.addEventListener('click', hidePopup);
+
+////Displaying cookies container if not accepted
+const cookiesContainer = document.querySelector('.cookies-container');
+const cookiesAcceptBtn = document.querySelector('.accept-cookies-btn');
+
+//check in localStorage if cookies were accepted and if not display cookies container
+const displayCookies = () => {
+  let storageStatus = localStorage.getItem('maciejkuran.com:cookies');
+
+  if (storageStatus === null) cookiesContainer.classList.remove('hide');
+
+  if (storageStatus !== null) cookiesContainer.classList.add('hide');
+};
+
+document.addEventListener('DOMContentLoaded', displayCookies);
+
+//Save cookies to localStorage on button click
+const acceptCookies = () => {
+  localStorage.setItem('maciejkuran.com:cookies', 'accepted');
+  cookiesContainer.classList.add('hide');
+};
+
+cookiesAcceptBtn?.addEventListener('click', acceptCookies);

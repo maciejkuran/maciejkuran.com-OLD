@@ -1,5 +1,6 @@
 'use strict';
 
+//Navbar
 class webNavbar extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
@@ -29,3 +30,19 @@ class webNavbar extends HTMLElement {
 }
 
 customElements.define('web-navbar', webNavbar);
+
+//Footer
+
+class webFooter extends HTMLElement {
+  connectedCallback() {
+    this.innerHTML = `
+    <footer class="web-footer">
+      <p>Copyright©, Maciej Kuran-Janowski</p>
+
+      <div><a href="/privacy-policy">Privacy policy</a></div>
+    </footer>
+    `;
+  }
+}
+
+customElements.define('web-footer', webFooter);

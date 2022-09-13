@@ -535,7 +535,7 @@ button {
   background-color: white;
   padding: 2rem;
   border-radius: 5px;
-  border: 1px solid var(--grey-tag-border);
+  border: 3px solid var(--grey-tag-border);
   min-width: 90rem;
   max-height: 40rem;
   overflow-y: scroll;

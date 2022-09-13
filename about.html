@@ -119,15 +119,47 @@
                 of Business National Louis University
               </p>
 
-              <button class="primary-button coursework-btn">
+              <button data-popupclass=".course-work-container" class="primary-button coursework-btn">
                 coursework<i class="fa-solid fa-arrow-right-long"></i>
               </button>
 
-              <button class="primary-button coursework-btn">
+              <button data-popupclass=".other-education-container" class="primary-button othereducation-btn">
                 other education<i class="fa-solid fa-arrow-right-long"></i>
               </button>
               <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!
               TODO:TUTAJ WSTAWIĆ POPUPY COURSEWORK I OTHER EDUCATION -->
+              <div class="popup course-work-container hide">
+                <h3>Coursework</h3>
+                <ul>
+                  <li>🟧 2022 - TypeScript with Maximilian Schwarzmüller</li>
+                  <li>🟧 2022 - React.js with Maximilian Schwarzmüller</li>
+                  <li>🟧 2022 - Node.js with Jonas Schmedtmann</li>
+                  <li>🟩 2022 - JavaScript with Jonas Schmedtmann</li>
+                  <li>🟩 2022 - Responsive Web Design with Daniel Walter Scott</li>
+                </ul>
+                <button class="close-popup-btn">
+                  <i class="fa-solid fa-xmark"></i>
+                </button>
+              </div>
+
+              <div class="popup other-education-container hide">
+                <h3>Other education</h3>
+                <ul>
+                  <li>
+                    🟩 10/2015 - 06/2018 Homeland Security at Nicolaus Copernicus University in Toruń (bachelor's
+                    degree)
+                  </li>
+                  <li>
+                    🟩 09/2010 - 06/2014 prof. E.Pijanowski's Technical College of Hospitality in Warsaw (hospitality
+                    technician degree)
+                  </li>
+                  <li>🟩 09/2007 - 06/2010 Meridian International Middle School in Warsaw</li>
+                  <li>🟩 09/2000 - 06/2006 Antoni Szaliński's Music School in Żyrardów (first degree)</li>
+                </ul>
+                <button class="close-popup-btn">
+                  <i class="fa-solid fa-xmark"></i>
+                </button>
+              </div>
             </div>
           </div>
         </div>

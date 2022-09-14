@@ -1,3 +1,9 @@
+@mixin flexCenter() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 @media (max-width: 1366.98px) {
   .tag-primary {
     font-size: 1.6rem;
@@ -9,6 +15,24 @@
     .seperator {
       width: 10rem;
     }
+  }
+
+  .my-projects-header-container {
+    flex-direction: column;
+
+    .wrap {
+      flex-direction: column;
+
+      .separator {
+        height: 9rem;
+        width: 1px;
+        margin: 1.5rem 0;
+      }
+    }
+  }
+
+  .colorala-data {
+    @include flexCenter();
   }
 }
 
@@ -77,7 +101,7 @@
 
 @media (max-width: 752.98px) {
   .primary-nav {
-    z-index: 3;
+    z-index: 5;
   }
   .nav-list {
     position: fixed;
@@ -173,6 +197,10 @@
       }
     }
   }
+
+  .my-projects-header {
+    margin-top: 0;
+  }
 }
 
 @media (max-width: 600.98px) {
@@ -244,6 +272,14 @@
   .tag-primary {
     font-size: 1.4rem;
   }
+
+  .colorala-banner img {
+    max-width: 32rem;
+  }
+
+  .my-projects-header-container {
+    margin-top: 2rem;
+  }
 }
 
 @media (max-width: 386.98px) {
@@ -252,5 +288,19 @@
   }
   .person-data {
     margin: 1rem 0 0 0;
+  }
+
+  .colorala-banner {
+    img {
+      max-width: 26rem;
+    }
+
+    div h3 {
+      font-size: 1.8rem;
+    }
+  }
+
+  .my-projects-header-container {
+    margin-top: 2rem;
   }
 }

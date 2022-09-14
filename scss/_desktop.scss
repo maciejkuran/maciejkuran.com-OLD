@@ -412,7 +412,7 @@
       @extend .home-header-animation;
     }
 
-    .seperator {
+    .separator {
       width: 25rem;
       height: 1px;
       background-color: var(--grey-tag-border);
@@ -461,8 +461,9 @@
 
   .project {
     max-width: 100rem;
+    margin: 0 1.5rem;
 
-    h2 {
+    h3 {
       font-size: 2.8rem;
       font-weight: 600;
       margin-bottom: 2rem;

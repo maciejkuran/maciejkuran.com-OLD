@@ -654,7 +654,7 @@ button {
       -ms-flex-align: center;
           align-items: center;
 }
-.my-projects-header-container .wrap .seperator {
+.my-projects-header-container .wrap .separator {
   width: 25rem;
   height: 1px;
   background-color: var(--grey-tag-border);
@@ -708,8 +708,9 @@ button {
 }
 .projects-grid-container .project {
   max-width: 100rem;
+  margin: 0 1.5rem;
 }
-.projects-grid-container .project h2 {
+.projects-grid-container .project h3 {
   font-size: 2.8rem;
   font-weight: 600;
   margin-bottom: 2rem;
@@ -725,6 +726,34 @@ button {
 @media (max-width: 1299.98px) {
   .about-page-header .seperator {
     width: 10rem;
+  }
+  .my-projects-header-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .my-projects-header-container .wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .my-projects-header-container .wrap .separator {
+    height: 9rem;
+    width: 1px;
+    margin: 1.5rem 0;
+  }
+  .colorala-data {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 @media (max-width: 1215.98px) {
@@ -784,7 +813,7 @@ li {
 }
 @media (max-width: 752.98px) {
   .primary-nav {
-    z-index: 3;
+    z-index: 5;
   }
   .nav-list {
     position: fixed;
@@ -886,6 +915,9 @@ li {
   .web-footer div a {
     font-size: 1.5rem;
   }
+  .my-projects-header {
+    margin-top: 0;
+  }
 }
 @media (max-width: 600.98px) {
   .about-grid-container {
@@ -952,6 +984,12 @@ li {
   .tag-primary {
     font-size: 1.4rem;
   }
+  .colorala-banner img {
+    max-width: 32rem;
+  }
+  .my-projects-header-container {
+    margin-top: 2rem;
+  }
 }
 @media (max-width: 386.98px) {
   .about-grid-container {
@@ -959,5 +997,14 @@ li {
   }
   .person-data {
     margin: 1rem 0 0 0;
+  }
+  .colorala-banner img {
+    max-width: 26rem;
+  }
+  .colorala-banner div h3 {
+    font-size: 1.8rem;
+  }
+  .my-projects-header-container {
+    margin-top: 2rem;
   }
 }

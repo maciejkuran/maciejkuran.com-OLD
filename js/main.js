@@ -85,9 +85,9 @@ const cookiesAcceptBtn = document.querySelector('.accept-cookies-btn');
 const displayCookies = () => {
   let storageStatus = localStorage.getItem('maciejkuran.com:cookies');
 
-  if (storageStatus === null) cookiesContainer.classList.remove('hide');
+  if (storageStatus === null) cookiesContainer?.classList.remove('hide');
 
-  if (storageStatus !== null) cookiesContainer.classList.add('hide');
+  if (storageStatus !== null) cookiesContainer?.classList.add('hide');
 };
 
 document.addEventListener('DOMContentLoaded', displayCookies);
@@ -99,77 +99,3 @@ const acceptCookies = () => {
 };
 
 cookiesAcceptBtn?.addEventListener('click', acceptCookies);
-
-////Inserting all other-projects to DOM
-const projectsContainer = document.querySelector('.projects-grid-container');
-
-const Project = class {
-  projects = [];
-
-  constructor(title, description, img, alt, webLink, githubLink, csLink, tags) {
-    this.title = title;
-    this.description = description;
-    this.img = img;
-    this.alt = alt;
-    this.webLink = webLink;
-    this.githubLink = githubLink;
-    this.csLink = csLink;
-    this.tags = tags;
-    this.insertProjectsToDOM();
-  }
-
-  getProjects() {
-    this.projects.push(this);
-    return this.projects;
-  }
-
-  insertProjectsToDOM() {
-    let projects = this.getProjects();
-
-    projects.forEach((project) => {
-      const container = document.createElement('div');
-      container.className = 'item project';
-      container.innerHTML = `
-            <img src="${project.img}" alt="${project.alt}" />
-            <div class="item-content">
-              <h2>${project.title}</h2>
-              <p>${project.description}</p>
-
-              <a target="_blank" href="${project.webLink}">
-                <button class="primary-button">live<i class="fa-solid fa-arrow-right-long"></i></button>
-              </a>
-
-              <a target="_blank" href="${project.githubLink}">
-                <button class="primary-button">GitHub<i class="fa-solid fa-arrow-right-long"></i></button>
-              </a>
-
-            </div>
-    `;
-
-      // <div class="tag-cloud tag-cloud-my-projects tag-cloud-other-projects">
-      // ${this.insertTags(project.tags)}
-      // </div>
-
-      const tagsDiv = document.createElement('div');
-      tagsDiv.className = 'tag-cloud tag-cloud-my-projects tag-cloud-other-projects';
-
-      projectsContainer.append(container);
-      container.children[1].append(tagsDiv);
-      this.insertTags(project.tags, tagsDiv);
-    });
-  }
-
-  insertTags(tags, container) {
-    tags.forEach((tag) => {
-      const p = document.createElement('p');
-      p.classList.add('tag-primary');
-      p.textContent = tag;
-      container.append(p);
-    });
-  }
-};
-
-//prettier-ignore
-const project_1 = new Project('PugHouse.pl', 'Cosy blog and community 🐾❤️ for Pug Lovers & Owners.', '/img/icons/Pug House.png', 'colorala color palette generator app', 'https://pughouse.pl/', 'https://github.com/maciejkuran/PugHouse.pl', '', ['Xd', 'Ps', 'Ai', 'HTML5', 'SCSS', 'JavaScript', 'Git', 'GitHub']);
-//prettier-ignore
-const project_2 = new Project('yhome', 'Property listing demo app. yhome is a fake brand that I designed and created for learning purposes.', '/img/icons/yhome.png', 'yhome project', 'https://yhome.maciejkuran.com/', 'https://github.com/maciejkuran/yhome-Property-Listing-App', '', ['Xd','Ai', 'HTML5', 'SCSS', 'JavaScript', 'Git', 'GitHub'])

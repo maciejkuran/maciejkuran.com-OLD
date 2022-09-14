@@ -620,14 +620,14 @@ button {
 }
 .colorala-banner img {
   max-width: 40rem;
-  -webkit-filter: drop-shadow(3px 5px 8px #f8f8f9);
-          filter: drop-shadow(3px 5px 8px #f8f8f9);
+  -webkit-filter: drop-shadow(3px 2px 5px #f4f4f4);
+          filter: drop-shadow(3px 2px 5px #f4f4f4);
 }
 .colorala-banner div h3 {
   text-align: right;
   font-family: "Poppins", sans-serif;
   font-size: 2.2rem;
-  line-height: 0;
+  line-height: 20px;
   color: white;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.854);
   -webkit-filter: drop-shadow(0 0 0.75rem rgb(68, 68, 68));

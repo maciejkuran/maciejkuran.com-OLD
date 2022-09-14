@@ -140,6 +140,7 @@ button {
   transition: -webkit-transform 500ms ease;
   transition: transform 500ms ease;
   transition: transform 500ms ease, -webkit-transform 500ms ease;
+  z-index: 3;
 }
 
 .primary-nav-hide {
@@ -230,7 +231,7 @@ button {
   text-align: center;
 }
 
-.home-header-animation, .about-page-header h1 {
+.home-header-animation, .my-projects-header-container .wrap h1, .about-page-header h1 {
   background-image: -webkit-gradient(linear, right top, left top, from(#2ecc71), color-stop(#3498db), color-stop(#9b59b6), to(#f39c12));
   background-image: linear-gradient(to left, #2ecc71, #3498db, #9b59b6, #f39c12);
   -webkit-background-clip: text;
@@ -359,7 +360,7 @@ button {
           transform: translate(-50%, -50%);
   top: 50%;
   left: 50%;
-  z-index: 2;
+  z-index: 4;
 }
 
 .about-page-header {
@@ -460,7 +461,7 @@ button {
   padding: 0.6rem 1.3rem;
   margin-right: 2rem;
   margin-bottom: 2rem;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 .education {
@@ -539,7 +540,7 @@ button {
   min-width: 90rem;
   max-height: 40rem;
   overflow-y: scroll;
-  z-index: 3;
+  z-index: 5;
 }
 
 .close-popup-btn {
@@ -599,7 +600,7 @@ button {
 }
 
 .my-projects-header {
-  margin-top: 8rem;
+  margin-top: 6rem;
 }
 
 .colorala-banner {
@@ -617,11 +618,12 @@ button {
   background-image: url(/img/colorala_background_banner.png);
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: right;
 }
 .colorala-banner img {
   max-width: 40rem;
-  -webkit-filter: drop-shadow(3px 2px 5px #f4f4f4);
-          filter: drop-shadow(3px 2px 5px #f4f4f4);
+  -webkit-filter: drop-shadow(1px 4px 4px #391c1c);
+          filter: drop-shadow(1px 4px 4px #391c1c);
 }
 .colorala-banner div h3 {
   text-align: right;
@@ -632,6 +634,87 @@ button {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.854);
   -webkit-filter: drop-shadow(0 0 0.75rem rgb(68, 68, 68));
           filter: drop-shadow(0 0 0.75rem rgb(68, 68, 68));
+}
+
+.my-projects-header-container {
+  margin-top: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1rem;
+}
+.my-projects-header-container .wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.my-projects-header-container .wrap .seperator {
+  width: 25rem;
+  height: 1px;
+  background-color: var(--grey-tag-border);
+  margin: 0 2rem;
+}
+
+.colorala-data .item {
+  max-width: 85rem;
+}
+.colorala-data .item h2 {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: solid 1px var(--grey-tag-border);
+}
+
+.tag-cloud-my-projects {
+  border-top: solid 1px var(--grey-tag-border);
+  margin-top: 1rem;
+}
+.tag-cloud-my-projects p {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  margin-top: 1rem;
+  margin-right: 1rem;
+}
+
+.other-projects-section {
+  margin-top: 10rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.other-projects-section h3 {
+  margin-bottom: 3rem;
+}
+
+.projects-grid-container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  row-gap: 4rem;
+}
+.projects-grid-container .project {
+  max-width: 100rem;
+}
+.projects-grid-container .project h2 {
+  font-size: 2.8rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: solid 1px var(--grey-tag-border);
 }
 
 @media (max-width: 1366.98px) {

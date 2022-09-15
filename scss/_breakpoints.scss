@@ -53,6 +53,12 @@
   }
 }
 
+@media (max-width: 1062.98px) {
+  .blog-post-header .item {
+    padding: 3rem;
+  }
+}
+
 @media (max-width: 938.98px) {
   .course-work-container {
     min-width: 90%;
@@ -234,6 +240,16 @@
       margin-left: 0;
     }
   }
+
+  .blog-post-header {
+    .tag-cloud {
+      margin-bottom: 3rem;
+    }
+  }
+
+  pre code {
+    font-size: 1.5rem;
+  }
 }
 
 @media (max-width: 500.98px) {
@@ -241,6 +257,7 @@
   h3 {
     font-size: 2.5rem;
   }
+
   .home-container {
     margin-top: 11rem;
   }

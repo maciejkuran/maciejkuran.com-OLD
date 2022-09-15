@@ -105,8 +105,27 @@ input {
   border: 1px solid #707070;
 }
 
+pre {
+  position: relative;
+  max-width: 100%;
+  min-height: 40rem;
+  overflow: scroll;
+  border: 3px solid var(--color-black);
+  background-color: rgb(16, 16, 16);
+  color: var(--grey-tag-border);
+  padding: 1rem 0 2rem 3rem;
+  margin: 1.5rem 0 4rem 0;
+  white-space: pre-line;
+}
+pre code {
+  position: absolute;
+  font-family: "Roboto Mono", monospace;
+  font-size: 1.8rem;
+}
+
 ::-webkit-scrollbar {
   width: 10px;
+  height: 10px;
 }
 
 ::-webkit-scrollbar-track {
@@ -122,7 +141,7 @@ input {
 }
 
 ::-webkit-scrollbar-corner {
-  background-color: transparent;
+  background-color: var(--grey-background-2);
 }
 
 .primary-button {
@@ -814,6 +833,119 @@ input {
   font-size: 2.8rem;
 }
 
+.blog-post-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+}
+
+@-webkit-keyframes gradientAnim {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes gradientAnim {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.blog-post-header {
+  background: -webkit-gradient(linear, right top, left top, from(#ff6a3c), color-stop(#ff498f), color-stop(#ffb624), to(#23d5ab));
+  background: linear-gradient(-90deg, #ff6a3c, #ff498f, #ffb624, #23d5ab);
+  background-size: 450% 450%;
+  -webkit-animation: gradientAnim 13s ease-in-out infinite;
+          animation: gradientAnim 13s ease-in-out infinite;
+  margin: 5rem 1rem 10rem 1rem;
+  padding: 0 2rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.blog-post-header .item {
+  -webkit-transform: translateY(8rem);
+          transform: translateY(8rem);
+  max-width: 110rem;
+  padding: 7rem;
+}
+.blog-post-header .item a {
+  position: absolute;
+  bottom: 2%;
+  left: 2%;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+.blog-post-header .item a svg {
+  margin-right: 1rem;
+}
+.blog-post-header .item a:hover {
+  background-color: var(--grey-background-2);
+}
+
+.post-date {
+  margin-top: 3rem;
+  color: var(--grey-icons);
+}
+
+.post-section {
+  margin: 2rem 0;
+  max-width: 90rem;
+  padding: 1rem;
+}
+.post-section h2,
+.post-section h3 {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: solid 1px var(--grey-tag-border);
+}
+.post-section pre {
+  margin: 3rem 0;
+}
+
+.highlight {
+  background-color: var(--grey-tag-border);
+  padding: 0.2rem 0.5rem;
+  border-radius: 5px;
+}
+
 @media (max-width: 1366.98px) {
   .tag-primary {
     font-size: 1.6rem;
@@ -868,6 +1000,11 @@ input {
     margin: 0rem;
     -webkit-transform: translateY(25%);
             transform: translateY(25%);
+  }
+}
+@media (max-width: 1062.98px) {
+  .blog-post-header .item {
+    padding: 3rem;
   }
 }
 @media (max-width: 938.98px) {
@@ -1045,6 +1182,12 @@ li {
   .item .item-content {
     margin-top: 3rem;
     margin-left: 0;
+  }
+  .blog-post-header .tag-cloud {
+    margin-bottom: 3rem;
+  }
+  pre code {
+    font-size: 1.5rem;
   }
 }
 @media (max-width: 500.98px) {

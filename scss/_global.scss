@@ -95,6 +95,16 @@ button {
   font-weight: 600;
 }
 
+input {
+  outline: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 2rem;
+  border-radius: 5px;
+  border: 1px solid #707070;
+}
+
 ::-webkit-scrollbar {
   width: 10px;
 }

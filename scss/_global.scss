@@ -108,19 +108,19 @@ input {
 pre {
   position: relative;
   max-width: 100%;
-  min-height: 40rem;
-  overflow: scroll;
+  max-height: 40rem;
+  overflow: auto;
   border: 3px solid var(--color-black);
   background-color: rgb(16, 16, 16);
   color: var(--grey-tag-border);
-  padding: 1rem 0 2rem 3rem;
-  margin: 1.5rem 0 4rem 0;
+  padding: 0 1.5rem;
+  border-radius: 5px;
   white-space: pre-line;
 
   code {
-    position: absolute;
     font-family: 'Roboto Mono', monospace;
     font-size: 1.8rem;
+    line-height: 25px;
   }
 }
 

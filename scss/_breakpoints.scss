@@ -347,4 +347,18 @@
   .filter-container {
     padding: 2rem;
   }
+
+  .blog-post-header .item {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 355.98px) {
+  .blog-post-header {
+    padding: 0 1rem;
+
+    h1 {
+      font-size: 2.7rem;
+    }
+  }
 }

@@ -6,7 +6,7 @@ class webNavbar extends HTMLElement {
     this.innerHTML = `
         <nav class="primary-nav">
       <div class="nav-items">
-        <a href="/"><img src="./img/Logo Maciej Kuran-Janowski.png" alt="logo Maciej Kuran-Janowski" /></a>
+        <a href="/"><img src="/img/Logo Maciej Kuran-Janowski.png" alt="logo Maciej Kuran-Janowski" /></a>
 
         <div class="nav-list">
           <ul>

@@ -29,14 +29,39 @@
     <!-- My scripts with defer attribute load async -->
     <script defer type="module" src="/js/components.js"></script>
     <script defer type="module" src="/js/main.js"></script>
+    <script defer type="module" src="/js/blog.js"></script>
 
     <!-- -- CSS-- -->
-    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="/css/main.css" />
   </head>
   <body>
     <web-navbar></web-navbar>
 
-    <main class="home-main"></main>
+    <main>
+      <header class="blog-header">
+        <picture class="img-banner">
+          <img src="/img/Maciej Kuran-Janowski_5.jpg" alt="Maciej Kuran-Janowski web developer" />
+        </picture>
+        <div class="filter-container">
+          <h1>Blog</h1>
+          <div class="filter-input-wrapper">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input class="posts-search-input" type="text" placeholder="Search by tag or title..." spellcheck="false" />
+          </div>
+          <div class="tag-cloud">
+            <button class="tag-primary category-btn">JavaScript</button>
+          </div>
+        </div>
+      </header>
+
+      <section class="blog-posts-section">
+        <div class="posts-grid-container">
+          <!-- ---POSTS ARE INSERTED VIA JS DYNAMICALLY RIGHT HERE --- -->
+        </div>
+      </section>
+    </main>
+
+    <web-footer></web-footer>
 
     <cookies-popup></cookies-popup>
 

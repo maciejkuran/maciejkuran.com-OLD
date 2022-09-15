@@ -26,8 +26,8 @@ navCloseBtn?.addEventListener('click', closeNav);
 const navEls = document.querySelectorAll('.nav-list ul li');
 
 const highlightActiveLi = () => {
-  let documentName = document.location.pathname.replace('.html', '');
-  let navEl = document.querySelector(`.nav-list a[href="${documentName}"]`);
+  let documentName = document.location.pathname.replace('.html', '').replaceAll('/', '').replace('index', '');
+  let navEl = document.querySelector(`.nav-list a[href="/${documentName}"]`);
 
   if (!navEl) return;
 

@@ -55,10 +55,10 @@ const Post = class {
 };
 
 const post_1 = new Post(
-  './the-function-returns-the-sum-of-unlimited-numbers',
+  './function-sums-indefinite-number-of-numbers',
   '/img/icons/javascript.png',
-  'function returns sum of unlimited numbers javascript',
-  'The function returns the sum of unlimited numbers passed as arguments.',
+  'function sums indefinite number of numbers as arguments javascript',
+  'The function that sums an indefinite number of numbers as arguments.',
   ['JavaScript']
 );
 
@@ -71,10 +71,10 @@ const post_2 = new Post(
 );
 
 const post_3 = new Post(
-  './the-function-that-checks-for-capital-letters-spaces',
+  './removing-capital-letters-spaces-login-email',
   '/img/icons/javascript.png',
-  'function checks login email address for capital letters/spaces and removes them js',
-  'The function checks the login email address for capital letters/spaces and removes them.',
+  'removing capital letters/spaces from login email address javascript',
+  'Removing capital letters/spaces from login email address.',
   ['JavaScript']
 );
 
@@ -90,7 +90,7 @@ const post_5 = new Post(
   './function-converts-the-first-value-of-each-word-uppercase',
   '/img/icons/javascript.png',
   'function converts the first value of word to uppercase js',
-  'The function converts the first value of each word to uppercase.',
+  'Converting the first value of each word to uppercase.',
   ['JavaScript']
 );
 
@@ -98,7 +98,7 @@ const post_6 = new Post(
   './function-masks-credit-card-digits',
   '/img/icons/javascript.png',
   'function masks credit card digits javascript',
-  'The function masks credit card digits, showing only the last 4.',
+  'Masking credit card digits, showing only the last 4.',
   ['JavaScript']
 );
 
@@ -261,7 +261,7 @@ const findArticles = () => {
   });
 };
 
-searchInput.addEventListener('keyup', findArticles);
+searchInput?.addEventListener('keyup', findArticles);
 
 //Blog page - search filter based on category tag
 const categoryTags = document.querySelectorAll('.category-btn');
@@ -274,3 +274,69 @@ const filterBasedOnTag = e => {
 };
 
 categoryTags.forEach(tag => tag.addEventListener('click', filterBasedOnTag));
+
+//Removing blank lines in <pre> HTML
+const code = document.querySelectorAll('pre code');
+
+const removeBlankLines = () => {
+  [...code].forEach(el => {
+    el.textContent = el.textContent.replace(/^\s+/gm, '');
+  });
+};
+
+removeBlankLines();
+
+//******FUNCTIONALITY REPLACED BY prism.js library*******
+// ////Code colors <pre> tag
+// const preTags = document.querySelectorAll('pre code');
+
+// const calc = preTags.forEach(function (preTag) {
+//   const string = preTag.innerHTML;
+//   const newString = string
+
+//     .replaceAll('function', '<span style="color:#B5FFFE">function</span>')
+//     .replaceAll('const', '<span style="color:#0AFFFB">const</span>')
+//     .replaceAll('let ', '<span style="color:#0AFFFB">let </span>')
+//     .replaceAll('class=', '<span style="color:#0AFFFB">class=</span>')
+//     .replaceAll(' = ', '<span style="color:#E53613"> = </span>')
+//     .replaceAll(' + ', '<span style="color:#E53613"> + </span>')
+//     .replaceAll(' += ', '<span style="color:#E53613"> += </span>')
+//     .replaceAll('${', '<span style="color:#E53613">${</span>')
+//     .replaceAll(' === ', '<span style="color:#E53613"> === </span>')
+//     .replaceAll('(', '<span style="color:#FE755A">(</span>')
+//     .replaceAll(')', '<span style="color:#FE755A">)</span>')
+//     .replaceAll('[', '<span style="color:#39F18D">[</span>')
+//     .replaceAll(']', '<span style="color:#39F18D">]</span>')
+//     .replaceAll('{', '<span style="color:#F66F0B">{</span>')
+//     .replaceAll('}', '<span style="color:#F66F0B">}</span>')
+//     .replaceAll('console.log', '<span style="color:#10E48D">console.log</span>')
+//     .replaceAll('=&gt;', '<span style="color:#E53613">=&gt;</span>')
+//     .replaceAll('if ', '<span style="color:#FC3535">if </span>')
+//     .replaceAll('else if ', '<span style="color:#FC3535">else if </span>')
+//     .replaceAll('else ', '<span style="color:#FC3535">else </span>')
+//     .replaceAll('return', '<span style="color:#EF593B">return</span>')
+//     .replaceAll('addEventListener', '<span style="color:#E8704B">addEventListener</span>')
+//     .replaceAll('div', '<span style="color:#E8704B">div</span>');
+
+//   preTag.innerHTML = newString;
+// });
+
+// //Copy to clipboard code
+// const copiedAlert = document.querySelector('.copied-alert');
+// const copyCodeBtns = document.querySelectorAll('.copy-code-btn');
+
+// const copyToClipboard = e => {
+//   let contentToCopy = e.target.previousElementSibling.textContent;
+
+//   if (navigator.clipboard) navigator.clipboard.writeText(contentToCopy);
+
+//   setTimeout(() => {
+//     copiedAlert.classList.add('copied-alert--active');
+//   }, 0);
+
+//   setTimeout(() => {
+//     copiedAlert.classList.remove('copied-alert--active');
+//   }, 1200);
+// };
+
+// copyCodeBtns.forEach(btn => btn.addEventListener('click', copyToClipboard));

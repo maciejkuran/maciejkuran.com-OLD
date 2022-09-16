@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>Masking credit card digits, showing only the last 4 - JavaScript</title>
+    <meta
+      name="description"
+      content="In this exercise, I am working with string methods. I wrote the function that masks credit card digits, leaving the last 4. - javascript"
+    />
+    <link rel="icon" type="image/x-icon" href="/img/icons/Maciej Kuran-Janowski avatar.png" />
+    <!-- ---GOOGLE FONTS--- -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500;600;700&family=Roboto+Mono:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SZF313ENVP"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'G-SZF313ENVP');
+    </script>
+    <!-- _________________________________ -->
+    <!-- ---Font Awesome--- -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/js/all.min.js"
+      integrity="sha512-naukR7I+Nk6gp7p5TMA4ycgfxaZBJ7MO5iC3Fp6ySQyKFHOGfpkSZkYVWV5R7u7cfAicxanwYQ5D1e17EfJcMA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- _____________ -->
+    <!-- My scripts with defer attribute load async -->
+    <script defer type="module" src="/js/components.js"></script>
+    <script defer type="module" src="/js/prism.js"></script>
+    <script defer type="module" src="/js/main.js"></script>
+    <script defer type="module" src="/js/blog.js"></script>
+
+    <!-- -- CSS-- -->
+    <link rel="stylesheet" href="/css/prism.css" />
+    <link rel="stylesheet" href="/css/main.css" />
+  </head>
+  <body class="line-numbers">
+    <web-navbar></web-navbar>
+
+    <main class="blog-post-main">
+      <header class="blog-post-header">
+        <div class="item">
+          <img src="/img/icons/javascript.png" alt="masking credit card digits javascript" />
+          <div class="item-content">
+            <h1>Masking credit card digits, showing only the last 4</h1>
+            <p class="post-date">15-05-2022</p>
+
+            <div class="tag-cloud tag-cloud-my-projects">
+              <p class="tag-primary">JavaScript</p>
+              <p class="tag-primary">Exercise</p>
+            </div>
+            <a href="/blog/"><i class="fa-solid fa-arrow-left-long"></i>back</a>
+          </div>
+        </div>
+      </header>
+      <section class="post-section">
+        <h2>String methods</h2>
+        <p>
+          In this exercise, I am working with string methods. I wrote the function that masks credit card digits,
+          leaving the last 4.
+        </p>
+        <p>
+          I used the <code class="highlight">slice()</code> and <code class="highlight">padStart()</code> string
+          methods.
+        </p>
+        <ul>
+          <li><code class="highlight">slice()</code> – cuts a string based on argument.</li>
+          <li>
+            <code class="highlight">padStart()</code> – the 1st argument defines how many characters a string must have
+            and the 2nd defines the value that a string will be completed with.
+          </li>
+        </ul>
+
+        <pre>
+            <code class="language-js">
+                //sample primitive string created, but the Function works with any argument passed
+
+const creditCard = '1234567891011123';
+console.log(creditCard.length); //16 digits
+
+const hidingDigits = digits =&gt; {
+digits.trim();
+const slicedDigits = digits.slice(-4); //last 4 digits
+const hidingDigits = slicedDigits.padStart(digits.length, '*'); //1st argument - string characters quantity, 2nd - value that the string will be completed with
+
+return hidingDigits;
+};
+                
+            </code>
+
+        </pre>
+
+        <pre>
+            <code class="language-js">
+                console.log(hidingDigits(creditCard)); //OUTPUT: ************1123
+                console.log(hidingDigits('9999999999999999')); //OUTPUT: ************9999
+                console.log(hidingDigits('12346666')); //OUTPUT: ****6666
+                
+            </code>
+        
+        </pre>
+      </section>
+    </main>
+
+    <web-footer></web-footer>
+
+    <cookies-popup></cookies-popup>
+
+    <div class="background-overlay hide"></div>
+  </body>
+</html>

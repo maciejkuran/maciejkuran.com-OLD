@@ -32,7 +32,6 @@ p,
 a,
 ul,
 button,
-span,
 div {
   font-family: "Roboto Mono", monospace;
   color: var(--color-black);
@@ -107,20 +106,11 @@ input {
 
 pre {
   position: relative;
-  max-width: 100%;
+  max-width: 93vw;
   max-height: 40rem;
   overflow: auto;
   border: 3px solid var(--color-black);
   background-color: rgb(16, 16, 16);
-  color: var(--grey-tag-border);
-  padding: 0 1.5rem;
-  border-radius: 5px;
-  white-space: pre-line;
-}
-pre code {
-  font-family: "Roboto Mono", monospace;
-  font-size: 1.8rem;
-  line-height: 25px;
 }
 
 ::-webkit-scrollbar {
@@ -936,9 +926,6 @@ pre code {
   padding-bottom: 1rem;
   border-bottom: solid 1px var(--grey-tag-border);
 }
-.post-section pre {
-  margin: 3rem 0;
-}
 
 .highlight {
   background-color: var(--grey-tag-border);
@@ -1185,9 +1172,6 @@ li {
   }
   .blog-post-header .tag-cloud {
     margin-bottom: 3rem;
-  }
-  pre code {
-    font-size: 1.5rem;
   }
 }
 @media (max-width: 500.98px) {

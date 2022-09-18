@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>Title Case Converter - Maciej Kuran-Janowski</title>
+    <meta
+      name="description"
+      content="Title case is a style used for the titles of articles, books, movies, songs, and other works. It makes the title look elegant and readable."
+    />
+    <link rel="icon" type="image/x-icon" href="/img/icons/Maciej Kuran-Janowski avatar.png" />
+    <!-- ---GOOGLE FONTS--- -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500;600;700&family=Roboto+Mono:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SZF313ENVP"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'G-SZF313ENVP');
+    </script>
+    <!-- _________________________________ -->
+    <!-- ---Font Awesome--- -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/js/all.min.js"
+      integrity="sha512-naukR7I+Nk6gp7p5TMA4ycgfxaZBJ7MO5iC3Fp6ySQyKFHOGfpkSZkYVWV5R7u7cfAicxanwYQ5D1e17EfJcMA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <!-- _____________ -->
+    <!-- My scripts with defer attribute load async -->
+    <script defer type="module" src="/js/components.js"></script>
+    <script defer type="module" src="/js/main.js"></script>
+    <script defer type="module" src="/js/titlecase.js"></script>
+
+    <!-- -- CSS-- -->
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <web-navbar></web-navbar>
+
+    <main class="palindrome-main">
+      <header class="palindrome-header">
+        <h1><span class="home-header-animation">Title case</span> converter</h1>
+        <p>
+          Title case is a style that is used for the titles of articles, books, movies, songs, and other works. It makes
+          the title look elegant and readable.
+        </p>
+
+        <p>
+          All major words will be capitalized, while minor words (articles, coordinating conjunctions and other) will be
+          lowercased: <i>a, an, and, the, or, is, of, but, as, in</i>
+        </p>
+        <p></p>
+        <ul>
+          <li><i>The man of the forest.</i></li>
+          <li>The Man of the Forest.</li>
+        </ul>
+        <a target="_blank" href="/blog/title-case-converter-function"
+          ><button class="primary-button">case study <i class="fa-solid fa-arrow-right-long"></i></button
+        ></a>
+      </header>
+
+      <section class="palindrome-app-container">
+        <div class="internal-wrapper">
+          <p class="titlecase-output"></p>
+          <textarea
+            name=""
+            class="titlecase-text-input"
+            cols="30"
+            rows="4"
+            placeholder="Type your text here"
+            spellcheck="false"
+          ></textarea>
+
+          <div>
+            <button class="palindrome-clear-btn titlecase-clear-btn">clear<i class="fa-solid fa-xmark"></i></button>
+            <button class="palindrome-clear-btn titlecase-copy-btn">copy<i class="fa-regular fa-copy"></i></button>
+          </div>
+
+          <button class="primary-button titlecase-convert-btn">
+            Check<i class="fa-solid fa-arrow-right-long"></i>
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <p class="copied-alert-label">Copied 🟢</p>
+    <p class="cleared-alert-label">Cleared ✔</p>
+
+    <web-footer></web-footer>
+
+    <cookies-popup></cookies-popup>
+
+    <div class="background-overlay hide"></div>
+  </body>
+</html>

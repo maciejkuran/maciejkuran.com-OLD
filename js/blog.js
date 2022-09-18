@@ -146,7 +146,7 @@ const post_12 = new Post(
   './function-calculates-percentage-of-nationality',
   '/img/icons/javascript.png',
   'function calculates a percentage of nationality javascript',
-  'The function calculates a percentage of nationality.',
+  'Calculating a percentage of nationality.',
   ['JavaScript']
 );
 

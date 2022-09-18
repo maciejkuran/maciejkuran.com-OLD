@@ -170,7 +170,7 @@ const post_15 = new Post(
   './function-finds-users-over-18-years',
   '/img/icons/javascript.png',
   'function finds users who are over 18 years old javascript',
-  'The function finds users who are over 18 years old.',
+  'Finding users over 18 years old.',
   ['JavaScript']
 );
 
@@ -178,7 +178,7 @@ const post_16 = new Post(
   './function-computes-overal-family-income',
   '/img/icons/javascript.png',
   'function computes overall family income javascript',
-  'The function computes overall family income.',
+  'Computing overal family income.',
   ['JavaScript']
 );
 

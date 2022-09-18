@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>Palindrome checker - Maciej Kuran-Janowski</title>
+    <meta
+      name="description"
+      content="Palindrome checker app! A palindrome is a word, number, phrase, or another sequence of characters that reads the same backward as forward, such as mom, noon, level."
+    />
+    <link rel="icon" type="image/x-icon" href="/img/icons/Maciej Kuran-Janowski avatar.png" />
+    <!-- ---GOOGLE FONTS--- -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500;600;700&family=Roboto+Mono:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SZF313ENVP"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'G-SZF313ENVP');
+    </script>
+    <!-- _________________________________ -->
+    <!-- ---Font Awesome--- -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/js/all.min.js"
+      integrity="sha512-naukR7I+Nk6gp7p5TMA4ycgfxaZBJ7MO5iC3Fp6ySQyKFHOGfpkSZkYVWV5R7u7cfAicxanwYQ5D1e17EfJcMA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <!-- _____________ -->
+    <!-- My scripts with defer attribute load async -->
+    <script defer type="module" src="/js/components.js"></script>
+    <script defer type="module" src="/js/main.js"></script>
+    <script defer type="module" src="/js/palindrome.js"></script>
+
+    <!-- -- CSS-- -->
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <web-navbar></web-navbar>
+
+    <main class="palindrome-main">
+      <header class="palindrome-header">
+        <h1><span class="home-header-animation">Palindrome</span> checker!</h1>
+        <p>
+          A palindrome is a word, number, phrase, or another sequence of characters that reads the same backward as
+          forward, such as <i>mom, noon, level</i> or <i>121</i>.
+        </p>
+        <p>
+          You may read more about Palindromes in
+          <a href="https://en.wikipedia.org/wiki/Palindrome" target="_blank">Wikipedia</a>.
+        </p>
+        <p>
+          App case study is
+          <a target="_blank" href="/blog/palindrome-checker-functions-javascript">available here</a>.
+        </p>
+      </header>
+
+      <section class="palindrome-app-container">
+        <lottie-player
+          class="face palindrome-face--happy hide"
+          src="https://assets7.lottiefiles.com/packages/lf20_sgzw5ogf.json"
+          background="transparent"
+          speed="1"
+          style="width: 120px; height: 120px"
+          loop
+          autoplay
+        ></lottie-player>
+        <lottie-player
+          class="face palindrome-face--sad hide"
+          src="https://assets10.lottiefiles.com/packages/lf20_lt5xlugl.json"
+          background="transparent"
+          speed="1"
+          style="width: 120px; height: 120px"
+          loop
+          autoplay
+        ></lottie-player>
+        <lottie-player
+          class="face palindrome-face--thinking"
+          src="https://assets5.lottiefiles.com/packages/lf20_vvx2gjpt.json"
+          mode="bounce"
+          background="transparent"
+          speed="1"
+          style="width: 120px; height: 120px"
+          loop
+          autoplay
+        ></lottie-player>
+        <div class="internal-wrapper">
+          <p class="palindrome-output"></p>
+          <textarea
+            name=""
+            class="palindrome-text-input"
+            cols="30"
+            rows="4"
+            placeholder="Type your text here"
+            spellcheck="false"
+          ></textarea>
+
+          <button class="palindrome-clear-btn">clear<i class="fa-solid fa-xmark"></i></button>
+
+          <button class="primary-button palindrome-check-btn">Check<i class="fa-solid fa-arrow-right-long"></i></button>
+        </div>
+        <p class="thanks-lottie">
+          Thanks to <a class="thanks-lottie" target="_blank" href="https://lottiefiles.com/">LottieFiles.com</a> 🤍 for
+          amazing animations. Featuring: emaro, V.S. Thakur, Bruce
+        </p>
+      </section>
+    </main>
+
+    <web-footer></web-footer>
+
+    <cookies-popup></cookies-popup>
+
+    <div class="background-overlay hide"></div>
+  </body>
+</html>

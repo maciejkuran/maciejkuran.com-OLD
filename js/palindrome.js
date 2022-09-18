@@ -19,10 +19,10 @@ const checkIfPalindrome = () => {
   const revertInput = input.split('').reverse().join('');
 
   if (input === revertInput) {
-    output.innerHTML = `Reversed text: ${revertInput}<br>Hurra! ${input} is a palindrome !`;
+    output.innerHTML = `Reversed text: ${revertInput}<br>Hurra! ${input} is a palindrome!`;
     showFace(happyFace, thinkingFace, sadFace);
   } else {
-    output.innerHTML = `Reversed text: ${revertInput}<br>Sorry! ${input} is NOT a palindrome !`;
+    output.innerHTML = `Reversed text: ${revertInput}<br>Sorry! ${input} is NOT a palindrome!`;
     showFace(sadFace, thinkingFace, happyFace);
   }
 };

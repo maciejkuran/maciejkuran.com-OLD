@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>Part 2: Tax calculator - the partial application and bind() method - JavaScript</title>
+    <meta
+      name="description"
+      content="We are still with a paradigm of the functional programming in JavaScript. This time we will use the concept of partial application and the bind method to create our tax calculator - javascript"
+    />
+    <link rel="icon" type="image/x-icon" href="/img/icons/Maciej Kuran-Janowski avatar.png" />
+    <!-- ---GOOGLE FONTS--- -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500;600;700&family=Roboto+Mono:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SZF313ENVP"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'G-SZF313ENVP');
+    </script>
+    <!-- _________________________________ -->
+    <!-- ---Font Awesome--- -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/js/all.min.js"
+      integrity="sha512-naukR7I+Nk6gp7p5TMA4ycgfxaZBJ7MO5iC3Fp6ySQyKFHOGfpkSZkYVWV5R7u7cfAicxanwYQ5D1e17EfJcMA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- _____________ -->
+    <!-- My scripts with defer attribute load async -->
+    <script defer type="module" src="/js/components.js"></script>
+    <script defer type="module" src="/js/prism.js"></script>
+    <script defer type="module" src="/js/main.js"></script>
+    <script defer type="module" src="/js/blog.js"></script>
+
+    <!-- -- CSS-- -->
+    <link rel="stylesheet" href="/css/prism.css" />
+    <link rel="stylesheet" href="/css/main.css" />
+  </head>
+  <body class="line-numbers">
+    <web-navbar></web-navbar>
+
+    <main class="blog-post-main">
+      <header class="blog-post-header">
+        <div class="item">
+          <img src="/img/icons/javascript.png" alt="tax calculator javascript" />
+          <div class="item-content">
+            <h1>Part 2: Tax calculator - the partial application and bind() method</h1>
+            <p class="post-date">17-05-2022</p>
+
+            <div class="tag-cloud tag-cloud-my-projects">
+              <p class="tag-primary">JavaScript</p>
+              <p class="tag-primary">Exercise</p>
+            </div>
+            <a href="/blog/"><i class="fa-solid fa-arrow-left-long"></i>back</a>
+          </div>
+        </div>
+      </header>
+      <section class="post-section">
+        <p>
+          This assignment is a continuation of the tax calculator.
+          <a href="/blog/part-1-tax-calculator-javascript">If you have not read the first part, please review it now</a
+          >.
+        </p>
+        <p>
+          We are still with a paradigm of the functional programming in JavaScript. This time we will use the concept of
+          <code class="highlight">partial application</code> and the <code class="highlight">bind()</code> method to
+          create our tax calculator.
+        </p>
+        <p>
+          'Partial application starts with a function. We take this function and create a new one with one or more of
+          its arguments already “set” or partially applied. This sounds odd, but it will reduce the number of parameters
+          needed for our functions.' – full article about partial application is
+          <a
+            target="_blank"
+            href="https://www.freecodecamp.org/news/how-to-use-partial-application-to-improve-your-javascript-code-5af9ad877833/"
+            >available at freecodecamp.org</a
+          >
+        </p>
+        <p>
+          I am writing the function that takes 2 parameters and does the calculation. The results will be logged to the
+          console.
+        </p>
+
+        <pre>
+            <code class="language-js">
+                const taxCalc = (rate, value) =&gt; {
+                    const tax = (value * rate) / 100;
+                    console.log(`Value: ${value}zl\nTax rate: ${rate}%\nYour tax: ${tax}zl`);
+                    };
+                
+            </code>  
+        </pre>
+        <p>
+          The <code class="highlight">bind()</code> method does not immediately call a function. Instead, it returns a
+          new function where the <code class="highlight">this</code> keyword is bound. In this situation I do not care
+          about the <code class="highlight">this</code>keyword, so I set this value to
+          <code class="highlight">null</code>.
+        </p>
+
+        <pre>
+            <code class="language-js">
+                const VATPoland = taxCalc.bind(null, 23);
+            </code>  
+        </pre>
+        <p>I am calling the function.</p>
+
+        <pre>
+            <code class="language-js">
+                VATPoland(100);
+//OUTPUT
+// Value: 100zl
+// Tax rate: 23%
+// Your tax: 23zl
+            </code>  
+        </pre>
+      </section>
+    </main>
+
+    <web-footer></web-footer>
+
+    <cookies-popup></cookies-popup>
+
+    <div class="background-overlay hide"></div>
+  </body>
+</html>

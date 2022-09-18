@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>Calculating a percentage of nationality - JavaScript</title>
+    <meta
+      name="description"
+      content="The function that calculates a percentage of nationality – call(), apply(), bind() methods - javascript"
+    />
+    <link rel="icon" type="image/x-icon" href="/img/icons/Maciej Kuran-Janowski avatar.png" />
+    <!-- ---GOOGLE FONTS--- -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500;600;700&family=Roboto+Mono:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SZF313ENVP"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'G-SZF313ENVP');
+    </script>
+    <!-- _________________________________ -->
+    <!-- ---Font Awesome--- -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/js/all.min.js"
+      integrity="sha512-naukR7I+Nk6gp7p5TMA4ycgfxaZBJ7MO5iC3Fp6ySQyKFHOGfpkSZkYVWV5R7u7cfAicxanwYQ5D1e17EfJcMA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- _____________ -->
+    <!-- My scripts with defer attribute load async -->
+    <script defer type="module" src="/js/components.js"></script>
+    <script defer type="module" src="/js/prism.js"></script>
+    <script defer type="module" src="/js/main.js"></script>
+    <script defer type="module" src="/js/blog.js"></script>
+
+    <!-- -- CSS-- -->
+    <link rel="stylesheet" href="/css/prism.css" />
+    <link rel="stylesheet" href="/css/main.css" />
+  </head>
+  <body class="line-numbers">
+    <web-navbar></web-navbar>
+
+    <main class="blog-post-main">
+      <header class="blog-post-header">
+        <div class="item">
+          <img src="/img/icons/javascript.png" alt="function calculates a percentage of nationality javascript" />
+          <div class="item-content">
+            <h1>Calculating a percentage of nationality</h1>
+            <p class="post-date">22-05-2022</p>
+
+            <div class="tag-cloud tag-cloud-my-projects">
+              <p class="tag-primary">JavaScript</p>
+              <p class="tag-primary">Exercise</p>
+            </div>
+            <a href="/blog/"><i class="fa-solid fa-arrow-left-long"></i>back</a>
+          </div>
+        </div>
+      </header>
+      <section class="post-section">
+        <h2>Call, apply and bind methods</h2>
+        <p>
+          In this exercise, I am creating 2 objects. One of them contains the method named
+          <code class="highlight">foreignerPercentage</code>, which takes 2 parameters –
+          <code class="highlight">foreignerNationality</code>, <code class="highlight">number</code>. This function
+          calculates a percentage of nationality.
+        </p>
+
+        <pre>
+            <code class="language-js">
+                const poland = {
+                    country: 'Poland',
+                    population: 40000000,
+                    foreignerPercentage: function (foreignerNationality, number) {
+                    const percCalc = (number * 100) / this.population;
+                    console.log(
+                    `In ${this.country} live ${this.population} people. Among this population live ${number} of ${foreignerNationality} people. It is ${percCalc}%. `
+                    );
+                    },
+                    };
+                
+            </code>
+           
+        </pre>
+
+        <pre>
+            <code class="language-js">
+                const germany = {
+                    country: 'Germany',
+                    population: 80000000,
+                    };    
+            </code>
+        </pre>
+        <p>
+          This exercise shows a use-case of the 3 methods: <code class="highlight">call()</code>,
+          <code class="highlight">apply()</code>, and <code class="highlight">bind()</code>.
+        </p>
+        <p>I am assigning the object method to a variable.</p>
+
+        <pre>
+            <code class="language-js">
+                const calcPercentage = poland.foreignerPercentage; 
+            </code>
+        </pre>
+      </section>
+
+      <section class="post-section">
+        <h3>Call method</h3>
+        <p>
+          I am calling the function using the <code class="highlight">call()</code> method. The first argument is the
+          name of the object which we point the <code class="highlight">this</code> keyword to. The 2nd argument is the
+          <code class="highlight">foreignerNationality</code> and the last one <code class="highlight">number</code>.
+        </p>
+
+        <pre>
+            <code class="language-js">
+                calcPercentage.call(germany, 'Turkish', 800000);
+//OUTPUT:
+// In Germany live 80000000 people. Among this population live 800000 Turkish people. It is 1%.
+            </code>
+        </pre>
+      </section>
+
+      <section class="post-section">
+        <h3>Apply method</h3>
+        <p>
+          The <code class="highlight">apply()</code> method requires values to be stored in an array. Then we pass the
+          array as an argument.
+        </p>
+        <pre>
+            <code class="language-js">
+                const portugal = ['Portuguese', 80000];
+                calcPercentage.apply(germany, portugal);
+                //OUTPUT:
+                // In Germany live 80000000 people. Among this population live 80000 Portuguese people. It is 0.1%.
+            </code>
+        </pre>
+        <p>
+          If for some reason we had values stored in an array and we want to use the
+          <code class="highlight">call()</code> method, we can call the function using the spread operator (syntax:<code
+            class="highlight"
+            >...</code
+          >). The spread operator does a sort of 'unpacking'.
+        </p>
+        <pre>
+            <code class="language-js">
+                const portugal = ['Portuguese', 80000];
+calcPercentage.call(germany, …portugal);
+//OUTPUT:
+// In Germany live 80000000 people. Among this population live 80000 Portuguese people. It is 0.1%.
+            </code>
+        </pre>
+      </section>
+      <section class="post-section">
+        <h3>Bind method</h3>
+        <p>
+          The <code class="highlight">bind()</code> method does not call the function immediately. Instead it returns
+          another function where the <code class="highlight">this</code> keyword is bound. You may also do a partial
+          application of the arguments, which means to pre-set a specific argument. This time I pre-set
+          <code class="highlight">foreignerNationality</code> argument. Then I call the function with one argument left
+          – <code class="highlight">number</code>.
+        </p>
+        <pre>
+            <code class="language-js">
+                const spain = calcPercentage.bind(germany, 'Spanish');
+spain(160000);
+//OUTPUT:
+// In Germany live 80000000 people. Among this population live 160000 Spanish people. It is 0.2%.
+            </code>
+        </pre>
+      </section>
+    </main>
+
+    <web-footer></web-footer>
+
+    <cookies-popup></cookies-popup>
+
+    <div class="background-overlay hide"></div>
+  </body>
+</html>

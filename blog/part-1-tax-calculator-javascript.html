@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>Part 1: Tax calculator - the function that returns another function - JavaScript</title>
+    <meta
+      name="description"
+      content="In this exercise, I am writing the function that returns another function. This concept is commonly used in the functional programming paradigm - javascript"
+    />
+    <link rel="icon" type="image/x-icon" href="/img/icons/Maciej Kuran-Janowski avatar.png" />
+    <!-- ---GOOGLE FONTS--- -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500;600;700&family=Roboto+Mono:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SZF313ENVP"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'G-SZF313ENVP');
+    </script>
+    <!-- _________________________________ -->
+    <!-- ---Font Awesome--- -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/js/all.min.js"
+      integrity="sha512-naukR7I+Nk6gp7p5TMA4ycgfxaZBJ7MO5iC3Fp6ySQyKFHOGfpkSZkYVWV5R7u7cfAicxanwYQ5D1e17EfJcMA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- _____________ -->
+    <!-- My scripts with defer attribute load async -->
+    <script defer type="module" src="/js/components.js"></script>
+    <script defer type="module" src="/js/prism.js"></script>
+    <script defer type="module" src="/js/main.js"></script>
+    <script defer type="module" src="/js/blog.js"></script>
+
+    <!-- -- CSS-- -->
+    <link rel="stylesheet" href="/css/prism.css" />
+    <link rel="stylesheet" href="/css/main.css" />
+  </head>
+  <body class="line-numbers">
+    <web-navbar></web-navbar>
+
+    <main class="blog-post-main">
+      <header class="blog-post-header">
+        <div class="item">
+          <img src="/img/icons/javascript.png" alt="tax calculator  javascript" />
+          <div class="item-content">
+            <h1>Part 1: Tax calculator - the function that returns another function</h1>
+            <p class="post-date">17-05-2022</p>
+
+            <div class="tag-cloud tag-cloud-my-projects">
+              <p class="tag-primary">JavaScript</p>
+              <p class="tag-primary">Exercise</p>
+            </div>
+            <a href="/blog/"><i class="fa-solid fa-arrow-left-long"></i>back</a>
+          </div>
+        </div>
+      </header>
+      <section class="post-section">
+        <h2>Function returns another function</h2>
+        <p>
+          In this exercise, I am writing the function that returns another function. This concept is commonly used in
+          the functional programming paradigm. However you don't really have to be interested in functional programming
+          in order to use this concept. It can be helpful in many situations.
+        </p>
+        <p>I am writing the function that will calculate any tax value.</p>
+        <p>
+          The function <code class="highlight">taxCalc</code> that takes a parameter
+          <code class="highlight">rate</code> is a higher-order function. Just a reminder, a higher-order function is
+          the function that takes other functions as arguments, returns another function, or both.
+        </p>
+        <p>Why do I think that this example is that important?</p>
+        <p>
+          Actually, by returning a function from another function we gain some benefits. We can use the same function on
+          and on to calculate any tax value. Let's dive deeper into this example.
+        </p>
+        <p>I am writing the function that returns another function and does calculation.</p>
+
+        <pre>
+            <code class="language-js">
+                const taxCalc = rate =&gt; {
+                    return function (value) {
+                    const tax = (value * rate) / 100;
+                    console.log(`Value: ${value}zl\nTax rate: ${rate}%\nYour tax: ${tax}zl`);
+                    };
+                    };
+            </code>
+           
+        </pre>
+        <p>
+          In Poland, there's a VAT tax. It is an additional value that is added to any goods that you buy. There are
+          different rates but the main one is 23 %.
+        </p>
+        <p>The currency in Poland is 'Zloty' – zl.</p>
+
+        <pre>
+            <code class="language-js">
+                const VATPoland = taxCalc(23);
+            </code>
+           
+        </pre>
+        <p>
+          I created the constant variable <code class="highlight">VATPoland</code> and assigned a higher-order function,
+          passing the number <code class="highlight">23</code> as an argument – tax rate.
+        </p>
+        <p>
+          Now we are moving to the returned function that will be invoked. The number
+          <code class="highlight">100</code> is the <code class="highlight">value</code> and, based on our example – the
+          money.
+        </p>
+
+        <pre>
+            <code class="language-js">
+                VATPoland(100);
+                //OUTPUT:
+                // Value: 100zl
+                // Tax rate: 23%
+                // Your tax: 23zl
+            </code>
+           
+        </pre>
+        <p>
+          The function <code class="highlight">taxCalc()</code> we can save to any variable anytime. I also want to
+          calculate the VAT tax rate in Germany. The standard VAT rate in Germany is 19 %.
+        </p>
+
+        <pre>
+            <code class="language-js">
+                const VATGermany = taxCalc(19);
+                VATGermany(100);
+                //OUTPUT:
+                // Value: 100zl
+                // Tax rate: 19%
+                // Your tax: 19zl
+            </code>
+        </pre>
+        <p>
+          There's some other functional programming concept to write the tax calculator – using the
+          <code class="highlight">partial application</code> concept and the
+          <code class="highlight">bind()</code> method.
+        </p>
+        <p>If you're interested, <a href="/blog/part-2-tax-calculator-javascript">please read my case study</a>.</p>
+      </section>
+    </main>
+
+    <web-footer></web-footer>
+
+    <cookies-popup></cookies-popup>
+
+    <div class="background-overlay hide"></div>
+  </body>
+</html>

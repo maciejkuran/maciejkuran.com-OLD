@@ -941,6 +941,27 @@ pre {
   border: solid 1px var(--grey-tag-border);
 }
 
+.copied-alert-label, .cleared-alert-label {
+  padding: 0.5rem;
+  background-color: var(--grey-background-2);
+  position: fixed;
+  -webkit-transform: translate(-50%, -50%) translateY(200%);
+          transform: translate(-50%, -50%) translateY(200%);
+  bottom: 0;
+  left: 50%;
+  border: 1px solid var(--grey-tag-border);
+  border-radius: 5px;
+  -webkit-transition: -webkit-transform 400ms ease-in-out;
+  transition: -webkit-transform 400ms ease-in-out;
+  transition: transform 400ms ease-in-out;
+  transition: transform 400ms ease-in-out, -webkit-transform 400ms ease-in-out;
+}
+
+.copied-alert-label--active, .cleared-alert-label--active {
+  -webkit-transform: translate(-50%, -50%) translateY(0);
+          transform: translate(-50%, -50%) translateY(0);
+}
+
 .palindrome-header {
   position: relative;
   max-width: 80rem;
@@ -1030,6 +1051,24 @@ pre {
 }
 .hide {
   display: none;
+}
+
+.palindrome-app-container .internal-wrapper div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: auto;
+}
+.palindrome-app-container .internal-wrapper div .titlecase-copy-btn {
+  margin-left: 1rem;
+}
+.palindrome-app-container .internal-wrapper div .titlecase-copy-btn svg {
+  color: #23d5ab;
+}
+
+.titlecase-output {
+  border-left: 2px solid rgb(91, 231, 116);
+  padding-left: 0.5rem;
 }
 
 @media (max-width: 1366.98px) {

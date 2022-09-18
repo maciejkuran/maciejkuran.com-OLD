@@ -76,3 +76,23 @@
 .hide {
   display: none;
 }
+
+//Styles for 'Title case converter'
+.palindrome-app-container .internal-wrapper div {
+  display: flex;
+  margin-left: auto;
+
+  .titlecase-copy-btn {
+    margin-left: 1rem;
+
+    svg {
+      color: #23d5ab;
+    }
+  }
+}
+
+.titlecase-output {
+  border-left: 2px solid rgb(91, 231, 116);
+  padding-left: 0.5rem;
+}
+//----------------------------------------------

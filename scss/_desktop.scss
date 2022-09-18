@@ -625,3 +625,27 @@
   border-radius: 5px;
   border: solid 1px var(--grey-tag-border);
 }
+
+.copied-alert-label {
+  padding: 0.5rem;
+  background-color: var(--grey-background-2);
+  position: fixed;
+  transform: translate(-50%, -50%) translateY(200%);
+  bottom: 0;
+  left: 50%;
+  border: 1px solid var(--grey-tag-border);
+  border-radius: 5px;
+  transition: transform 400ms ease-in-out;
+}
+
+.copied-alert-label--active {
+  transform: translate(-50%, -50%) translateY(0);
+}
+
+.cleared-alert-label {
+  @extend .copied-alert-label;
+}
+
+.cleared-alert-label--active {
+  @extend .copied-alert-label--active;
+}

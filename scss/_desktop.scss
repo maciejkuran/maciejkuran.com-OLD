@@ -612,10 +612,16 @@
     padding-bottom: 1rem;
     border-bottom: solid 1px var(--grey-tag-border);
   }
+
+  p,
+  li {
+    line-height: 32px;
+  }
 }
 
 .highlight {
-  background-color: var(--grey-tag-border);
+  background-color: var(--grey-background-2);
   padding: 0.2rem 0.5rem;
   border-radius: 5px;
+  border: solid 1px var(--grey-tag-border);
 }

@@ -1,0 +1,78 @@
+@mixin flexCenter() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.palindrome-header {
+  position: relative;
+  max-width: 80rem;
+  margin: 11rem 1rem 0 1rem;
+  background-color: var(--grey-background);
+  padding: 4rem;
+  border-radius: 5px;
+  border: 1px solid var(--grey-background-2);
+
+  h1 {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: solid 1px var(--grey-tag-border);
+  }
+}
+
+.palindrome-app-container {
+  @include flexCenter();
+  flex-direction: column;
+  margin: 2rem 1rem;
+
+  .internal-wrapper {
+    @include flexCenter();
+    flex-direction: column;
+    max-width: 60rem;
+
+    textarea {
+      width: 100%;
+    }
+    svg {
+      pointer-events: none;
+    }
+  }
+}
+
+.palindrome-clear-btn {
+  margin-top: 0.2rem;
+  margin-left: auto;
+  padding: 0.2rem;
+  border-radius: 5px;
+  svg {
+    margin-left: 0.3rem;
+    font-size: 1.1rem;
+    color: red;
+  }
+}
+
+.palindrome-clear-btn:hover {
+  background-color: var(--grey-background-2);
+}
+
+.palindrome-check-btn {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.thanks-lottie {
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 1.2rem;
+  color: var(--grey-tag-border);
+}
+
+@media (max-width: 400.98px) {
+  .palindrome-header {
+    padding: 2rem;
+  }
+}
+
+.hide {
+  display: none;
+}

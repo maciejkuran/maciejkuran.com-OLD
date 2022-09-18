@@ -94,7 +94,7 @@ button {
   font-weight: 600;
 }
 
-input {
+input, textarea {
   outline: none;
   -moz-appearance: none;
   -webkit-appearance: none;
@@ -102,6 +102,10 @@ input {
   font-size: 2rem;
   border-radius: 5px;
   border: 1px solid #707070;
+}
+
+textarea {
+  padding: 1rem;
 }
 
 pre {
@@ -926,11 +930,107 @@ pre {
   padding-bottom: 1rem;
   border-bottom: solid 1px var(--grey-tag-border);
 }
+.post-section p,
+.post-section li {
+  line-height: 32px;
+}
 
 .highlight {
-  background-color: var(--grey-tag-border);
+  background-color: var(--grey-background-2);
   padding: 0.2rem 0.5rem;
   border-radius: 5px;
+  border: solid 1px var(--grey-tag-border);
+}
+
+.palindrome-header {
+  position: relative;
+  max-width: 80rem;
+  margin: 11rem 1rem 0 1rem;
+  background-color: var(--grey-background);
+  padding: 4rem;
+  border-radius: 5px;
+  border: 1px solid var(--grey-background-2);
+}
+.palindrome-header h1 {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: solid 1px var(--grey-tag-border);
+}
+
+.palindrome-app-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 2rem 1rem;
+}
+.palindrome-app-container .internal-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 60rem;
+}
+.palindrome-app-container .internal-wrapper textarea {
+  width: 100%;
+}
+.palindrome-app-container .internal-wrapper svg {
+  pointer-events: none;
+}
+
+.palindrome-clear-btn {
+  margin-top: 0.2rem;
+  margin-left: auto;
+  padding: 0.2rem;
+  border-radius: 5px;
+}
+.palindrome-clear-btn svg {
+  margin-left: 0.3rem;
+  font-size: 1.1rem;
+  color: red;
+}
+
+.palindrome-clear-btn:hover {
+  background-color: var(--grey-background-2);
+}
+
+.palindrome-check-btn {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.thanks-lottie {
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 1.2rem;
+  color: var(--grey-tag-border);
+}
+
+@media (max-width: 400.98px) {
+  .palindrome-header {
+    padding: 2rem;
+  }
+}
+.hide {
+  display: none;
 }
 
 @media (max-width: 1366.98px) {
@@ -1172,6 +1272,9 @@ li {
   }
   .blog-post-header .tag-cloud {
     margin-bottom: 3rem;
+  }
+  textarea {
+    font-size: 1.6rem;
   }
 }
 @media (max-width: 500.98px) {

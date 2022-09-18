@@ -104,6 +104,11 @@ input {
   border: 1px solid #707070;
 }
 
+textarea {
+  @extend input;
+  padding: 1rem;
+}
+
 pre {
   position: relative;
   max-width: 93vw;

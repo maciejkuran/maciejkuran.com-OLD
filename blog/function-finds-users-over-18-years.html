@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>Finding users over 18 years old - JavaScript</title>
+    <meta
+      name="description"
+      content="In this exercise, I am writing an arrow function that finds users over 18 years old – using the map and Object.values methods."
+    />
+    <link rel="icon" type="image/x-icon" href="/img/icons/Maciej Kuran-Janowski avatar.png" />
+    <!-- ---GOOGLE FONTS--- -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500;600;700&family=Roboto+Mono:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SZF313ENVP"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'G-SZF313ENVP');
+    </script>
+    <!-- _________________________________ -->
+    <!-- ---Font Awesome--- -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/js/all.min.js"
+      integrity="sha512-naukR7I+Nk6gp7p5TMA4ycgfxaZBJ7MO5iC3Fp6ySQyKFHOGfpkSZkYVWV5R7u7cfAicxanwYQ5D1e17EfJcMA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- _____________ -->
+    <!-- My scripts with defer attribute load async -->
+    <script defer type="module" src="/js/components.js"></script>
+    <script defer type="module" src="/js/main.js"></script>
+    <script defer type="module" src="/js/blog.js"></script>
+    <script defer type="module" src="/js/prism.js"></script>
+
+    <!-- -- CSS-- -->
+    <link rel="stylesheet" href="/css/prism.css" />
+    <link rel="stylesheet" href="/css/main.css" />
+  </head>
+  <body class="line-numbers">
+    <web-navbar></web-navbar>
+
+    <main class="blog-post-main">
+      <header class="blog-post-header">
+        <div class="item">
+          <img src="/img/icons/javascript.png" alt="map and object values methods javascript" />
+          <div class="item-content">
+            <h1>Finding users over 18 years old</h1>
+            <p class="post-date">09-06-2022</p>
+
+            <div class="tag-cloud tag-cloud-my-projects">
+              <p class="tag-primary">JavaScript</p>
+              <p class="tag-primary">Exercise</p>
+            </div>
+            <a href="/blog/"><i class="fa-solid fa-arrow-left-long"></i>back</a>
+          </div>
+        </div>
+      </header>
+      <section class="post-section">
+        <h2>Map and Object.values methods</h2>
+        <p>
+          In this exercise, I am writing an arrow function that finds users over 18 years old – using the
+          <code class="highlight">map()</code> and <code class="highlight">Object.values()</code> methods.
+        </p>
+        <p>
+          I created 4 simple <code class="highlight">user</code> objects, with the same
+          <code class="highlight">property</code>/<code class="highlight">key</code> names.
+        </p>
+
+        <pre>
+            <code class="language-js">
+                const user1 = {
+                    name: 'Valentina',
+                    age: 16,
+                    };
+                    
+                    const user2 = {
+                    name: 'John',
+                    age: 18,
+                    };
+                    
+                    const user3 = {
+                    name: 'Eva',
+                    age: 32,
+                    };
+                    
+                    const user4 = {
+                    name: 'Nick',
+                    age: 14,
+                    };
+            </code>   
+        </pre>
+        <p>
+          I created an array that contains all <code class="highlight">user</code> objects –
+          <code class="highlight">user1</code>, <code class="highlight">user2</code>,
+          <code class="highlight">user3</code>, <code class="highlight">user4</code>.
+        </p>
+
+        <pre>
+            <code class="language-js">
+                const users = [user1, user2, user3, user4];
+            </code>   
+        </pre>
+        <p>
+          If we console.log the <code class="highlight">users</code> variable, we will get the data structure shown
+          below.
+        </p>
+        <pre>
+            <code class="language-js">
+                (4) [{…}, {…}, {…}, {…}]
+                1. 0: {name: 'Valentina', age: 16}
+                2. 1: {name: 'John', age: 18}
+                3. 2: {name: 'Eva', age: 32}
+                4. 3: {name: 'Nick', age: 14}
+            </code>   
+        </pre>
+        <p>
+          I am writing an arrow function that takes one argument – <code class="highlight">users</code>. I am looping
+          through the entire array with the <code class="highlight">map()</code> method. I get access to every user.
+        </p>
+        <p>
+          As I am only interested in retrieving values from each object, I am destructuring/unpacking object values into
+          separate variables – <code class="highlight">name</code> and <code class="highlight">age</code>.
+        </p>
+        <p>Then I log the results using the ternary operator checking who's &gt;= 18 years old.</p>
+        <pre>
+            <code class="language-js">
+                const checkAdults = users =&gt; {
+                    users.map(user =&gt; {
+                    const [name, age] = Object.values(user);
+                    console.log(`${age &gt;= 18 ? '🟢' : '🔴'} ${name}: ${age} years old`);
+                    });
+                    };
+                    
+                    checkAdults(users);
+            </code>   
+        </pre>
+        <pre>
+            <code class="language-js">
+                //OUTPUT:
+                // 🔴 Valentina: 16 years old
+                // 🟢 John: 18 years old
+                // 🟢 Eva: 32 years old
+                // 🔴 Nick: 14 years old
+            </code>   
+        </pre>
+      </section>
+    </main>
+
+    <web-footer></web-footer>
+
+    <cookies-popup></cookies-popup>
+
+    <div class="background-overlay hide"></div>
+  </body>
+</html>

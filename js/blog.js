@@ -162,7 +162,7 @@ const post_14 = new Post(
   './function-returns-highest-number-array-javascript',
   '/img/icons/javascript.png',
   'function returns the highest number from array javascript',
-  'The function returns the highest number from an array.',
+  'Returning the highest number from an array.',
   ['JavaScript']
 );
 

@@ -367,10 +367,6 @@
   }
 }
 
-.hide {
-  display: none;
-}
-
 .my-projects-header {
   margin-top: 6rem;
 }
@@ -619,6 +615,13 @@
   }
 }
 
+.post-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin: 3rem 0;
+}
+
 .highlight {
   background-color: var(--grey-background-2);
   padding: 0.2rem 0.5rem;
@@ -648,4 +651,153 @@
 
 .cleared-alert-label--active {
   @extend .copied-alert-label--active;
+}
+
+//Login-logout functionality blog-post styles
+.login-container {
+  border: 1px solid var(--grey-background-2);
+  padding: 4rem;
+  border-radius: 5px;
+  background-color: var(--grey-background);
+
+  .login-form {
+    max-width: 50rem;
+
+    input {
+      width: 100%;
+      margin-bottom: 1rem;
+      padding: 1rem;
+    }
+  }
+}
+//_________________________________________
+
+//Slider component - blog post exercise
+.slider-wrapper {
+  position: relative;
+  min-height: 55rem;
+  width: 100%;
+  overflow: hidden;
+  opacity: 0;
+
+  p {
+    position: absolute;
+    font-size: 1.3rem;
+    top: 5%;
+    right: 3%;
+    font-weight: 600;
+    color: var(--color-black);
+    padding: 0.3rem 1rem;
+    border-radius: 5px;
+    background-color: rgba(239, 239, 239, 0.666);
+  }
+}
+
+.slide {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  transition: transform 1s;
+
+  img {
+    filter: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0;
+  }
+}
+
+.slider-btn {
+  z-index: 3;
+  position: absolute;
+  margin: 0;
+  font-size: 2.5rem;
+  color: var(--color-black);
+  background-color: var(--grey-background);
+  padding: 0 0.4rem;
+  border-radius: 50%;
+}
+
+.slider-btn:hover {
+  background-color: var(--grey-background-2);
+}
+
+.slide-img-left-btn {
+  top: 50%;
+  left: 2%;
+}
+
+.slide-img-right-btn {
+  top: 50%;
+  right: 2%;
+}
+
+//---------------------------------
+
+//----TAB component blog post exercise ----------
+.tab-component-btns-wrapper {
+  margin: 3rem 0;
+  @include flexCenter();
+}
+
+.tab-component-content-wrapper {
+  position: relative;
+  min-width: 100%;
+  min-height: 40rem;
+}
+
+.tab-content {
+  position: absolute;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.tab-btn--active {
+  background-color: var(--grey-background-2);
+}
+
+//_____________
+
+.uconverted-logo {
+  @include flexCenter();
+
+  img {
+    max-width: 25rem;
+    border-radius: 0;
+  }
+}
+
+.page-not-found-main {
+  @include flexCenter();
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.content-404 {
+  width: 95%;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  position: fixed;
+  padding: 1rem;
+  border-radius: 5px;
+
+  h1,
+  p {
+    color: white;
+    text-shadow: 2px 2px #000000;
+  }
+}
+
+.hide {
+  display: none;
 }

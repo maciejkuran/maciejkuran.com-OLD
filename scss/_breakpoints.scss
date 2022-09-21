@@ -107,6 +107,11 @@
   .home-container {
     padding: 1rem;
   }
+  //----------- slider component blog post -----------
+  .slider-wrapper {
+    min-height: 40rem;
+  }
+  //_________________________
 }
 
 @media (max-width: 752.98px) {
@@ -250,6 +255,15 @@
   textarea {
     font-size: 1.6rem;
   }
+  //----------- slider component blog post -----------
+  .slider-wrapper {
+    min-height: 25rem;
+
+    p {
+      font-size: 1.3rem;
+    }
+  }
+  //-------------------
 }
 
 @media (max-width: 500.98px) {

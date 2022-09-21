@@ -289,6 +289,8 @@ div.code-toolbar > .toolbar > .toolbar-item > span {
   background: var(--grey-background);
   box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.2);
   border-radius: 5px;
+  border: 1px solid var(--grey-tag-border);
+  transform: translate(-2rem, 1rem);
 }
 
 div.code-toolbar > .toolbar > .toolbar-item > a:hover,
@@ -305,5 +307,12 @@ div.code-toolbar > .toolbar > .toolbar-item > span:focus {
   code[class*='language-'],
   pre[class*='language-'] {
     font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 498.98px) {
+  :not(pre) > code[class*='language-'],
+  pre[class*='language-'] {
+    padding-top: 2.5rem;
   }
 }

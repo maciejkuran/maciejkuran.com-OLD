@@ -1,0 +1,143 @@
+.html-converter-main {
+  margin-top: 12rem;
+  margin: 12rem 1rem 0 1rem;
+
+  header {
+    padding: 1rem;
+    h1 {
+      margin-bottom: 3rem;
+    }
+    p {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+  }
+}
+
+.html-converter-section--1 {
+  padding: 2rem;
+  display: flex;
+  max-width: 130rem;
+  margin: auto;
+  justify-content: space-between;
+  background-color: rgb(233, 233, 233);
+  border: 1px solid var(--color-black);
+  border-radius: 5px;
+}
+
+.textarea-wrapper {
+  position: relative;
+
+  textarea {
+    padding: 4rem 2rem 2rem 2rem;
+    font-size: 1.8rem;
+  }
+
+  .primary-button {
+    font-size: 1.4rem;
+  }
+}
+
+.html-converter-clear-btn {
+  background-color: var(--grey-background);
+  position: absolute;
+  top: -1%;
+  right: -2%;
+  padding: 0.3rem;
+  border: 1px solid var(--grey-tag-border);
+}
+
+.html-converter-output-wrapper {
+  margin-left: 3rem;
+  width: 100%;
+
+  .output-box {
+    position: relative;
+    background-color: var(--grey-background);
+    border: 1px solid var(--grey-background-2);
+    padding: 3.5rem;
+    margin-top: 2rem;
+    max-height: 30rem;
+    overflow: auto;
+
+    code {
+      white-space: pre-line;
+      font-size: 1.8rem;
+    }
+
+    .primary-button {
+      font-size: 1.4rem;
+    }
+  }
+
+  .html-converter-copy-btn {
+    background-color: var(--grey-background);
+    position: absolute;
+    top: -2%;
+    right: -2%;
+    padding: 0.3rem;
+    border: 1px solid var(--grey-tag-border);
+  }
+
+  .html-converter-copy-btn:hover {
+    background-color: var(--grey-background-2);
+  }
+}
+
+.html-converter-section--2 {
+  max-width: 80rem;
+  margin-top: 12rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem;
+
+  h2 {
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--grey-tag-border);
+    padding-bottom: 1rem;
+  }
+
+  picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  img {
+    max-width: 28rem;
+    margin-top: 3rem;
+  }
+}
+
+@media (max-width: 1069.98px) {
+  .html-converter-main header p {
+    margin-bottom: 1rem;
+  }
+
+  .html-converter-section--1 {
+    flex-direction: column;
+  }
+
+  .textarea-wrapper {
+    width: 100%;
+
+    textarea {
+      width: 100%;
+    }
+  }
+
+  .html-converter-output-wrapper {
+    margin-left: 0;
+    margin-top: 4rem;
+  }
+}
+
+@media (max-width: 500.98px) {
+  .textarea-wrapper textarea {
+    font-size: 1.4rem;
+  }
+
+  .html-converter-output-wrapper .output-box code {
+    font-size: 1.4rem;
+  }
+}

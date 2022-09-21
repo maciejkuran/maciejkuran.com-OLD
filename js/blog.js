@@ -202,7 +202,7 @@ const post_19 = new Post(
   './function-checks-if-number-is-in-array-of-arrays',
   '/img/icons/javascript.png',
   'function checks if a number is in an array of arrays javascript',
-  'The function checks if a number is in an array of arrays.',
+  'Checking if a number is in an array of arrays.',
   ['JavaScript']
 );
 
@@ -218,7 +218,7 @@ const post_21 = new Post(
   './function-checks-if-number-is-even',
   '/img/icons/javascript.png',
   'function checks if a number is even javascript',
-  'The function checks if a number is even.',
+  'Checking if a number is even.',
   ['JavaScript']
 );
 
@@ -226,7 +226,7 @@ const post_22 = new Post(
   './function-computes-number-of-days-between-dates',
   '/img/icons/javascript.png',
   'function computes the number of days between dates javascript',
-  'The function computes the number of days between dates.',
+  'Computing the number of days between dates.',
   ['JavaScript']
 );
 
@@ -246,8 +246,7 @@ const post_24 = new Post(
   ['JavaScript']
 );
 
-//Blog page - search filter based on user input (tag or title)
-
+////Blog page - search filter based on user input (tag or title)
 const searchInput = document.querySelector('.posts-search-input');
 const allPosts = document.querySelectorAll('.post');
 
@@ -286,57 +285,69 @@ const removeBlankLines = () => {
 
 removeBlankLines();
 
-//******FUNCTIONALITY REPLACED BY prism.js library*******
-// ////Code colors <pre> tag
-// const preTags = document.querySelectorAll('pre code');
+////----Slider component - blog post exercise -----------
+const slides = document.querySelectorAll('.slide');
+const slideRightBtn = document.querySelector('.slide-img-right-btn');
+const slideLeftBtn = document.querySelector('.slide-img-left-btn');
+const instructionSlider = document.querySelector('.instruction-slider-label');
 
-// const calc = preTags.forEach(function (preTag) {
-//   const string = preTag.innerHTML;
-//   const newString = string
+let currentSlide = 0;
+const maxSlides = slides.length;
 
-//     .replaceAll('function', '<span style="color:#B5FFFE">function</span>')
-//     .replaceAll('const', '<span style="color:#0AFFFB">const</span>')
-//     .replaceAll('let ', '<span style="color:#0AFFFB">let </span>')
-//     .replaceAll('class=', '<span style="color:#0AFFFB">class=</span>')
-//     .replaceAll(' = ', '<span style="color:#E53613"> = </span>')
-//     .replaceAll(' + ', '<span style="color:#E53613"> + </span>')
-//     .replaceAll(' += ', '<span style="color:#E53613"> += </span>')
-//     .replaceAll('${', '<span style="color:#E53613">${</span>')
-//     .replaceAll(' === ', '<span style="color:#E53613"> === </span>')
-//     .replaceAll('(', '<span style="color:#FE755A">(</span>')
-//     .replaceAll(')', '<span style="color:#FE755A">)</span>')
-//     .replaceAll('[', '<span style="color:#39F18D">[</span>')
-//     .replaceAll(']', '<span style="color:#39F18D">]</span>')
-//     .replaceAll('{', '<span style="color:#F66F0B">{</span>')
-//     .replaceAll('}', '<span style="color:#F66F0B">}</span>')
-//     .replaceAll('console.log', '<span style="color:#10E48D">console.log</span>')
-//     .replaceAll('=&gt;', '<span style="color:#E53613">=&gt;</span>')
-//     .replaceAll('if ', '<span style="color:#FC3535">if </span>')
-//     .replaceAll('else if ', '<span style="color:#FC3535">else if </span>')
-//     .replaceAll('else ', '<span style="color:#FC3535">else </span>')
-//     .replaceAll('return', '<span style="color:#EF593B">return</span>')
-//     .replaceAll('addEventListener', '<span style="color:#E8704B">addEventListener</span>')
-//     .replaceAll('div', '<span style="color:#E8704B">div</span>');
+//setting slide
+const setSlide = slide => {
+  slides.forEach((sl, i) => {
+    sl.style.transform = `translateX(${100 * (i - slide)}%)`;
+  });
+};
 
-//   preTag.innerHTML = newString;
-// });
+setSlide(0);
 
-// //Copy to clipboard code
-// const copiedAlert = document.querySelector('.copied-alert');
-// const copyCodeBtns = document.querySelectorAll('.copy-code-btn');
+//Changing to next slide
+const nextSlide = () => {
+  if (currentSlide === maxSlides - 1) {
+    currentSlide = 0;
+  } else {
+    currentSlide++;
+  }
 
-// const copyToClipboard = e => {
-//   let contentToCopy = e.target.previousElementSibling.textContent;
+  setSlide(currentSlide);
+};
 
-//   if (navigator.clipboard) navigator.clipboard.writeText(contentToCopy);
+//Changing to previous slide
+const previousSlide = () => {
+  if (currentSlide === 0) {
+    currentSlide = maxSlides - 1;
+  } else {
+    currentSlide--;
+  }
+  setSlide(currentSlide);
+};
 
-//   setTimeout(() => {
-//     copiedAlert.classList.add('copied-alert--active');
-//   }, 0);
+//Show slider on UI with delay
+const sliderWrapper = document.querySelector('.slider-wrapper');
 
-//   setTimeout(() => {
-//     copiedAlert.classList.remove('copied-alert--active');
-//   }, 1200);
-// };
+const delaySlider = () => {
+  if (sliderWrapper) setTimeout(() => (sliderWrapper.style.opacity = '1'), 700);
+};
+delaySlider();
 
-// copyCodeBtns.forEach(btn => btn.addEventListener('click', copyToClipboard));
+//Handlers
+slideRightBtn?.addEventListener('click', nextSlide);
+
+slideLeftBtn?.addEventListener('click', previousSlide);
+
+////-----Tab component - blog post exercise ------
+const tabBtns = document.querySelectorAll('.tab-btn');
+const tabContent = document.querySelectorAll('.tab-content');
+
+const switchTabs = e => {
+  let clickedIndex = [...tabBtns].indexOf(e.target);
+  tabContent.forEach(tab => tab.classList.add('hide'));
+  tabBtns.forEach(btn => btn.classList.remove('tab-btn--active'));
+
+  tabContent[clickedIndex].classList.remove('hide');
+  tabBtns[clickedIndex].classList.add('tab-btn--active');
+};
+
+tabBtns?.forEach(btn => btn.addEventListener('click', switchTabs));

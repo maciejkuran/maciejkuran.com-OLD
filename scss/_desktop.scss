@@ -797,6 +797,36 @@
   }
 }
 
+.sitemap-container {
+  a {
+    margin: 0.5rem 0;
+    border-bottom: 1px solid var(--grey-tag-border);
+    padding: 0.3rem;
+
+    svg {
+      margin-right: 1rem;
+    }
+  }
+
+  a:hover {
+    background-color: var(--grey-background-2);
+  }
+  .sep {
+    width: 1px;
+    height: 3rem;
+    background-color: var(--color-black);
+    margin: 1rem 0;
+  }
+
+  .align {
+    max-width: 70rem;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+//Keep this class at the bottom to let override other styles
 .hide {
   display: none;
 }
+//_______________________________

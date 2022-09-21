@@ -1125,6 +1125,34 @@ pre {
   text-shadow: 2px 2px #000000;
 }
 
+.sitemap-container a {
+  margin: 0.5rem 0;
+  border-bottom: 1px solid var(--grey-tag-border);
+  padding: 0.3rem;
+}
+.sitemap-container a svg {
+  margin-right: 1rem;
+}
+.sitemap-container a:hover {
+  background-color: var(--grey-background-2);
+}
+.sitemap-container .sep {
+  width: 1px;
+  height: 3rem;
+  background-color: var(--color-black);
+  margin: 1rem 0;
+}
+.sitemap-container .align {
+  max-width: 70rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .hide {
   display: none;
 }
@@ -1628,6 +1656,9 @@ li {
   }
   .slider-wrapper p {
     font-size: 1.3rem;
+  }
+  .sitemap-container a {
+    font-size: 1.5rem;
   }
 }
 @media (max-width: 500.98px) {

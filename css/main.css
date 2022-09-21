@@ -206,9 +206,6 @@ pre {
 }
 .nav-items img {
   max-width: 9rem;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
 }
 .nav-items ul {
   display: -webkit-box;

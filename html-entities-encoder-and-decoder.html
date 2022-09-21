@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>HTML entities encoder decoder - Maciej Kuran-Janowski</title>
+    <meta
+      name="description"
+      content="Encode decode your HTML with my converter. Some special characters are reserved for use in HTML, meaning that your browser will parse them as HTML code."
+    />
+    <link rel="icon" type="image/x-icon" href="/img/icons/Maciej Kuran-Janowski avatar.png" />
+    <!-- ---GOOGLE FONTS--- -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500;600;700&family=Roboto+Mono:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SZF313ENVP"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'G-SZF313ENVP');
+    </script>
+    <!-- _________________________________ -->
+    <!-- ---Font Awesome--- -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/js/all.min.js"
+      integrity="sha512-naukR7I+Nk6gp7p5TMA4ycgfxaZBJ7MO5iC3Fp6ySQyKFHOGfpkSZkYVWV5R7u7cfAicxanwYQ5D1e17EfJcMA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- _____________ -->
+    <!-- My scripts with defer attribute load async -->
+    <script defer type="module" src="/js/components.js"></script>
+    <script defer type="module" src="/js/main.js"></script>
+    <script defer type="module" src="/js/prism.js"></script>
+    <script defer type="module" src="/js/html-converter.js"></script>
+
+    <!-- -- CSS-- -->
+    <link rel="stylesheet" href="/css/prism.css" />
+    <link rel="stylesheet" href="/css/main.css" />
+  </head>
+  <body>
+    <web-navbar></web-navbar>
+
+    <main class="html-converter-main">
+      <header>
+        <h1><span class="home-header-animation">HTML Entities</span><br />Encoder / Decoder</h1>
+        <p>
+          Enter the text and choose between <code class="highlight">encode</code> or
+          <code class="highlight">decode</code>.
+        </p>
+      </header>
+      <section class="html-converter-section--1">
+        <div class="html-converter-input-wrapper">
+          <div class="textarea-wrapper">
+            <textarea
+              class="html-converter-input"
+              cols="45"
+              rows="10"
+              placeholder="Place your code here"
+              spellcheck="false"
+            ></textarea>
+
+            <button class="primary-button html-converter-clear-btn">Clear<i class="fa-solid fa-eraser"></i></button>
+          </div>
+          <div>
+            <button class="primary-button encode-btn">Encode<i class="fa-solid fa-arrow-right-long"></i></button>
+            <button class="primary-button decode-btn">Decode<i class="fa-solid fa-arrow-right-long"></i></button>
+          </div>
+        </div>
+
+        <div class="html-converter-output-wrapper">
+          <h3>OUTPUT</h3>
+          <div class="output-box">
+            <code class="html-converter-output">The result will be displayed here</code>
+
+            <button class="primary-button html-converter-copy-btn">Copy<i class="fa-regular fa-copy"></i></button>
+          </div>
+        </div>
+      </section>
+
+      <section class="html-converter-section--2">
+        <h2>Reserved characters</h2>
+        <p>
+          Some special characters are reserved for use in HTML, meaning that your browser will parse them as HTML code.
+          For example, if you use the less-than (&lt;) sign, the browser interprets any text that follows as a tag.
+        </p>
+        <p>
+          To display these characters as text, replace them with their corresponding character entities, as shown in the
+          following table.
+        </p>
+        <p>
+          <i>source:</i>
+          <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Glossary/Entity">developer.mozilla.org</a>
+        </p>
+        <p>
+          <i>app repo:</i>
+          <a target="_blank" href="https://github.com/maciejkuran/HTML-Entities-Encoder-Decoder-App">GitHub</a>
+        </p>
+
+        <picture
+          ><img class="post-img" src="/img/html entities info graphic.png" alt="html entities info graphic"
+        /></picture>
+      </section>
+    </main>
+
+    <web-footer></web-footer>
+
+    <cookies-popup></cookies-popup>
+
+    <p class="copied-alert-label">Copied 🟢</p>
+    <p class="cleared-alert-label">Cleared 🟢</p>
+
+    <div class="background-overlay hide"></div>
+  </body>
+</html>

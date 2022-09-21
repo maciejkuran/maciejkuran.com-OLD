@@ -36,7 +36,7 @@ class webFooter extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
     <footer class="web-footer">
-      <p>Copyright©, Maciej Kuran-Janowski</p>
+      <p>Copyright©, Maciej Kuran-Janowski,<span><a href="/site-map">sitemap</a></span></p>
 
       <div><a href="/privacy-policy">Privacy policy</a></div>
     </footer>

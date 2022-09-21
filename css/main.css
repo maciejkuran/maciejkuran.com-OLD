@@ -540,7 +540,8 @@ pre {
 .web-footer a:hover {
   background-color: var(--grey-background-2);
 }
-.web-footer p {
+.web-footer p,
+.web-footer a {
   margin-bottom: 0;
   color: var(--grey-tag-border);
   font-size: 1.5rem;
@@ -1120,7 +1121,8 @@ pre {
   border-radius: 5px;
 }
 .content-404 h1,
-.content-404 p {
+.content-404 p,
+.content-404 a {
   color: white;
   text-shadow: 2px 2px #000000;
 }

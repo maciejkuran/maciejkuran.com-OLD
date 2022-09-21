@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>Creating dynamically an array that contains 100 random numbers between 1-10 - JavaScript</title>
+    <meta
+      name="description"
+      content="In this exercise, I am practising such methods as new Array, fill and Array.from. These methods allow us to create arrays programmatically."
+    />
+    <link rel="icon" type="image/x-icon" href="/img/icons/Maciej Kuran-Janowski avatar.png" />
+    <!-- ---GOOGLE FONTS--- -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500;600;700&family=Roboto+Mono:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SZF313ENVP"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'G-SZF313ENVP');
+    </script>
+    <!-- _________________________________ -->
+    <!-- ---Font Awesome--- -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/js/all.min.js"
+      integrity="sha512-naukR7I+Nk6gp7p5TMA4ycgfxaZBJ7MO5iC3Fp6ySQyKFHOGfpkSZkYVWV5R7u7cfAicxanwYQ5D1e17EfJcMA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- _____________ -->
+    <!-- My scripts with defer attribute load async -->
+    <script defer type="module" src="/js/components.js"></script>
+    <script defer type="module" src="/js/main.js"></script>
+    <script defer type="module" src="/js/blog.js"></script>
+    <script defer type="module" src="/js/prism.js"></script>
+
+    <!-- -- CSS-- -->
+    <link rel="stylesheet" href="/css/prism.css" />
+    <link rel="stylesheet" href="/css/main.css" />
+  </head>
+  <body class="line-numbers">
+    <web-navbar></web-navbar>
+
+    <main class="blog-post-main">
+      <header class="blog-post-header">
+        <div class="item">
+          <img
+            src="/img/icons/javascript.png"
+            alt="creating dynamically array contains 100 random numbers between 1 10 javascript"
+          />
+          <div class="item-content">
+            <h1>Creating dynamically an array that contains 100 random numbers between 1-10</h1>
+            <p class="post-date">09-06-2022</p>
+
+            <div class="tag-cloud tag-cloud-my-projects">
+              <p class="tag-primary">JavaScript</p>
+              <p class="tag-primary">Exercise</p>
+            </div>
+            <a href="/blog/"><i class="fa-solid fa-arrow-left-long"></i>back</a>
+          </div>
+        </div>
+      </header>
+      <section class="post-section">
+        <h3>new Array, fill, Array.from methods</h3>
+        <p>
+          In this exercise, I am practising such methods as <code class="highlight">new Array()</code>,
+          <code class="highlight">fill()</code> and <code class="highlight">Array.from()</code>. These methods allow to
+          create arrays programmatically.
+        </p>
+        <p>Before we solve the exercise, let me first go through a few examples to show how these methods work.</p>
+      </section>
+      <section class="post-section">
+        <h3>new Array and fill</h3>
+        <p>I am creating an empty array defining the length.</p>
+        <pre>
+            <code class="language-js">
+                const emptyArray = new Array(10); //OUTPUT: [empty × 10]
+            </code>
+        </pre>
+        <p>
+          The <code class="highlight">fill()</code> method works like the <code class="highlight">slice()</code> method.
+          It has a start and end parameter. Let's fill the <code class="highlight">emptyArray</code> with the number:
+          1,2.
+        </p>
+        <pre>
+            <code class="language-js">
+                //Adding the last 5 values
+emptyArray.fill(2, 5, 10);
+console.log(emptyArray); //OUTPUT: [empty × 5, 2, 2, 2, 2, 2]
+            </code>
+        </pre>
+
+        <pre>
+            <code class="language-js">
+                //Adding the first 5 values
+emptyArray.fill(1, 0, 5);
+console.log(emptyArray); //OUTPUT: [1, 1, 1, 1, 1, 2, 2, 2, 2, 2]
+            </code>
+        </pre>
+        <p>Let's check how to mutate the existing array.</p>
+        <pre>
+            <code class="language-js">
+                const existingArr = [99, 99, 99];
+                existingArr.fill(1, 0).fill(2, 1).fill(3, 2);
+                console.log(existingArr); //OUTPUT: [1, 2, 3]
+            </code>
+        </pre>
+      </section>
+      <section class="post-section">
+        <h3>Array.from</h3>
+        <p>
+          In this method, we get access to value and index. Let's create the array that contains numbers from 1 to 5.
+        </p>
+        <pre>
+            <code class="language-js">
+                const newArray = Array.from({ length: 5 }, (_, i) =&gt; i + 1);
+                console.log(newArray); //OUTPUT: [1, 2, 3, 4, 5] 
+            </code>
+        </pre>
+        <p>Now, let's manipulate values in <code class="highlight">newArray</code>, adding +10 to each number.</p>
+        <pre>
+            <code class="language-js">
+                const manipulateArr = Array.from(newArray, (nb, _) =&gt; nb + 10);
+                console.log(manipulateArr); //OUTPUT: [11, 12, 13, 14, 15]
+            </code>
+        </pre>
+      </section>
+      <section class="post-section">
+        <h2>Creating dynamically an array that contains 100 random numbers between 1-10</h2>
+        <p>
+          I am creating the array that will contain 100 randomly chosen numbers between 1-10 using the
+          <code class="highlight">Array.from()</code>
+          method. Please note, that every time the output will be different as we generate random numbers.
+        </p>
+        <pre>
+            <code class="language-js">
+                const randomNumbers = Array.from(
+                    { length: 100 },
+                    () =&gt; Math.trunc(Math.random() * 10) + 1
+                    );
+                    
+                    console.log(randomNumbers); //OUTPUT: [10, 1, 10, 10, 8, 6, 4, 5, 1, 8, 3, 8, 9, 5, 2, 6, 10, 9, 5, 9, 6, 10, 10, 10, 1, 1, 4, 9, 7, 3, 7, 3, 10, 8, 7, 1, 9, 7, 7, 9, 4, 8, 6, 8, 4, 1, 6, 6, 3, 3, 1, 4, 5, 4, 9, 10, 5, 8, 3, 6, 5, 2, 1, 5, 1, 3, 9, 5, 8, 1, 6, 8, 9, 5, 8, 9, 9, 8, 5, 7, 4, 8, 2, 1, 10, 10, 8, 6, 4, 3, 4, 7, 5, 2, 2, 6, 5, 6, 6, 6]
+            </code>
+        </pre>
+      </section>
+    </main>
+
+    <web-footer></web-footer>
+
+    <cookies-popup></cookies-popup>
+
+    <div class="background-overlay hide"></div>
+  </body>
+</html>

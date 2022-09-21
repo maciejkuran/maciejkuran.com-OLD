@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>Creating a slider component - JavaScript</title>
+    <meta
+      name="description"
+      content="In this exercise, I am creating a simple slider component that can be useful in any website creation. It will be all done with vanilla JavaScript."
+    />
+    <link rel="icon" type="image/x-icon" href="/img/icons/Maciej Kuran-Janowski avatar.png" />
+    <!-- ---GOOGLE FONTS--- -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500;600;700&family=Roboto+Mono:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SZF313ENVP"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'G-SZF313ENVP');
+    </script>
+    <!-- _________________________________ -->
+    <!-- ---Font Awesome--- -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/js/all.min.js"
+      integrity="sha512-naukR7I+Nk6gp7p5TMA4ycgfxaZBJ7MO5iC3Fp6ySQyKFHOGfpkSZkYVWV5R7u7cfAicxanwYQ5D1e17EfJcMA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- _____________ -->
+    <!-- My scripts with defer attribute load async -->
+    <script defer type="module" src="/js/components.js"></script>
+    <script defer type="module" src="/js/main.js"></script>
+    <script defer type="module" src="/js/blog.js"></script>
+    <script defer type="module" src="/js/prism.js"></script>
+
+    <!-- -- CSS-- -->
+    <link rel="stylesheet" href="/css/prism.css" />
+    <link rel="stylesheet" href="/css/main.css" />
+  </head>
+  <body>
+    <web-navbar></web-navbar>
+
+    <main class="blog-post-main">
+      <header class="blog-post-header">
+        <div class="item">
+          <img src="/img/icons/javascript.png" alt="slider component javascript" />
+          <div class="item-content">
+            <h1>Creating a slider component</h1>
+            <p class="post-date">14-07-2022</p>
+
+            <div class="tag-cloud tag-cloud-my-projects">
+              <p class="tag-primary">JavaScript</p>
+              <p class="tag-primary">Exercise</p>
+            </div>
+            <a href="/blog/"><i class="fa-solid fa-arrow-left-long"></i>back</a>
+          </div>
+        </div>
+      </header>
+      <section class="post-section">
+        <h2>How to create a slider with JavaScript</h2>
+        <p>
+          In this exercise, I am creating a simple slider component that can be useful in any website creation. It will
+          be all done with vanilla JavaScript. You may check the source code below the slider (HTML, SCSS, JS).
+        </p>
+
+        <div class="slider-wrapper">
+          <div class="slide">
+            <img src="/img/slider-imgs/img-1.jpg" alt="" />
+          </div>
+          <div class="slide">
+            <img src="/img/slider-imgs/img-2.jpg" alt="" />
+          </div>
+          <div class="slide">
+            <img src="/img/slider-imgs/img-3.jpg" alt="" />
+          </div>
+          <div class="slide">
+            <img src="/img/slider-imgs/img-4.jpg" alt="" />
+          </div>
+
+          <button class="slider-btn slide-img-left-btn"><i class="fa-solid fa-arrow-left-long"></i></button>
+          <button class="slider-btn slide-img-right-btn"><i class="fa-solid fa-arrow-right-long"></i></button>
+
+          <p class="instruction-slider-label">use arrows to slide</p>
+        </div>
+
+        <div class="tab-component-btns-wrapper">
+          <button class="primary-button tab-btn tab-btn--active">HTML</button>
+          <button class="primary-button tab-btn">SCSS</button>
+          <button class="primary-button tab-btn">JS</button>
+        </div>
+
+        <div class="tab-component-content-wrapper">
+          <pre class="tab-content">
+                <code class="language-html">
+                  &lt;div class=&quot;slider-wrapper&quot;&gt;
+                  &lt;div class=&quot;slide&quot;&gt;
+                  &lt;img src=&quot;/img/img-1.jpg&quot; alt=&quot;&quot; /&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;slide&quot;&gt;
+                  &lt;img src=&quot;/img/img-2.jpg&quot; alt=&quot;&quot; /&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;slide&quot;&gt;
+                  &lt;img src=&quot;/img/img-3.jpg&quot; alt=&quot;&quot; /&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;slide&quot;&gt;
+                  &lt;img src=&quot;/img/img-4.jpg&quot; alt=&quot;&quot; /&gt;
+                  &lt;/div&gt;
+                  &lt;button class=&quot;slider-btn slide-img-left-btn&quot;&gt;&lt;i class=&quot;fa-solid fa-arrow-left-long&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+          &lt;button class=&quot;slider-btn slide-img-right-btn&quot;&gt;&lt;i class=&quot;fa-solid fa-arrow-right-long&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+                  &lt;p class=&quot;instruction-slider-label&quot;&gt;use arrows to slide&lt;/p&gt;
+                  &lt;/div&gt;
+                </code>
+            </pre>
+          <pre class="tab-content hide">
+                <code class="language-css">
+                  .slider-wrapper {
+                    position: relative;
+                    min-height: 55rem;
+                    width: 100%;
+                    overflow: hidden;
+                    
+                    p {
+                    position: absolute;
+                    top: 5%;
+                    right: 3%;
+                    font-weight: 600;
+                    color: var(--clr-white);
+                    }
+                    }
+                    
+                    .slide {
+                    position: absolute;
+                    height: 100%;
+                    width: 100%;
+                    // border-radius: 10px;
+                    transition: transform 1s;
+                    
+                    img {
+                    filter: none;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 0;
+                    }
+                    }
+                    
+                    .slider-btn {
+                    z-index: 3;
+                    position: absolute;
+                    border-radius: 500%;
+                    margin: 0;
+                    padding: 1rem;
+                    background-color: var(--clr-grey4);
+                    border: none;
+                    }
+                    
+                    .slider-btn:hover {
+                    border: none;
+                    background-color: var(--clr-grey5);
+                    transition: 500ms;
+                    }
+                    
+                    .slide-img-left-btn {
+                    left: 5%;
+                    top: 50%;
+                    }
+                    
+                    .slide-img-right-btn {
+                    right: 5%;
+                    top: 50%;
+                    }
+                    
+                    @media (max-width: 823.98px) {
+                    .slider-wrapper {
+                    min-height: 40rem;
+                    }
+                    }
+                    
+                    @media (max-width: 575.98px) {
+                    .slider-wrapper {
+                    min-height: 25rem;
+                    
+                    p {
+                    font-size: 1.3rem;
+                    }
+                    }
+                    }
+                </code>
+            </pre>
+          <pre class="tab-content hide">
+                <code class="language-js">
+                  const slides = document.querySelectorAll('.slide');
+const slideRightBtn = document.querySelector('.slide-img-right-btn');
+const slideLeftBtn = document.querySelector('.slide-img-left-btn');
+const instructionSlider = document.querySelector('.instruction-slider-label');
+
+let currentSlide = 0;
+const maxSlides = slides.length;
+
+//setting slide
+const setSlide = (slide) =&gt; {
+slides.forEach((sl, i) =&gt; {
+sl.style.transform = `translateX(${100 * (i - slide)}%)`;
+});
+};
+
+setSlide(0);
+
+//Changing to next slide
+const nextSlide = () =&gt; {
+if (currentSlide === maxSlides - 1) {
+currentSlide = 0;
+} else {
+currentSlide++;
+}
+
+setSlide(currentSlide);
+};
+
+//Changing to previous slide
+
+const previousSlide = () =&gt; {
+if (currentSlide === 0) {
+currentSlide = maxSlides - 1;
+} else {
+currentSlide--;
+}
+setSlide(currentSlide);
+};
+
+//Handlers
+slideRightBtn.addEventListener('click', nextSlide);
+
+slideLeftBtn.addEventListener('click', previousSlide);
+                </code>
+            </pre>
+        </div>
+      </section>
+    </main>
+
+    <web-footer></web-footer>
+
+    <cookies-popup></cookies-popup>
+
+    <div class="background-overlay hide"></div>
+  </body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>Computing the number of days between dates - JavaScript</title>
+    <meta
+      name="description"
+      content="There's a rule that says that every even number can be divided by 2. Let's check if a number is even using the remainder operator - javascript"
+    />
+    <link rel="icon" type="image/x-icon" href="/img/icons/Maciej Kuran-Janowski avatar.png" />
+    <!-- ---GOOGLE FONTS--- -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500;600;700&family=Roboto+Mono:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SZF313ENVP"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'G-SZF313ENVP');
+    </script>
+    <!-- _________________________________ -->
+    <!-- ---Font Awesome--- -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/js/all.min.js"
+      integrity="sha512-naukR7I+Nk6gp7p5TMA4ycgfxaZBJ7MO5iC3Fp6ySQyKFHOGfpkSZkYVWV5R7u7cfAicxanwYQ5D1e17EfJcMA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- _____________ -->
+    <!-- My scripts with defer attribute load async -->
+    <script defer type="module" src="/js/components.js"></script>
+    <script defer type="module" src="/js/main.js"></script>
+    <script defer type="module" src="/js/blog.js"></script>
+    <script defer type="module" src="/js/prism.js"></script>
+
+    <!-- -- CSS-- -->
+    <link rel="stylesheet" href="/css/prism.css" />
+    <link rel="stylesheet" href="/css/main.css" />
+  </head>
+  <body class="line-numbers">
+    <web-navbar></web-navbar>
+
+    <main class="blog-post-main">
+      <header class="blog-post-header">
+        <div class="item">
+          <img src="/img/icons/javascript.png" alt="function checks if a number is even javascript" />
+          <div class="item-content">
+            <h1>Computing the number of days between dates</h1>
+            <p class="post-date">18-06-2022</p>
+
+            <div class="tag-cloud tag-cloud-my-projects">
+              <p class="tag-primary">JavaScript</p>
+              <p class="tag-primary">Exercise</p>
+            </div>
+            <a href="/blog/"><i class="fa-solid fa-arrow-left-long"></i>back</a>
+          </div>
+        </div>
+      </header>
+      <section class="post-section">
+        <p>
+          In this exercise, I am writing the function that computes the number of days between dates. Let's assume,
+          there are 3 events in January. The dates have already been announced and stored in an array, in the object
+          <code class="highlight">january</code>.
+        </p>
+
+        <pre>
+            <code class="language-js">
+                const january = {
+                    events: [
+                    '2023-01-01T19:30:00.000Z',
+                    '2023-01-10T20:30:00.000Z',
+                    '2023-01-30T21:30:00.000Z',
+                    ],
+                    };
+                
+            </code>
+           
+        </pre>
+
+        <pre>
+            <code class="language-js">
+                const calcDays = (date1, date2) =&gt;
+                Math.round(
+                Math.abs(+new Date(date1) - +new Date(date2)) / (1000 * 60 * 60 * 24)
+                );
+                
+                
+            </code>
+           
+        </pre>
+
+        <pre>
+            <code class="language-js">
+                //Calculating the days between the 1st and 2nd event
+                console.log(calcDays(january.events.at(0), january.events.at(1))); //9 DAYS
+                
+                //Calculating the days between the 1st and 3rd event
+                console.log(calcDays(january.events.at(0), january.events.at(2))); // 29 DAYS
+            </code>
+           
+        </pre>
+      </section>
+    </main>
+
+    <web-footer></web-footer>
+
+    <cookies-popup></cookies-popup>
+
+    <div class="background-overlay hide"></div>
+  </body>
+</html>

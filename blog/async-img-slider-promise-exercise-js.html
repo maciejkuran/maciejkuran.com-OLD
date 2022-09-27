@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>Async image slider, promises exercise - JavaScript</title>
+    <meta
+      name="description"
+      content="Creating asynchronous image slider by returning a promise from a function and then consuming this promise - JavaScript"
+    />
+    <link rel="icon" type="image/x-icon" href="/img/icons/Maciej Kuran-Janowski avatar.png" />
+    <!-- ---GOOGLE FONTS--- -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500;600;700&family=Roboto+Mono:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SZF313ENVP"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'G-SZF313ENVP');
+    </script>
+    <!-- _________________________________ -->
+    <!-- ---Font Awesome--- -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/js/all.min.js"
+      integrity="sha512-naukR7I+Nk6gp7p5TMA4ycgfxaZBJ7MO5iC3Fp6ySQyKFHOGfpkSZkYVWV5R7u7cfAicxanwYQ5D1e17EfJcMA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- _____________ -->
+    <!-- My scripts with defer attribute load async -->
+    <script defer type="module" src="/js/components.js"></script>
+    <script defer type="module" src="/js/main.js"></script>
+    <script defer type="module" src="/js/blog.js"></script>
+    <script defer type="module" src="/js/prism.js"></script>
+
+    <!-- -- CSS-- -->
+    <link rel="stylesheet" href="/css/prism.css" />
+    <link rel="stylesheet" href="/css/main.css" />
+  </head>
+  <body>
+    <web-navbar></web-navbar>
+
+    <main class="blog-post-main">
+      <header class="blog-post-header">
+        <div class="item">
+          <img src="/img/icons/javascript.png" alt="async image slider promises exercise javascript" />
+          <div class="item-content">
+            <h1>Asynchronous image slider - promises exercise</h1>
+            <p class="post-date">27-09-2022</p>
+
+            <div class="tag-cloud tag-cloud-my-projects">
+              <p class="tag-primary">JavaScript</p>
+              <p class="tag-primary">Exercise</p>
+            </div>
+            <a href="/blog/"><i class="fa-solid fa-arrow-left-long"></i>back</a>
+          </div>
+        </div>
+      </header>
+      <section class="post-section">
+        <h2>Asynchronous image slider</h2>
+        <p>
+          In this exercise, I will experiment and implement a very basic slider. This exercise highlights handling
+          asynchronous tasks in JavaScript. The content (image) will automatically keep changing after 1.5s.
+        </p>
+        <p>
+          In total there are 4 images.
+          <span class="yellow-highlight"
+            >Press the button to activate the slider. To run slider again, please reset first.</span
+          >
+        </p>
+        <button class="primary-button run-slider-btn">Run slider<i class="fa-solid fa-arrow-right-long"></i></button>
+        <button class="primary-button reset-slider-btn">Reset<i class="fa-solid fa-arrow-right-long"></i></button>
+        <div class="async-slider-container">
+          <!-- img is appended here -->
+        </div>
+      </section>
+      <section class="post-section">
+        <h3>JavaScript promises</h3>
+        <p>
+          I am writing the function, that returns a <code class="highlight">promise</code>. This function takes one
+          argument <code class="highlight">imgSrc</code> and promises to display the image in DOM if everything went
+          successfully. If some error occurs (e.g. image not found), I will make sure to
+          <code class="highlight">reject()</code> and <code class="highlight">catch()</code> the error when a promise is
+          consumed.
+        </p>
+
+        <p>
+          If you lack good information about JavaScript promises, I encourage you to read
+          <a
+            target="_blank"
+            href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"
+            >MDN documentation</a
+          >.
+        </p>
+
+        <div class="tab-component-btns-wrapper">
+          <button class="primary-button tab-btn tab-btn--active">HTML</button>
+          <button class="primary-button tab-btn">JS</button>
+        </div>
+
+        <div class="tab-component-content-wrapper">
+          <pre class="tab-content">
+                  <code class="language-html">  
+                    
+                    &lt;button class=&quot;primary-button run-slider-btn&quot;&gt;Run slider&lt;i class=&quot;fa-solid fa-arrow-right-long&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+                    &lt;button class=&quot;primary-button reset-slider-btn&quot;&gt;Reset&lt;i class=&quot;fa-solid fa-arrow-right-long&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+                    &lt;div class=&quot;async-slider-container&quot;&gt;
+                      &lt;!-- img is appended here --&gt;
+                    &lt;/div&gt;
+                   
+                  </code>
+              </pre>
+
+          <pre class="tab-content hide">
+                  <code class="language-js">
+const imgContainer = document.querySelector('.async-slider-container');
+const runSliderBtn = document.querySelector('.run-slider-btn');
+                    const resetSliderBtn = document.querySelector('.reset-slider-btn');
+                    
+                    //Creating promises
+                    const makeDelay = seconds =&gt; {
+                      return new Promise(resolve =&gt; {
+                        setTimeout(resolve, seconds * 1000);
+                      });
+                    };
+                    
+                    const displayImg = imgSrc =&gt; {
+                      return new Promise((resolve, reject) =&gt; {
+                        const img = document.createElement('img');
+                        img.classList.add('post-img'); //my css class
+                        img.src = imgSrc;
+                    
+                        img.addEventListener('load', () =&gt; {
+                          resolve(img);
+                          imgContainer.append(img);
+                        });
+                    
+                        img.addEventListener('error', () =&gt; {
+                          reject('Image not found 🔴');
+                        });
+                      });
+                    };
+                    
+                    //Consuming promises
+                    let activeImg;
+                    
+                    const runSlider = () =&gt; {
+                      displayImg('/img/slider-imgs/img-1.jpg')
+                        .then(res =&gt; {
+                          activeImg = res;
+                          return makeDelay(1.5);
+                        })
+                        .then(res =&gt; {
+                          return makeDelay(1.5);
+                        })
+                        .then(res =&gt; {
+                          activeImg.remove();
+                          return displayImg('/img/slider-imgs/img-2.jpg');
+                        })
+                        .then(res =&gt; {
+                          activeImg = res;
+                    
+                          return makeDelay(1.5);
+                        })
+                        .then(res =&gt; {
+                          activeImg.remove();
+                          return displayImg('/img/slider-imgs/img-3.jpg');
+                        })
+                        .then(res =&gt; {
+                          activeImg = res;
+                    
+                          return makeDelay(1.5);
+                        })
+                        .then(res =&gt; {
+                          activeImg.remove();
+                          return displayImg('/img/slider-imgs/img-4.jpg');
+                        })
+                        .catch(err =&gt; console.log(err)); //catching error
+                    };
+                    
+                    runSliderBtn.addEventListener('click', runSlider);
+                    
+                    //Resetting slider
+                    const resetSlider = () =&gt; {
+                      [...imgContainer.children].forEach(item =&gt; item.remove());
+                    };
+                    
+                    resetSliderBtn.addEventListener('click', resetSlider);
+                  </code>
+              </pre>
+        </div>
+      </section>
+    </main>
+
+    <web-footer></web-footer>
+
+    <cookies-popup></cookies-popup>
+
+    <div class="background-overlay hide"></div>
+  </body>
+</html>

@@ -42,6 +42,7 @@ pre[class*='language-'] {
 :not(pre) > code[class*='language-'],
 pre[class*='language-'] {
   background: #222222;
+  margin: 2rem 0;
 }
 
 /* Inline code */
@@ -291,7 +292,7 @@ div.code-toolbar > .toolbar > .toolbar-item > span {
   box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.2);
   border-radius: 5px;
   border: 1px solid var(--grey-tag-border);
-  transform: translate(-2rem, 1rem);
+  transform: translate(-2rem, 2rem);
 }
 
 div.code-toolbar > .toolbar > .toolbar-item > a:hover,

@@ -111,7 +111,7 @@ textarea {
 pre {
   position: relative;
   max-width: 93vw;
-  max-height: 40rem;
+  max-height: 45rem;
   overflow: auto;
   border: 3px solid var(--color-black);
 }
@@ -1153,6 +1153,11 @@ pre {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.yellow-highlight {
+  background-color: yellow;
+  padding: 0.2rem;
 }
 
 .hide {

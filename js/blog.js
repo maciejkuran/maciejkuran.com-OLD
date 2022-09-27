@@ -246,6 +246,22 @@ const post_24 = new Post(
   ['JavaScript']
 );
 
+const post_25 = new Post(
+  './function-creates-username-oop-js',
+  '/img/icons/javascript.png',
+  'function creates username oop javascript',
+  'Creating username out of user objects data - OOP.',
+  ['JavaScript']
+);
+
+const post_26 = new Post(
+  './async-img-slider-promise-exercise-js',
+  '/img/icons/javascript.png',
+  'async img slider promises exercise javascript',
+  'Asynchronous image slider - promises exercise',
+  ['JavaScript']
+);
+
 ////Blog page - search filter based on user input (tag or title)
 const searchInput = document.querySelector('.posts-search-input');
 const allPosts = document.querySelectorAll('.post');
@@ -279,11 +295,14 @@ const code = document.querySelectorAll('pre code');
 
 const removeBlankLines = () => {
   [...code].forEach(el => {
-    el.textContent = el.textContent.replace(/^\s+/gm, '');
+    // el.textContent = el.textContent.replace(/^\s+/gm, '');
+    el.textContent = el.textContent.trim();
   });
 };
 
 removeBlankLines();
+
+const codeTags = document.querySelectorAll('code');
 
 ////----Slider component - blog post exercise -----------
 const slides = document.querySelectorAll('.slide');
@@ -351,3 +370,78 @@ const switchTabs = e => {
 };
 
 tabBtns?.forEach(btn => btn.addEventListener('click', switchTabs));
+
+////-----Asynchronous image slider - blog post exercise ------
+const imgContainer = document.querySelector('.async-slider-container');
+const runSliderBtn = document.querySelector('.run-slider-btn');
+const resetSliderBtn = document.querySelector('.reset-slider-btn');
+
+//Creating promises
+const makeDelay = seconds => {
+  return new Promise(resolve => {
+    setTimeout(resolve, seconds * 1000);
+  });
+};
+
+const displayImg = imgSrc => {
+  return new Promise((resolve, reject) => {
+    const img = document.createElement('img');
+    img.classList.add('post-img'); //my css class
+    img.src = imgSrc;
+
+    img.addEventListener('load', () => {
+      resolve(img);
+      imgContainer.append(img);
+    });
+
+    img.addEventListener('error', () => {
+      reject('Image not found 🔴');
+    });
+  });
+};
+
+//Consuming promises
+let activeImg;
+
+const runSlider = () => {
+  displayImg('/img/slider-imgs/img-1.jpg')
+    .then(res => {
+      activeImg = res;
+      return makeDelay(1.5);
+    })
+    .then(res => {
+      return makeDelay(1.5);
+    })
+    .then(res => {
+      activeImg.remove();
+      return displayImg('/img/slider-imgs/img-2.jpg');
+    })
+    .then(res => {
+      activeImg = res;
+
+      return makeDelay(1.5);
+    })
+    .then(res => {
+      activeImg.remove();
+      return displayImg('/img/slider-imgs/img-3.jpg');
+    })
+    .then(res => {
+      activeImg = res;
+
+      return makeDelay(1.5);
+    })
+    .then(res => {
+      activeImg.remove();
+      return displayImg('/img/slider-imgs/img-4.jpg');
+    })
+    .catch(err => console.log(err)); //catching error
+};
+
+runSliderBtn?.addEventListener('click', runSlider);
+
+//Resetting slider
+const resetSlider = () => {
+  [...imgContainer.children].forEach(item => item.remove());
+};
+
+resetSliderBtn?.addEventListener('click', resetSlider);

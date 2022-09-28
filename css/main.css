@@ -927,6 +927,9 @@ pre {
 .post-section li {
   line-height: 32px;
 }
+.post-section p {
+  margin-bottom: 2rem;
+}
 
 .post-img {
   max-width: 100%;

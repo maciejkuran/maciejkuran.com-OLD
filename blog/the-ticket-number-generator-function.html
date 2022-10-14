@@ -51,44 +51,44 @@
   <body>
     <web-navbar></web-navbar>
 
-    <main class="blog-post-main">
-      <header class="blog-post-header">
-        <div class="item">
-          <img src="/img/icons/javascript.png" alt="ticket number generator javascript" />
-          <div class="item-content">
-            <h1>The ticket number generator</h1>
-            <p class="post-date">15-05-2022</p>
-
-            <div class="tag-cloud tag-cloud-my-projects">
-              <p class="tag-primary">JavaScript</p>
-              <p class="tag-primary">Exercise</p>
+    <main>
+      <article class="blog-post-article">
+        <header class="blog-post-header">
+          <div class="item">
+            <img src="/img/icons/javascript.png" alt="ticket number generator javascript" />
+            <div class="item-content">
+              <h1>The ticket number generator</h1>
+              <p class="post-date">15-05-2022</p>
+              <div class="tag-cloud tag-cloud-my-projects">
+                <p class="tag-primary">JavaScript</p>
+                <p class="tag-primary">Exercise</p>
+              </div>
+              <a href="/blog/"><i class="fa-solid fa-arrow-left-long"></i>back</a>
             </div>
-            <a href="/blog/"><i class="fa-solid fa-arrow-left-long"></i>back</a>
           </div>
-        </div>
-      </header>
-      <section class="post-section">
-        <p>
-          In this exercise, I am writing the function that will choose a random letter from the array, generate a random
-          number and return a random letter + random number as a string.
-        </p>
-
-        <pre>
-            <code class="language-js">
-                const ticketNumberGenerator = () =&gt; {
-                    const letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'];
-                    const randomLetter = Math.floor(Math.random() * letters.length);
-                    const numbers = Math.floor(Math.random() * 100000);
-                    
-                    return letters[randomLetter].toUpperCase() + numbers;
-                    };
-                    
-                    console.log(ticketNumberGenerator()); //OUTPUT H64912
-                
-            </code>
-           
-        </pre>
-      </section>
+        </header>
+        <section class="post-section">
+          <p>
+            In this exercise, I am writing the function that will choose a random letter from the array, generate a
+            random number and return a random letter + random number as a string.
+          </p>
+          <pre>
+              <code class="language-js">
+                  const ticketNumberGenerator = () =&gt; {
+                      const letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'];
+                      const randomLetter = Math.floor(Math.random() * letters.length);
+                      const numbers = Math.floor(Math.random() * 100000);
+        
+                      return letters[randomLetter].toUpperCase() + numbers;
+                      };
+        
+                      console.log(ticketNumberGenerator()); //OUTPUT H64912
+        
+              </code>
+        
+          </pre>
+        </section>
+      </article>
     </main>
 
     <web-footer></web-footer>

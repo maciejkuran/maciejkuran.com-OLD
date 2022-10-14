@@ -51,107 +51,106 @@
   <body>
     <web-navbar></web-navbar>
 
-    <main class="blog-post-main">
-      <header class="blog-post-header">
-        <div class="item">
-          <img src="/img/icons/javascript.png" alt="tab component javascript" />
-          <div class="item-content">
-            <h1>Implementing a tab component</h1>
-            <p class="post-date">26-07-2022</p>
-
-            <div class="tag-cloud tag-cloud-my-projects">
-              <p class="tag-primary">JavaScript</p>
-              <p class="tag-primary">Exercise</p>
+    <main>
+      <article class="blog-post-article">
+        <header class="blog-post-header">
+          <div class="item">
+            <img src="/img/icons/javascript.png" alt="tab component javascript" />
+            <div class="item-content">
+              <h1>Implementing a tab component</h1>
+              <p class="post-date">26-07-2022</p>
+              <div class="tag-cloud tag-cloud-my-projects">
+                <p class="tag-primary">JavaScript</p>
+                <p class="tag-primary">Exercise</p>
+              </div>
+              <a href="/blog/"><i class="fa-solid fa-arrow-left-long"></i>back</a>
             </div>
-            <a href="/blog/"><i class="fa-solid fa-arrow-left-long"></i>back</a>
           </div>
-        </div>
-      </header>
-      <section class="post-section">
-        <h2>How to make a custom tab component with JavaScript</h2>
-        <p>
-          In this exercise, I am creating a simple tab component that can be useful in any website creation. It will be
-          all done with vanilla JavaScript. The source code is available in the tabs. Please note that I implemented it
-          with JS in 2 different ways.
-        </p>
-
-        <div class="tab-component-btns-wrapper">
-          <button class="primary-button tab-btn tab-btn--active">HTML</button>
-          <button class="primary-button tab-btn">SCSS</button>
-          <button class="primary-button tab-btn">JS</button>
-        </div>
-
-        <div class="tab-component-content-wrapper">
-          <pre class="tab-content">
-                <code class="language-html">
-                    &lt;div class=&quot;tab-component-btns-wrapper&quot;&gt;
-                    &lt;button class=&quot;primary-button tab-btn tab-btn--active&quot;&gt;HTML&lt;/button&gt;
-                    &lt;button class=&quot;primary-button tab-btn&quot;&gt;SCSS&lt;/button&gt;
-                    &lt;button class=&quot;primary-button tab-btn&quot;&gt;JS&lt;/button&gt;
-                  &lt;/div&gt;
-          
-                  &lt;div class=&quot;tab-component-content-wrapper&quot;&gt;
-                    &lt;pre class=&quot;tab-content&quot;&gt;
-                          &lt;code class=&quot;language-html&quot;&gt;
-                              //HTML code
-                          &lt;/code&gt;
-                      &lt;/pre&gt;
-                    &lt;pre class=&quot;tab-content hide&quot;&gt;
-                          &lt;code class=&quot;language-css&quot;&gt;
-                              //SCSS code
-                          &lt;/code&gt;
-                      &lt;/pre&gt;
-                    &lt;pre class=&quot;tab-content hide&quot;&gt;
-                          &lt;code class=&quot;language-js&quot;&gt;
-                              //JS code
-                          &lt;/code&gt;
-                      &lt;/pre&gt;
-                  &lt;/div&gt;
-                </code>
-            </pre>
-          <pre class="tab-content hide">
-                <code class="language-css">
-                    .tab-component-btns-wrapper {
-                        margin: 3rem 0;
-                        @include flexCenter();
-                      }
-                      
-                      .tab-component-content-wrapper {
-                        position: relative;
-                        min-width: 100%;
-                        min-height: 40rem;
-                      }
-                      
-                      .tab-content {
-                        position: absolute;
-                        min-width: 100%;
-                        min-height: 100%;
-                      }
-                      
-                      .tab-btn--active {
-                        background-color: var(--grey-background-2);
-                      }
-                </code>
-            </pre>
-          <pre class="tab-content hide">
-                <code class="language-js">
-                    const tabBtns = document.querySelectorAll('.tab-btn');
-                    const tabContent = document.querySelectorAll('.tab-content');
-                    
-                    const switchTabs = e =&gt; {
-                      let clickedIndex = [...tabBtns].indexOf(e.target);
-                      tabContent.forEach(tab =&gt; tab.classList.add('hide'));
-                      tabBtns.forEach(btn =&gt; btn.classList.remove('tab-btn--active'));
-                    
-                      tabContent[clickedIndex].classList.remove('hide');
-                      tabBtns[clickedIndex].classList.add('tab-btn--active');
-                    };
-                    
-                    tabBtns.forEach(btn =&gt; btn.addEventListener('click', switchTabs));
-                </code>
-            </pre>
-        </div>
-      </section>
+        </header>
+        <section class="post-section">
+          <h2>How to make a custom tab component with JavaScript</h2>
+          <p>
+            In this exercise, I am creating a simple tab component that can be useful in any website creation. It will
+            be all done with vanilla JavaScript. The source code is available in the tabs. Please note that I
+            implemented it with JS in 2 different ways.
+          </p>
+          <div class="tab-component-btns-wrapper">
+            <button class="primary-button tab-btn tab-btn--active">HTML</button>
+            <button class="primary-button tab-btn">SCSS</button>
+            <button class="primary-button tab-btn">JS</button>
+          </div>
+          <div class="tab-component-content-wrapper">
+            <pre class="tab-content">
+                  <code class="language-html">
+                      &lt;div class=&quot;tab-component-btns-wrapper&quot;&gt;
+                      &lt;button class=&quot;primary-button tab-btn tab-btn--active&quot;&gt;HTML&lt;/button&gt;
+                      &lt;button class=&quot;primary-button tab-btn&quot;&gt;SCSS&lt;/button&gt;
+                      &lt;button class=&quot;primary-button tab-btn&quot;&gt;JS&lt;/button&gt;
+                    &lt;/div&gt;
+        
+                    &lt;div class=&quot;tab-component-content-wrapper&quot;&gt;
+                      &lt;pre class=&quot;tab-content&quot;&gt;
+                            &lt;code class=&quot;language-html&quot;&gt;
+                                //HTML code
+                            &lt;/code&gt;
+                        &lt;/pre&gt;
+                      &lt;pre class=&quot;tab-content hide&quot;&gt;
+                            &lt;code class=&quot;language-css&quot;&gt;
+                                //SCSS code
+                            &lt;/code&gt;
+                        &lt;/pre&gt;
+                      &lt;pre class=&quot;tab-content hide&quot;&gt;
+                            &lt;code class=&quot;language-js&quot;&gt;
+                                //JS code
+                            &lt;/code&gt;
+                        &lt;/pre&gt;
+                    &lt;/div&gt;
+                  </code>
+              </pre>
+            <pre class="tab-content hide">
+                  <code class="language-css">
+                      .tab-component-btns-wrapper {
+                          margin: 3rem 0;
+                          @include flexCenter();
+                        }
+        
+                        .tab-component-content-wrapper {
+                          position: relative;
+                          min-width: 100%;
+                          min-height: 40rem;
+                        }
+        
+                        .tab-content {
+                          position: absolute;
+                          min-width: 100%;
+                          min-height: 100%;
+                        }
+        
+                        .tab-btn--active {
+                          background-color: var(--grey-background-2);
+                        }
+                  </code>
+              </pre>
+            <pre class="tab-content hide">
+                  <code class="language-js">
+                      const tabBtns = document.querySelectorAll('.tab-btn');
+                      const tabContent = document.querySelectorAll('.tab-content');
+        
+                      const switchTabs = e =&gt; {
+                        let clickedIndex = [...tabBtns].indexOf(e.target);
+                        tabContent.forEach(tab =&gt; tab.classList.add('hide'));
+                        tabBtns.forEach(btn =&gt; btn.classList.remove('tab-btn--active'));
+        
+                        tabContent[clickedIndex].classList.remove('hide');
+                        tabBtns[clickedIndex].classList.add('tab-btn--active');
+                      };
+        
+                      tabBtns.forEach(btn =&gt; btn.addEventListener('click', switchTabs));
+                  </code>
+              </pre>
+          </div>
+        </section>
+      </article>
     </main>
 
     <web-footer></web-footer>

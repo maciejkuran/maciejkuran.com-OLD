@@ -51,113 +51,112 @@
   <body>
     <web-navbar></web-navbar>
 
-    <main class="blog-post-main">
-      <header class="blog-post-header">
-        <div class="item">
-          <img src="/img/icons/javascript.png" alt="higher-order function callbacks javascript" />
-          <div class="item-content">
-            <h1>Bank deposit for 12 months. Higher-order function and callbacks exercise</h1>
-            <p class="post-date">15-05-2022</p>
-
-            <div class="tag-cloud tag-cloud-my-projects">
-              <p class="tag-primary">JavaScript</p>
-              <p class="tag-primary">Exercise</p>
+    <main>
+      <article class="blog-post-article">
+        <header class="blog-post-header">
+          <div class="item">
+            <img src="/img/icons/javascript.png" alt="higher-order function callbacks javascript" />
+            <div class="item-content">
+              <h1>Bank deposit for 12 months. Higher-order function and callbacks exercise</h1>
+              <p class="post-date">15-05-2022</p>
+              <div class="tag-cloud tag-cloud-my-projects">
+                <p class="tag-primary">JavaScript</p>
+                <p class="tag-primary">Exercise</p>
+              </div>
+              <a href="/blog/"><i class="fa-solid fa-arrow-left-long"></i>back</a>
             </div>
-            <a href="/blog/"><i class="fa-solid fa-arrow-left-long"></i>back</a>
           </div>
-        </div>
-      </header>
-      <section class="post-section">
-        <h2>Higher order function and callbacks</h2>
-        <p>
-          In this exercise, I am going through higher-order functions and callbacks in JavaScript. A function that
-          receives another function as an argument is called the higher-order function.
-        </p>
-        <p>
-          Imagine, that you have some savings and you just saw an advertisement for the bank. The Yellow Bank offers
-          1.5% / month. The annual deposit cost is 3 %. However, there are 2 restrictions such as:
-        </p>
-        <ul>
-          <li>The amount has to be &gt;= 5000 $.</li>
-          <li>
-            You cannot break the deposit before 12 months. If you do, the penalty will be 20 % and in addition, the
-            earned income will be canceled.
-          </li>
-        </ul>
-        <p>Also, a citizen is required to pay individual income tax to the government.</p>
-        <p>
-          In this example a higher-order function is
-          <code class="highlight">newBankOffer(amount, fn1, fn2, fn3, fn4, fn5)</code> where I set 6 parameters. This
-          function operates at a high level of abstraction, leaving low-level details to low-level functions –
-          callbacks.
-        </p>
-        <p>The results of this program are logged to the console.</p>
-        <pre>
-            <code class="language-js">
-                // bank deposit
-                //12 months obligatory - get 1.5 % / month
-                
-                const annualBankDepositProfit = amount =&gt; {
-                const profit = ((amount * 1.5) / 100) * 12;
-                return profit;
-                };
-                
-                const annualDepositCost = amount =&gt; {
-                const depositCost = (amount * 3) / 100;
-                return depositCost;
-                };
-                
-                const finalRevenue = amount =&gt; {
-                const finalRevenue = annualBankDepositProfit(amount) - annualDepositCost(amount);
-                return finalRevenue;
-                };
-                
-                const taxPaidOutOfProfit = amount =&gt; {
-                const tax = (finalRevenue(amount) * 18) / 100; //TAX 18 %
-                return tax;
-                };
-                
-                const terminationDepositPenalty = amount =&gt; {
-                const penalty = (amount * 20) / 100;
-                return penalty;
-                };
-            </code>
-        </pre>
-
-        <pre>
-            <code class="language-js">
-                //Higher-order Function
-const newBankOffer = (amount, fn1, fn2, fn3, fn4, fn5) =&gt; {
-if (amount &gt;= 5000) {
-//5000 $ is a minimum deposit
-console.log(`${amount}$ qualifies for our savings program. Your annual income will be ${fn1(amount)}$. We charge an annual fee for the deposit of ${fn2(amount)}$. So in your case, the final revenue will be ${fn3(amount)}$. Under current law, a citizen is required to pay income tax. In the case of income: ${fn3(amount)}$, the tax will be: ${fn4(amount)}$. \n\nThe contract is signed for 12 months, which means you cannot break the deposit before 12 months. If you break it, the penalty will be 20% out of ${amount}$: ${fn5(amount)}$, and in addition the earned income will be canceled. \n\nIf you have any questions or concerns, contact office@yellowbank.com `);
-} else {
-console.log(`Unfortunately ${amount}$ does not qualify for our savings program. The deposit must be equal to or greater than the value of 5000$. If you have any questions or concerns, contact office@yellowbank.com`);
-}
-};
-
-newBankOffer(
-10000,
-annualBankDepositProfit,
-annualDepositCost,
-finalRevenue,
-taxPaidOutOfProfit,
-terminationDepositPenalty
-);
-            </code>
-        </pre>
-
-        <pre>
-            <code class="language-js">
-                //OUTPUT:
-                // $10000 qualifies for our savings program. Your annual income will be $1800. We charge an annual fee for the deposit of 300$. So in your case, the final revenue will be $1500. Under current law, a citizen is required to pay income tax. In the case of income: $1500, the tax will be: $270.
-                
-                // The contract is signed for 12 months, which means you cannot break the deposit before 12 months. If you break it, the penalty will be 20% out of $10000: $2000, and in addition the earned income will be canceled.
-                
-                // If you have any questions or concerns, contact office@yellowbank.com
-            </code>
-        </pre>
-      </section>
+        </header>
+        <section class="post-section">
+          <h2>Higher order function and callbacks</h2>
+          <p>
+            In this exercise, I am going through higher-order functions and callbacks in JavaScript. A function that
+            receives another function as an argument is called the higher-order function.
+          </p>
+          <p>
+            Imagine, that you have some savings and you just saw an advertisement for the bank. The Yellow Bank offers
+            1.5% / month. The annual deposit cost is 3 %. However, there are 2 restrictions such as:
+          </p>
+          <ul>
+            <li>The amount has to be &gt;= 5000 $.</li>
+            <li>
+              You cannot break the deposit before 12 months. If you do, the penalty will be 20 % and in addition, the
+              earned income will be canceled.
+            </li>
+          </ul>
+          <p>Also, a citizen is required to pay individual income tax to the government.</p>
+          <p>
+            In this example a higher-order function is
+            <code class="highlight">newBankOffer(amount, fn1, fn2, fn3, fn4, fn5)</code> where I set 6 parameters. This
+            function operates at a high level of abstraction, leaving low-level details to low-level functions –
+            callbacks.
+          </p>
+          <p>The results of this program are logged to the console.</p>
+          <pre>
+              <code class="language-js">
+                  // bank deposit
+                  //12 months obligatory - get 1.5 % / month
+        
+                  const annualBankDepositProfit = amount =&gt; {
+                  const profit = ((amount * 1.5) / 100) * 12;
+                  return profit;
+                  };
+        
+                  const annualDepositCost = amount =&gt; {
+                  const depositCost = (amount * 3) / 100;
+                  return depositCost;
+                  };
+        
+                  const finalRevenue = amount =&gt; {
+                  const finalRevenue = annualBankDepositProfit(amount) - annualDepositCost(amount);
+                  return finalRevenue;
+                  };
+        
+                  const taxPaidOutOfProfit = amount =&gt; {
+                  const tax = (finalRevenue(amount) * 18) / 100; //TAX 18 %
+                  return tax;
+                  };
+        
+                  const terminationDepositPenalty = amount =&gt; {
+                  const penalty = (amount * 20) / 100;
+                  return penalty;
+                  };
+              </code>
+          </pre>
+          <pre>
+              <code class="language-js">
+                  //Higher-order Function
+        const newBankOffer = (amount, fn1, fn2, fn3, fn4, fn5) =&gt; {
+        if (amount &gt;= 5000) {
+        //5000 $ is a minimum deposit
+        console.log(`${amount}$ qualifies for our savings program. Your annual income will be ${fn1(amount)}$. We charge an annual fee for the deposit of ${fn2(amount)}$. So in your case, the final revenue will be ${fn3(amount)}$. Under current law, a citizen is required to pay income tax. In the case of income: ${fn3(amount)}$, the tax will be: ${fn4(amount)}$. \n\nThe contract is signed for 12 months, which means you cannot break the deposit before 12 months. If you break it, the penalty will be 20% out of ${amount}$: ${fn5(amount)}$, and in addition the earned income will be canceled. \n\nIf you have any questions or concerns, contact office@yellowbank.com `);
+        } else {
+        console.log(`Unfortunately ${amount}$ does not qualify for our savings program. The deposit must be equal to or greater than the value of 5000$. If you have any questions or concerns, contact office@yellowbank.com`);
+        }
+        };
+        
+        newBankOffer(
+        10000,
+        annualBankDepositProfit,
+        annualDepositCost,
+        finalRevenue,
+        taxPaidOutOfProfit,
+        terminationDepositPenalty
+        );
+              </code>
+          </pre>
+          <pre>
+              <code class="language-js">
+                  //OUTPUT:
+                  // $10000 qualifies for our savings program. Your annual income will be $1800. We charge an annual fee for the deposit of 300$. So in your case, the final revenue will be $1500. Under current law, a citizen is required to pay income tax. In the case of income: $1500, the tax will be: $270.
+        
+                  // The contract is signed for 12 months, which means you cannot break the deposit before 12 months. If you break it, the penalty will be 20% out of $10000: $2000, and in addition the earned income will be canceled.
+        
+                  // If you have any questions or concerns, contact office@yellowbank.com
+              </code>
+          </pre>
+        </section>
+      </article>
     </main>
 
     <web-footer></web-footer>

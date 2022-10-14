@@ -52,72 +52,73 @@
   <body>
     <web-navbar></web-navbar>
 
-    <main class="blog-post-main">
-      <header class="blog-post-header">
-        <div class="item">
-          <img src="/img/icons/javascript.png" alt="log-in functionality and an automatic log-out timer javascript" />
-          <div class="item-content">
-            <h1>Implementing basic log-in functionality and an automatic log-out timer</h1>
-            <p class="post-date">17-06-2022</p>
-
-            <div class="tag-cloud tag-cloud-my-projects">
-              <p class="tag-primary">JavaScript</p>
-              <p class="tag-primary">Exercise</p>
+    <main>
+      <article class="blog-post-article">
+        <header class="blog-post-header">
+          <div class="item">
+            <img src="/img/icons/javascript.png" alt="log-in functionality and an automatic log-out timer javascript" />
+            <div class="item-content">
+              <h1>Implementing basic log-in functionality and an automatic log-out timer</h1>
+              <p class="post-date">17-06-2022</p>
+              <div class="tag-cloud tag-cloud-my-projects">
+                <p class="tag-primary">JavaScript</p>
+                <p class="tag-primary">Exercise</p>
+              </div>
+              <a href="/blog/"><i class="fa-solid fa-arrow-left-long"></i>back</a>
             </div>
-            <a href="/blog/"><i class="fa-solid fa-arrow-left-long"></i>back</a>
           </div>
-        </div>
-      </header>
-      <section class="post-section">
-        <h2>Introduction</h2>
-        <p>
-          In this exercise, I am implementing basic log-in functionality and an automatic log-out timer. Our users are
-          data written directly in the source code. The flowchart shown below explains the entire concept of this
-          exercise.
-          <a class="scroll-to-login-area" href="">Check out and test this functionality below</a>. Source code is
-          available on my
-          <a
-            target="_blank"
-            href="https://github.com/maciejkuran/Implementing-Basic-Login-Functionality-and-Logout-Timer"
-            >GitHub</a
-          >.
-        </p>
-        <img
-          class="post-img"
-          src="/img/login-logout-functionality-javascript.png"
-          alt="login logout functionality javascript"
-        />
-      </section>
-      <section class="post-section">
-        <h3>User data</h3>
-        <p>Please use the data below to log in.</p>
-        <pre>
-            <code class="language-js">
-                const user1 = {
-                    name: 'John',
-                    login: 'user1',
-                    password: '1111',
-                    };
-                    
-                    const user2 = {
-                    name: 'Katie',
-                    login: 'user2',
-                    password: '2222',
-                    };
-            </code>   
-        </pre>
-      </section>
-      <section class="post-section">
-        <div class="login-container">
-          <h3 class="home-header-animation welcome-msg">Log-in to Get Started</h3>
-          <p class="logout-alert"></p>
-          <form class="login-form">
-            <input placeholder="Login" class="login-input" type="text" />
-            <input placeholder="Password" class="password-input" type="password" />
-            <button class="primary-button login-btn">login <i class="fa-solid fa-arrow-right-long"></i></button>
-          </form>
-        </div>
-      </section>
+        </header>
+        <section class="post-section">
+          <h2>Introduction</h2>
+          <p>
+            In this exercise, I am implementing basic log-in functionality and an automatic log-out timer. Our users are
+            data written directly in the source code. The flowchart shown below explains the entire concept of this
+            exercise.
+            <a class="scroll-to-login-area" href="">Check out and test this functionality below</a>. Source code is
+            available on my
+            <a
+              target="_blank"
+              href="https://github.com/maciejkuran/Implementing-Basic-Login-Functionality-and-Logout-Timer"
+              >GitHub</a
+            >.
+          </p>
+          <img
+            class="post-img"
+            src="/img/login-logout-functionality-javascript.png"
+            alt="login logout functionality javascript"
+          />
+        </section>
+        <section class="post-section">
+          <h3>User data</h3>
+          <p>Please use the data below to log in.</p>
+          <pre>
+              <code class="language-js">
+                  const user1 = {
+                      name: 'John',
+                      login: 'user1',
+                      password: '1111',
+                      };
+        
+                      const user2 = {
+                      name: 'Katie',
+                      login: 'user2',
+                      password: '2222',
+                      };
+              </code>
+          </pre>
+        </section>
+        <section class="post-section">
+          <div class="login-container">
+            <h3 class="home-header-animation welcome-msg">Log-in to Get Started</h3>
+            <p class="logout-alert"></p>
+            <form class="login-form">
+              <input placeholder="Login" class="login-input" type="text" />
+              <input placeholder="Password" class="password-input" type="password" />
+              <button class="primary-button login-btn">login <i class="fa-solid fa-arrow-right-long"></i></button>
+            </form>
+          </div>
+        </section>
+      </article>
     </main>
 
     <web-footer></web-footer>

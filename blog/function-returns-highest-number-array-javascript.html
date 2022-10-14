@@ -51,102 +51,98 @@
   <body>
     <web-navbar></web-navbar>
 
-    <main class="blog-post-main">
-      <header class="blog-post-header">
-        <div class="item">
-          <img src="/img/icons/javascript.png" alt="function returns highest number array javascript" />
-          <div class="item-content">
-            <h1>Returning the highest number from an array</h1>
-            <p class="post-date">01-06-2022</p>
-
-            <div class="tag-cloud tag-cloud-my-projects">
-              <p class="tag-primary">JavaScript</p>
-              <p class="tag-primary">Exercise</p>
+    <main>
+      <article class="blog-post-article">
+        <header class="blog-post-header">
+          <div class="item">
+            <img src="/img/icons/javascript.png" alt="function returns highest number array javascript" />
+            <div class="item-content">
+              <h1>Returning the highest number from an array</h1>
+              <p class="post-date">01-06-2022</p>
+              <div class="tag-cloud tag-cloud-my-projects">
+                <p class="tag-primary">JavaScript</p>
+                <p class="tag-primary">Exercise</p>
+              </div>
+              <a href="/blog/"><i class="fa-solid fa-arrow-left-long"></i>back</a>
             </div>
-            <a href="/blog/"><i class="fa-solid fa-arrow-left-long"></i>back</a>
           </div>
-        </div>
-      </header>
-      <section class="post-section">
-        <h2>reduce method</h2>
-        <p>
-          In this exercise, I am writing an arrow function that returns the highest number from any array passed as an
-          argument when we call the function.
-        </p>
-        <p>
-          There are plenty of concepts in JavaScript that can be used to solve this problem: e.g. for loop or for of
-          loop. However, this time I want to use the <code class="highlight">reduce()</code> method.
-        </p>
-        <p>The reduce method reduces all array values to one single value, based on set condition.</p>
-        <p>I am creating a sample array. Let's find out what is the highest number.</p>
-
-        <pre>
-            <code class="language-js">
-                const array = [1, 5, 2, 7, 99, 10, 50, 555];
-            </code>
-        </pre>
-
-        <pre>
-            <code class="language-js">
-                const findHighestNumber = arr =&gt; {
-                    const highestNumber = arr.reduce((previousNumber, number) =&gt; {
-                    if (previousNumber &gt; number) {
-                    return previousNumber;
-                    } else {
-                    return number;
-                    }
-                    }, arr.at(0));
-                    
-                    return highestNumber;
-                    };
-                    
-                    console.log(findHighestNumber(array)); //OUTPUT: 555
-            </code>
-        </pre>
-      </section>
-      <section class="post-section">
-        <h3>Another solution - sort and at methods</h3>
-        <p>
-          I find the <code class="highlight">sort()</code> method helpful solving this problem. It makes this code look
-          clean and easy to read. If you don't know how the <code class="highlight">sort()</code> method works, you may
-          dive deeper into the
-          <a
-            target="_blank"
-            href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort"
-            >MDN documentation</a
-          >.
-        </p>
-
-        <pre>
-            <code class="language-js">
-                const array = [1, 5, 2, 7, 99, 10, 50, 555];
-                const findHighestNumber = arr =&gt; {
-                return arr.sort((a, b) =&gt; b - a).at(0);
-                };
-                
-                console.log(findHighestNumber(array)); //OUTPUT: 555
-            </code>
-        </pre>
-      </section>
-
-      <section class="post-section">
-        <h3>Returning the smallest number using sort and at methods</h3>
-        <p>
-          Even though this isn't part of the exercise, to curiosity let's check how to return the smallest number from
-          an array using the <code class="highlight">sort()</code> and <code class="highlight">at()</code> methods.
-        </p>
-
-        <pre>
-            <code class="language-js">
-                const array = [1, 5, 2, 7, 99, 10, 50, 555];
-                const findHighestNumber = arr =&gt; {
-                return arr.sort((a, b) =&gt; b - a).at(arr.length - 1);
-                };
-                
-                console.log(findHighestNumber(array)); //OUTPUT: 1
-            </code>
-        </pre>
-      </section>
+        </header>
+        <section class="post-section">
+          <h2>reduce method</h2>
+          <p>
+            In this exercise, I am writing an arrow function that returns the highest number from any array passed as an
+            argument when we call the function.
+          </p>
+          <p>
+            There are plenty of concepts in JavaScript that can be used to solve this problem: e.g. for loop or for of
+            loop. However, this time I want to use the <code class="highlight">reduce()</code> method.
+          </p>
+          <p>The reduce method reduces all array values to one single value, based on set condition.</p>
+          <p>I am creating a sample array. Let's find out what is the highest number.</p>
+          <pre>
+              <code class="language-js">
+                  const array = [1, 5, 2, 7, 99, 10, 50, 555];
+              </code>
+          </pre>
+          <pre>
+              <code class="language-js">
+                  const findHighestNumber = arr =&gt; {
+                      const highestNumber = arr.reduce((previousNumber, number) =&gt; {
+                      if (previousNumber &gt; number) {
+                      return previousNumber;
+                      } else {
+                      return number;
+                      }
+                      }, arr.at(0));
+        
+                      return highestNumber;
+                      };
+        
+                      console.log(findHighestNumber(array)); //OUTPUT: 555
+              </code>
+          </pre>
+        </section>
+        <section class="post-section">
+          <h3>Another solution - sort and at methods</h3>
+          <p>
+            I find the <code class="highlight">sort()</code> method helpful solving this problem. It makes this code
+            look clean and easy to read. If you don't know how the <code class="highlight">sort()</code> method works,
+            you may dive deeper into the
+            <a
+              target="_blank"
+              href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort"
+              >MDN documentation</a
+            >.
+          </p>
+          <pre>
+              <code class="language-js">
+                  const array = [1, 5, 2, 7, 99, 10, 50, 555];
+                  const findHighestNumber = arr =&gt; {
+                  return arr.sort((a, b) =&gt; b - a).at(0);
+                  };
+        
+                  console.log(findHighestNumber(array)); //OUTPUT: 555
+              </code>
+          </pre>
+        </section>
+        <section class="post-section">
+          <h3>Returning the smallest number using sort and at methods</h3>
+          <p>
+            Even though this isn't part of the exercise, to curiosity let's check how to return the smallest number from
+            an array using the <code class="highlight">sort()</code> and <code class="highlight">at()</code> methods.
+          </p>
+          <pre>
+              <code class="language-js">
+                  const array = [1, 5, 2, 7, 99, 10, 50, 555];
+                  const findHighestNumber = arr =&gt; {
+                  return arr.sort((a, b) =&gt; b - a).at(arr.length - 1);
+                  };
+        
+                  console.log(findHighestNumber(array)); //OUTPUT: 1
+              </code>
+          </pre>
+        </section>
+      </article>
     </main>
 
     <web-footer></web-footer>

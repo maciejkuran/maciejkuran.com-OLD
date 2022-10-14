@@ -52,111 +52,111 @@
   <body>
     <web-navbar></web-navbar>
 
-    <main class="blog-post-main">
-      <header class="blog-post-header">
-        <div class="item">
-          <img src="/img/icons/javascript.png" alt="title case converter exercise javascript" />
-          <div class="item-content">
-            <h1>Title Case Converter - excluding specific words from being capitalized</h1>
-            <p class="post-date">09-06-2022</p>
-
-            <div class="tag-cloud tag-cloud-my-projects">
-              <p class="tag-primary">JavaScript</p>
-              <p class="tag-primary">Exercise</p>
+    <main>
+      <article class="blog-post-article">
+        <header class="blog-post-header">
+          <div class="item">
+            <img src="/img/icons/javascript.png" alt="title case converter exercise javascript" />
+            <div class="item-content">
+              <h1>Title Case Converter - excluding specific words from being capitalized</h1>
+              <p class="post-date">09-06-2022</p>
+              <div class="tag-cloud tag-cloud-my-projects">
+                <p class="tag-primary">JavaScript</p>
+                <p class="tag-primary">Exercise</p>
+              </div>
+              <a href="/blog/"><i class="fa-solid fa-arrow-left-long"></i>back</a>
             </div>
-            <a href="/blog/"><i class="fa-solid fa-arrow-left-long"></i>back</a>
           </div>
-        </div>
-      </header>
-      <section class="post-section">
-        <h2>Title case converter</h2>
-        <p>
-          If you haven't checked my 'Title Case Converter' yet,
-          <a target="_blank" href="/title-case-converter">you may do it right now</a>. What is a title case?
-        </p>
-        <p>
-          Title case is a style that is used for the titles of articles, books, movies, songs, and other works. It makes
-          the title look elegant and readable.
-        </p>
-      </section>
-      <section class="post-section">
-        <h3>So what this program does?</h3>
-        <p>In this exercise, I am writing the function that does title case converting. However, there's a trick.</p>
-        <p>
-          All major words will be capitalized, while minor words will be lowercased. It means that we capitalize every
-          word except articles, coordinating conjunctions, and others. In my program, I called them
-          <code class="highlight">specialWords</code>. The special words are saved in the array below.
-        </p>
-        <pre>
-            <code class="language-js">
-                const specialWords = ['and','an','a','or','the','is','of', 'but','on',];
-            </code>
-        </pre>
-        <p>So what this program does? Please check the example below.</p>
-        <ul>
-          <li>INPUT: <i>The man of the forest.</i></li>
-          <li>OUTPUT: <i>The Man of the Forest.</i></li>
-        </ul>
-      </section>
-
-      <section class="post-section">
-        <h3>JavaScript concepts</h3>
-        <p>
-          To write this program, I will use string and array methods. First, we need to convert an input value to
-          <code class="highlight">lowerCase()</code>. Then I <code class="highlight">split()</code> a string, which
-          means I convert it to an array.
-        </p>
-        <p>
-          I loop through this array, checking if the <code class="highlight">specialWords</code> array
-          <code class="highlight">includes()</code> any specific <code class="highlight">word</code> (our input string
-          that I converted). If it does, this specific <code class="highlight">word</code> will be converted
-          <code class="highlight">toLowerCase()</code>, if it doesn't, the first character of each word will be
-          converted to <code class="highlight">upperCase()</code>. Then I convert back the
-          <code class="highlight">output</code> array to a string with the <code class="highlight">join()</code> method.
-        </p>
-
-        <p>
-          The <code class="highlight">correctOutput</code> function is a callback function. This function generally
-          corrects the final output but is also called in the ternary operator. Let me explain what it does.
-        </p>
-        <p>
-          If our input string starts from any of the special words e.g. 'the', our output will be:<br /><i
-            >the Beginning of the Road</i
-          >, instead of <i>The Beginning of the Road</i>
-        </p>
-        <p>
-          That's what this function is for. We return the function, passing <code class="highlight">output</code> – as
-          the argument.
-        </p>
-        <p>
-          This function will always convert <code class="highlight">index(0)</code> of our
-          <code class="highlight">output</code> string to <code class="highlight">upperCase()</code>, no matter if it's
-          a special word, or not.
-        </p>
-        <p>In this example, I don't access any DOM elements. It's just a pure function.</p>
-        <p>
-          If you're interested in checking my application source code, feel free to dive deeper into my
-          <a target="_blank" href="https://github.com/maciejkuran/title-case-converter-app">Github repository</a>.
-        </p>
-        <pre>
-            <code class="language-js">
-                const convertString = string =&gt; {
-                    const correctOutput = output =&gt; output.at(0).toUpperCase() + output.slice(1);
-                    
-                    const output = string
-                    .toLowerCase()
-                    .split(' ')
-                    .map(word =&gt; (specialWords.includes(word) ? word : correctOutput(word)))
-                    .join(' ');
-                    
-                    return correctOutput(output);
-                    };
-                    
-                    console.log(convertString('The best of the best')); // The Best of the Best
-                    console.log(convertString('The beginning of the road')); //The Beginning of the Road
-            </code>
-        </pre>
-      </section>
+        </header>
+        <section class="post-section">
+          <h2>Title case converter</h2>
+          <p>
+            If you haven't checked my 'Title Case Converter' yet,
+            <a target="_blank" href="/title-case-converter">you may do it right now</a>. What is a title case?
+          </p>
+          <p>
+            Title case is a style that is used for the titles of articles, books, movies, songs, and other works. It
+            makes the title look elegant and readable.
+          </p>
+        </section>
+        <section class="post-section">
+          <h3>So what this program does?</h3>
+          <p>In this exercise, I am writing the function that does title case converting. However, there's a trick.</p>
+          <p>
+            All major words will be capitalized, while minor words will be lowercased. It means that we capitalize every
+            word except articles, coordinating conjunctions, and others. In my program, I called them
+            <code class="highlight">specialWords</code>. The special words are saved in the array below.
+          </p>
+          <pre>
+              <code class="language-js">
+                  const specialWords = ['and','an','a','or','the','is','of', 'but','on',];
+              </code>
+          </pre>
+          <p>So what this program does? Please check the example below.</p>
+          <ul>
+            <li>INPUT: <i>The man of the forest.</i></li>
+            <li>OUTPUT: <i>The Man of the Forest.</i></li>
+          </ul>
+        </section>
+        <section class="post-section">
+          <h3>JavaScript concepts</h3>
+          <p>
+            To write this program, I will use string and array methods. First, we need to convert an input value to
+            <code class="highlight">lowerCase()</code>. Then I <code class="highlight">split()</code> a string, which
+            means I convert it to an array.
+          </p>
+          <p>
+            I loop through this array, checking if the <code class="highlight">specialWords</code> array
+            <code class="highlight">includes()</code> any specific <code class="highlight">word</code> (our input string
+            that I converted). If it does, this specific <code class="highlight">word</code> will be converted
+            <code class="highlight">toLowerCase()</code>, if it doesn't, the first character of each word will be
+            converted to <code class="highlight">upperCase()</code>. Then I convert back the
+            <code class="highlight">output</code> array to a string with the
+            <code class="highlight">join()</code> method.
+          </p>
+          <p>
+            The <code class="highlight">correctOutput</code> function is a callback function. This function generally
+            corrects the final output but is also called in the ternary operator. Let me explain what it does.
+          </p>
+          <p>
+            If our input string starts from any of the special words e.g. 'the', our output will be:<br /><i
+              >the Beginning of the Road</i
+            >, instead of <i>The Beginning of the Road</i>
+          </p>
+          <p>
+            That's what this function is for. We return the function, passing <code class="highlight">output</code> – as
+            the argument.
+          </p>
+          <p>
+            This function will always convert <code class="highlight">index(0)</code> of our
+            <code class="highlight">output</code> string to <code class="highlight">upperCase()</code>, no matter if
+            it's a special word, or not.
+          </p>
+          <p>In this example, I don't access any DOM elements. It's just a pure function.</p>
+          <p>
+            If you're interested in checking my application source code, feel free to dive deeper into my
+            <a target="_blank" href="https://github.com/maciejkuran/title-case-converter-app">Github repository</a>.
+          </p>
+          <pre>
+              <code class="language-js">
+                  const convertString = string =&gt; {
+                      const correctOutput = output =&gt; output.at(0).toUpperCase() + output.slice(1);
+        
+                      const output = string
+                      .toLowerCase()
+                      .split(' ')
+                      .map(word =&gt; (specialWords.includes(word) ? word : correctOutput(word)))
+                      .join(' ');
+        
+                      return correctOutput(output);
+                      };
+        
+                      console.log(convertString('The best of the best')); // The Best of the Best
+                      console.log(convertString('The beginning of the road')); //The Beginning of the Road
+              </code>
+          </pre>
+        </section>
+      </article>
     </main>
 
     <web-footer></web-footer>

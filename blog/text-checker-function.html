@@ -51,66 +51,63 @@
   <body>
     <web-navbar></web-navbar>
 
-    <main class="blog-post-main">
-      <header class="blog-post-header">
-        <div class="item">
-          <img
-            src="/img/icons/javascript.png"
-            alt="text checker checking if text contains forbidden words characters javascript"
-          />
-          <div class="item-content">
-            <h1>Text checker - checking if text contains forbidden words/characters</h1>
-            <p class="post-date">07-05-2022</p>
-
-            <div class="tag-cloud tag-cloud-my-projects">
-              <p class="tag-primary">JavaScript</p>
-              <p class="tag-primary">Exercise</p>
+    <main>
+      <article class="blog-post-article">
+        <header class="blog-post-header">
+          <div class="item">
+            <img
+              src="/img/icons/javascript.png"
+              alt="text checker checking if text contains forbidden words characters javascript"
+            />
+            <div class="item-content">
+              <h1>Text checker - checking if text contains forbidden words/characters</h1>
+              <p class="post-date">07-05-2022</p>
+              <div class="tag-cloud tag-cloud-my-projects">
+                <p class="tag-primary">JavaScript</p>
+                <p class="tag-primary">Exercise</p>
+              </div>
+              <a href="/blog/"><i class="fa-solid fa-arrow-left-long"></i>back</a>
             </div>
-            <a href="/blog/"><i class="fa-solid fa-arrow-left-long"></i>back</a>
           </div>
-        </div>
-      </header>
-      <section class="post-section">
-        <h2>Array methods</h2>
-        <p>This function checks if text, e.g. submitted by a user includes forbidden words or characters.</p>
-        <p>If yes, a specific notification will be returned to a user.</p>
-
-        <pre>
-            <code class="language-js">
-                const forbiddenWords = ['email', '@', 'tel'];
-
-                let notification = '';
-                
-                const textChecker = (text, arr) =&gt; {
-                const input = text.toLowerCase();
-                if (arr.some(word =&gt; input.includes(word))) {
-                notification = `Forbidden words: ${arr
-                .join(' ')
-                .replaceAll(' ', ', ')}`;
-                } else {
-                notification = 'Successfully submitted';
-                }
-                return notification;
-                };
-                
-            </code>
-            
-        </pre>
-
-        <pre>
-            <code class="language-js">
-                const string1 = 'Hi there, How are you ?';
-                console.log(textChecker(string1, forbiddenWords));
-                //OUTPUT: Successfully submitted
-
-                const string2 = 'Hi ! This is my email adddress: something@gmail.com';
-                console.log(textChecker(string2, forbiddenWords));
-                //OUTPUT: Forbidden words: email, @, tel
-                
-            </code>
-           
-        </pre>
-      </section>
+        </header>
+        <section class="post-section">
+          <h2>Array methods</h2>
+          <p>This function checks if text, e.g. submitted by a user includes forbidden words or characters.</p>
+          <p>If yes, a specific notification will be returned to a user.</p>
+          <pre>
+              <code class="language-js">
+                  const forbiddenWords = ['email', '@', 'tel'];
+                  let notification = '';
+        
+                  const textChecker = (text, arr) =&gt; {
+                  const input = text.toLowerCase();
+                  if (arr.some(word =&gt; input.includes(word))) {
+                  notification = `Forbidden words: ${arr
+                  .join(' ')
+                  .replaceAll(' ', ', ')}`;
+                  } else {
+                  notification = 'Successfully submitted';
+                  }
+                  return notification;
+                  };
+        
+              </code>
+        
+          </pre>
+          <pre>
+              <code class="language-js">
+                  const string1 = 'Hi there, How are you ?';
+                  console.log(textChecker(string1, forbiddenWords));
+                  //OUTPUT: Successfully submitted
+                  const string2 = 'Hi ! This is my email adddress: something@gmail.com';
+                  console.log(textChecker(string2, forbiddenWords));
+                  //OUTPUT: Forbidden words: email, @, tel
+        
+              </code>
+        
+          </pre>
+        </section>
+      </article>
     </main>
 
     <web-footer></web-footer>

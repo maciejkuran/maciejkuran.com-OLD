@@ -39,7 +39,7 @@
     ></script>
     <!-- _____________ -->
     <!-- My scripts with defer attribute load async -->
-    <script defer type="module" src="/js/prism.js"></script>
+    <script defer type="module" src="/js/components.js"></script>
     <script defer type="module" src="/js/main.js"></script>
     <script defer type="module" src="/js/blog.js"></script>
     <script defer type="module" src="/js/prism.js"></script>
@@ -51,75 +51,78 @@
   <body>
     <web-navbar></web-navbar>
 
-    <main class="blog-post-main">
-      <header class="blog-post-header">
-        <div class="item">
-          <img src="/img/icons/javascript.png" alt="converting the first value of each word to uppercase javascript" />
-          <div class="item-content">
-            <h1>Converting the first value of each word to uppercase</h1>
-            <p class="post-date">15-05-2022</p>
-
-            <div class="tag-cloud tag-cloud-my-projects">
-              <p class="tag-primary">JavaScript</p>
-              <p class="tag-primary">Exercise</p>
+    <main>
+      <article class="blog-post-article">
+        <header class="blog-post-header">
+          <div class="item">
+            <img
+              src="/img/icons/javascript.png"
+              alt="converting the first value of each word to uppercase javascript"
+            />
+            <div class="item-content">
+              <h1>Converting the first value of each word to uppercase</h1>
+              <p class="post-date">15-05-2022</p>
+              <div class="tag-cloud tag-cloud-my-projects">
+                <p class="tag-primary">JavaScript</p>
+                <p class="tag-primary">Exercise</p>
+              </div>
+              <a href="/blog/"><i class="fa-solid fa-arrow-left-long"></i>back</a>
             </div>
-            <a href="/blog/"><i class="fa-solid fa-arrow-left-long"></i>back</a>
           </div>
-        </div>
-      </header>
-      <section class="post-section">
-        <h2>Array and string methods</h2>
-        <p>
-          This function converts a string to <code class="highlight">lowercase</code> and then converts the first value
-          of each word to <code class="highlight">uppercase</code> - in a string passed as an argument when the function
-          is called.
-        </p>
-        <p>
-          This function is helpful if you e.g. need to convert a name and last name and have it printed in DOM. It's
-          also nice for specific names like books titles or building names.
-        </p>
-        <p>The function uses such methods as:</p>
-        <ul>
-          <li>
-            <code class="highlight">split()</code> - it allows to divide a string into multiple part based on divider
-            string. The elements are saved in an array.
-          </li>
-          <li><code class="highlight">toLowerCase()</code> - it converts values to lowercase.</li>
-          <li><code class="highlight">toUpperCase()</code> - it converts values to uppercase.</li>
-          <li><code class="highlight">slice()</code> - it 'cuts' a string.</li>
-          <li>
-            <code class="highlight">join()</code> - the opposite of split. It converts back array elements to a string.
-          </li>
-          <li><code class="highlight">push()</code> - the push method appends values to an array.</li>
-        </ul>
-
-        <pre>
-            <code class="language-js">
-                const capitalizeName = name =&gt; {
-                    const names = name.split(' ');
-                    const namesUpper = [];
-                    for (const n of names) {
-                    const toLowerCase = n.toLowerCase();
-                    namesUpper.push(toLowerCase[0].toUpperCase() + toLowerCase.slice(1));
-                    }
-                    
-                    const convertedName = namesUpper.join(' ');
-                    
-                    return convertedName;
-                    };
-                
-            </code>
-        </pre>
-
-        <pre>
-            <code class="language-js">
-                console.log(capitalizeName('jOHn kowALSKI')); //OUTPUT: John Kowalski
-console.log(capitalizeName('the museum of science and industry, chicago'));
-//OUTPUT:The Museum Of Science And Industry, Chicago
-                
-            </code>
-        </pre>
-      </section>
+        </header>
+        <section class="post-section">
+          <h2>Array and string methods</h2>
+          <p>
+            This function converts a string to <code class="highlight">lowercase</code> and then converts the first
+            value of each word to <code class="highlight">uppercase</code> - in a string passed as an argument when the
+            function is called.
+          </p>
+          <p>
+            This function is helpful if you e.g. need to convert a name and last name and have it printed in DOM. It's
+            also nice for specific names like books titles or building names.
+          </p>
+          <p>The function uses such methods as:</p>
+          <ul>
+            <li>
+              <code class="highlight">split()</code> - it allows to divide a string into multiple part based on divider
+              string. The elements are saved in an array.
+            </li>
+            <li><code class="highlight">toLowerCase()</code> - it converts values to lowercase.</li>
+            <li><code class="highlight">toUpperCase()</code> - it converts values to uppercase.</li>
+            <li><code class="highlight">slice()</code> - it 'cuts' a string.</li>
+            <li>
+              <code class="highlight">join()</code> - the opposite of split. It converts back array elements to a
+              string.
+            </li>
+            <li><code class="highlight">push()</code> - the push method appends values to an array.</li>
+          </ul>
+          <pre>
+              <code class="language-js">
+                  const capitalizeName = name =&gt; {
+                      const names = name.split(' ');
+                      const namesUpper = [];
+                      for (const n of names) {
+                      const toLowerCase = n.toLowerCase();
+                      namesUpper.push(toLowerCase[0].toUpperCase() + toLowerCase.slice(1));
+                      }
+        
+                      const convertedName = namesUpper.join(' ');
+        
+                      return convertedName;
+                      };
+        
+              </code>
+          </pre>
+          <pre>
+              <code class="language-js">
+                  console.log(capitalizeName('jOHn kowALSKI')); //OUTPUT: John Kowalski
+        console.log(capitalizeName('the museum of science and industry, chicago'));
+        //OUTPUT:The Museum Of Science And Industry, Chicago
+        
+              </code>
+          </pre>
+        </section>
+      </article>
     </main>
 
     <web-footer></web-footer>

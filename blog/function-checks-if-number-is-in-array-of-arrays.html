@@ -51,125 +51,126 @@
   <body>
     <web-navbar></web-navbar>
 
-    <main class="blog-post-main">
-      <header class="blog-post-header">
-        <div class="item">
-          <img src="/img/icons/javascript.png" alt="function checks if a number is in an array of arrays javascript" />
-          <div class="item-content">
-            <h1>Checking if a number is in an array of arrays</h1>
-            <p class="post-date">09-06-2022</p>
-
-            <div class="tag-cloud tag-cloud-my-projects">
-              <p class="tag-primary">JavaScript</p>
-              <p class="tag-primary">Exercise</p>
+    <main>
+      <article class="blog-post-article">
+        <header class="blog-post-header">
+          <div class="item">
+            <img
+              src="/img/icons/javascript.png"
+              alt="function checks if a number is in an array of arrays javascript"
+            />
+            <div class="item-content">
+              <h1>Checking if a number is in an array of arrays</h1>
+              <p class="post-date">09-06-2022</p>
+              <div class="tag-cloud tag-cloud-my-projects">
+                <p class="tag-primary">JavaScript</p>
+                <p class="tag-primary">Exercise</p>
+              </div>
+              <a href="/blog/"><i class="fa-solid fa-arrow-left-long"></i>back</a>
             </div>
-            <a href="/blog/"><i class="fa-solid fa-arrow-left-long"></i>back</a>
           </div>
-        </div>
-      </header>
-      <section class="post-section">
-        <h2>indexOf</h2>
-        <p>
-          In this exercise, I am checking if a certain number is in an array of arrays. I will write the function, that
-          will do the check and then return a boolean value – <code class="highlight">true</code> or
-          <code class="highlight">false</code>.
-        </p>
-        <p>I am creating the array <code class="highlight">arr</code> that contains other nested arrays.</p>
-        <pre>
-            <code class="language-js">
-                const arr = [
-            [6, 18, 22],
-            [44, 55, 88, 150],
-            [3, 111],
-            ];
-            </code>
-        </pre>
-        <p>
-          I am writing the arrow function that takes 2 arguments – <code class="highlight">number</code>,
-          <code class="highlight">array</code>. I use the <code class="highlight">forEach()</code> method, to loop
-          through the array, to access each <code class="highlight">innerArray</code>.
-        </p>
-        <p>
-          Then I do the check which means that any index that is equal to <code class="highlight">-1</code> tells that a
-          number doesn't exist.
-        </p>
-        <pre>
-            <code class="language-js">
-                const isNumberInArrayOfArrays = (number, array) =&gt; {
-                    let found = false;
-                    
-                    array.forEach(innerArray =&gt; {
-                    if (innerArray.indexOf(number) !== -1) {
-                    found = true;
-                    }
-                    });
-                    
-                    return found;
-                    };
-                    console.log(isNumberInArrayOfArrays(18, arr)); //true
-console.log(isNumberInArrayOfArrays(111, arr)); //true
-console.log(isNumberInArrayOfArrays(87, arr)); //false
-            </code>
-        </pre>
-      </section>
-
-      <section class="post-section">
-        <h3>flat and some</h3>
-        <p>From my point of view, this is probably the most readable and the easiest way to solve this problem.</p>
-        <p>
-          The <code class="highlight">flat()</code> method creates a new array with all sub-array elements concatenated
-          into it recursively up to the specified depth. The <code class="highlight">sum()</code> method loops through
-          the array, checks values based on set condition and returns a boolean value –
-          <code class="highlight">true</code> or <code class="highlight">false</code>.
-        </p>
-        <pre>
-            <code class="language-js">
-                const arr = [
-[6, 18, 22],
-[44, 55, 88, 150],
-[3, 111],
-];
-
-const isNumberInArrayOfArrays = (number, array) =&gt; {
-const flatArr = array.flat();
-console.log(flatArr); // [6, 18, 22, 44, 55, 88, 150, 3, 111]
-const checkNumber = flatArr.some(nb =&gt; nb === number);
-return checkNumber;
-};
-
-console.log(isNumberInArrayOfArrays(55, arr)); //true
-console.log(isNumberInArrayOfArrays(111, arr)); //true
-console.log(isNumberInArrayOfArrays(1000, arr)); //false
-            </code>
-        </pre>
-      </section>
-
-      <section class="post-section">
-        <h3>map and some</h3>
-        <p>
-          A different optional way to solve this problem using <code class="highlight">map()</code> and
-          <code class="highlight">some()</code> methods.
-        </p>
-        <pre>
-            <code class="language-js">
-                const isNumberInArrayOfArrays = (number, array) =&gt; {
-                    let found = false;
-                    
-                    array.map(innerArray =&gt; {
-                    if (innerArray.some(nb =&gt; nb === number)) {
-                    found = true;
-                    }
-                    });
-                    
-                    return found;
-                    };
-
-                    console.log(isNumberInArrayOfArrays(0, arr)); //false
-console.log(isNumberInArrayOfArrays(1000, arr)); //false
-console.log(isNumberInArrayOfArrays(111, arr)); //true
-            </code>
-        </pre>
-      </section>
+        </header>
+        <section class="post-section">
+          <h2>indexOf</h2>
+          <p>
+            In this exercise, I am checking if a certain number is in an array of arrays. I will write the function,
+            that will do the check and then return a boolean value – <code class="highlight">true</code> or
+            <code class="highlight">false</code>.
+          </p>
+          <p>I am creating the array <code class="highlight">arr</code> that contains other nested arrays.</p>
+          <pre>
+              <code class="language-js">
+                  const arr = [
+              [6, 18, 22],
+              [44, 55, 88, 150],
+              [3, 111],
+              ];
+              </code>
+          </pre>
+          <p>
+            I am writing the arrow function that takes 2 arguments – <code class="highlight">number</code>,
+            <code class="highlight">array</code>. I use the <code class="highlight">forEach()</code> method, to loop
+            through the array, to access each <code class="highlight">innerArray</code>.
+          </p>
+          <p>
+            Then I do the check which means that any index that is equal to <code class="highlight">-1</code> tells that
+            a number doesn't exist.
+          </p>
+          <pre>
+              <code class="language-js">
+                  const isNumberInArrayOfArrays = (number, array) =&gt; {
+                      let found = false;
+        
+                      array.forEach(innerArray =&gt; {
+                      if (innerArray.indexOf(number) !== -1) {
+                      found = true;
+                      }
+                      });
+        
+                      return found;
+                      };
+                      console.log(isNumberInArrayOfArrays(18, arr)); //true
+        console.log(isNumberInArrayOfArrays(111, arr)); //true
+        console.log(isNumberInArrayOfArrays(87, arr)); //false
+              </code>
+          </pre>
+        </section>
+        <section class="post-section">
+          <h3>flat and some</h3>
+          <p>From my point of view, this is probably the most readable and the easiest way to solve this problem.</p>
+          <p>
+            The <code class="highlight">flat()</code> method creates a new array with all sub-array elements
+            concatenated into it recursively up to the specified depth. The <code class="highlight">sum()</code> method
+            loops through the array, checks values based on set condition and returns a boolean value –
+            <code class="highlight">true</code> or <code class="highlight">false</code>.
+          </p>
+          <pre>
+              <code class="language-js">
+                  const arr = [
+        [6, 18, 22],
+        [44, 55, 88, 150],
+        [3, 111],
+        ];
+        
+        const isNumberInArrayOfArrays = (number, array) =&gt; {
+        const flatArr = array.flat();
+        console.log(flatArr); // [6, 18, 22, 44, 55, 88, 150, 3, 111]
+        const checkNumber = flatArr.some(nb =&gt; nb === number);
+        return checkNumber;
+        };
+        
+        console.log(isNumberInArrayOfArrays(55, arr)); //true
+        console.log(isNumberInArrayOfArrays(111, arr)); //true
+        console.log(isNumberInArrayOfArrays(1000, arr)); //false
+              </code>
+          </pre>
+        </section>
+        <section class="post-section">
+          <h3>map and some</h3>
+          <p>
+            A different optional way to solve this problem using <code class="highlight">map()</code> and
+            <code class="highlight">some()</code> methods.
+          </p>
+          <pre>
+              <code class="language-js">
+                  const isNumberInArrayOfArrays = (number, array) =&gt; {
+                      let found = false;
+        
+                      array.map(innerArray =&gt; {
+                      if (innerArray.some(nb =&gt; nb === number)) {
+                      found = true;
+                      }
+                      });
+        
+                      return found;
+                      };
+                      console.log(isNumberInArrayOfArrays(0, arr)); //false
+        console.log(isNumberInArrayOfArrays(1000, arr)); //false
+        console.log(isNumberInArrayOfArrays(111, arr)); //true
+              </code>
+          </pre>
+        </section>
+      </article>
     </main>
 
     <web-footer></web-footer>

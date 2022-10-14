@@ -51,41 +51,40 @@
   <body>
     <web-navbar></web-navbar>
 
-    <main class="blog-post-main">
-      <header class="blog-post-header">
-        <div class="item">
-          <img src="/img/icons/javascript.png" alt="function checks if a number is even javascript" />
-          <div class="item-content">
-            <h1>Checking if a number is even</h1>
-            <p class="post-date">18-06-2022</p>
-
-            <div class="tag-cloud tag-cloud-my-projects">
-              <p class="tag-primary">JavaScript</p>
-              <p class="tag-primary">Exercise</p>
+    <main>
+      <article class="blog-post-article">
+        <header class="blog-post-header">
+          <div class="item">
+            <img src="/img/icons/javascript.png" alt="function checks if a number is even javascript" />
+            <div class="item-content">
+              <h1>Checking if a number is even</h1>
+              <p class="post-date">18-06-2022</p>
+              <div class="tag-cloud tag-cloud-my-projects">
+                <p class="tag-primary">JavaScript</p>
+                <p class="tag-primary">Exercise</p>
+              </div>
+              <a href="/blog/"><i class="fa-solid fa-arrow-left-long"></i>back</a>
             </div>
-            <a href="/blog/"><i class="fa-solid fa-arrow-left-long"></i>back</a>
           </div>
-        </div>
-      </header>
-      <section class="post-section">
-        <h2>Remainder operator</h2>
-        <p>
-          There's a rule that says that every even number can be divided by 2. Let's check if the numbers I pass as
-          arguments are even, using the remainder operator - syntax <code class="highlight">%</code>.
-        </p>
-
-        <pre>
-            <code class="language-js">
-                const checkIfEven = n =&gt; n % 2 === 0;
-
-                console.log(checkIfEven(6)); //OUTPUT: true
-                console.log(checkIfEven(9)); //OUTPUT: false
-                console.log(checkIfEven(22)); //OUTPUT: true
-                
-            </code>
-           
-        </pre>
-      </section>
+        </header>
+        <section class="post-section">
+          <h2>Remainder operator</h2>
+          <p>
+            There's a rule that says that every even number can be divided by 2. Let's check if the numbers I pass as
+            arguments are even, using the remainder operator - syntax <code class="highlight">%</code>.
+          </p>
+          <pre>
+              <code class="language-js">
+                  const checkIfEven = n =&gt; n % 2 === 0;
+                  console.log(checkIfEven(6)); //OUTPUT: true
+                  console.log(checkIfEven(9)); //OUTPUT: false
+                  console.log(checkIfEven(22)); //OUTPUT: true
+        
+              </code>
+        
+          </pre>
+        </section>
+      </article>
     </main>
 
     <web-footer></web-footer>

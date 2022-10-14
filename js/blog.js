@@ -258,7 +258,7 @@ const post_26 = new Post(
   './async-img-slider-promise-exercise-js',
   '/img/icons/javascript.png',
   'async img slider promises exercise javascript',
-  'Asynchronous image slider - promises exercise',
+  'Asynchronous image slider - promises exercise.',
   ['JavaScript']
 );
 
@@ -409,28 +409,23 @@ const runSlider = () => {
       activeImg = res;
       return makeDelay(1.5);
     })
-    .then(res => {
-      return makeDelay(1.5);
-    })
-    .then(res => {
+    .then(() => {
       activeImg.remove();
       return displayImg('/img/slider-imgs/img-2.jpg');
     })
     .then(res => {
       activeImg = res;
-
       return makeDelay(1.5);
     })
-    .then(res => {
+    .then(() => {
       activeImg.remove();
       return displayImg('/img/slider-imgs/img-3.jpg');
     })
     .then(res => {
       activeImg = res;
-
       return makeDelay(1.5);
     })
-    .then(res => {
+    .then(() => {
       activeImg.remove();
       return displayImg('/img/slider-imgs/img-4.jpg');
     })

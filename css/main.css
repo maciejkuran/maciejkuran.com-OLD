@@ -12,6 +12,8 @@
   --grey-tag-background: #e2e2e2;
   --grey-tag-border: #bbbaba;
   --grey-icons: #575757;
+  --div-border: 1px solid #f1f1f1;
+  --header-border-bottom: 1px solid #bbbaba;
 }
 
 html {
@@ -32,7 +34,8 @@ p,
 a,
 ul,
 button,
-div {
+div,
+label {
   font-family: "Roboto Mono", monospace;
   color: var(--color-black);
   text-decoration: none;
@@ -86,8 +89,6 @@ a {
 
 button {
   cursor: pointer;
-  -moz-appearance: none;
-  -webkit-appearance: none;
   border: none;
   outline: none;
   background: none;
@@ -96,8 +97,6 @@ button {
 
 input, textarea {
   outline: none;
-  -moz-appearance: none;
-  -webkit-appearance: none;
   font-family: "Roboto Mono", monospace;
   font-size: 2rem;
   border-radius: 5px;
@@ -150,6 +149,73 @@ pre {
 
 .primary-button:hover {
   background-color: var(--grey-background-2);
+}
+
+input[type=range], textarea[type=range] {
+  -webkit-appearance: none;
+}
+
+input[type=range]::-webkit-slider-thumb, textarea[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+input[type=range]::-moz-range-thumb, textarea[type=range]::-moz-range-thumb {
+  -webkit-appearance: none;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: #ff4500;
+  cursor: ew-resize;
+  box-shadow: 0 0 2px 0 #555;
+  -moz-transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
+}
+
+input[type=range]::-ms-thumb, textarea[type=range]::-ms-thumb {
+  -webkit-appearance: none;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: #ff4500;
+  cursor: ew-resize;
+  box-shadow: 0 0 2px 0 #555;
+  -ms-transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
+}
+
+input[type=range]::-webkit-slider-thumb:hover, textarea[type=range]::-webkit-slider-thumb:hover {
+  background: #ff0200;
+}
+
+input[type=range]::-moz-range-thumb:hover, textarea[type=range]::-moz-range-thumb:hover {
+  background: #ff0200;
+}
+
+input[type=range]::-ms-thumb:hover, textarea[type=range]::-ms-thumb:hover {
+  background: #ff0200;
+}
+
+/* Input Track */
+input[type=range]::-webkit-slider-runnable-track, textarea[type=range]::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: none;
+  background: transparent;
+}
+
+input[type=range]::-moz-range-track, textarea[type=range]::-moz-range-track {
+  -webkit-appearance: none;
+  box-shadow: none;
+  border: none;
+  background: transparent;
+}
+
+input[type=range]::-ms-track, textarea[type=range]::-ms-track {
+  -webkit-appearance: none;
+  box-shadow: none;
+  border: none;
+  background: transparent;
 }
 
 .primary-nav {
@@ -358,7 +424,6 @@ pre {
 .img-banner {
   margin-top: 5rem;
   width: 100%;
-  background-color: #40e0d0;
 }
 .img-banner img {
   width: 100%;
@@ -1413,6 +1478,247 @@ pre {
   }
   .html-converter-output-wrapper .output-box code {
     font-size: 1.4rem;
+  }
+}
+.pw-generator-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  max-width: 100rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 12rem auto 0 auto;
+  padding: 0 1rem;
+}
+
+.pw-generator-header div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+.pw-generator-header div img {
+  max-width: 10rem;
+  margin-right: 2rem;
+}
+.pw-generator-header p {
+  margin-top: 2rem;
+}
+
+.pw-generator-section-1 {
+  width: 100%;
+  background-color: var(--grey-background);
+  border: var(--div-border);
+  margin-top: 2rem;
+}
+
+.output-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 2rem;
+}
+.output-wrapper div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.output-wrapper button {
+  font-size: 3rem;
+  padding: 0.2rem 1rem;
+}
+.output-wrapper button:hover {
+  background-color: var(--grey-background-2);
+}
+
+.pw-output {
+  max-width: 70rem;
+  margin-right: 1rem;
+  overflow: auto;
+}
+
+.pw-power-meter {
+  margin-top: 2rem;
+  position: relative;
+  width: 100%;
+  background-color: var(--grey-background-2);
+  height: 10px;
+}
+.pw-power-meter div {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  background-color: #4bff9c;
+  -webkit-transition: width 0.8s, background-color 0.1s;
+  transition: width 0.8s, background-color 0.1s;
+}
+
+.pw-generator-section-2 {
+  margin-top: 3rem;
+  background-color: var(--grey-background);
+  border: var(--div-border);
+  padding: 2rem;
+  width: 100%;
+}
+.pw-generator-section-2 h2 {
+  border-bottom: var(--header-border-bottom);
+  padding-bottom: 1rem;
+  margin-bottom: 3rem;
+}
+.pw-generator-section-2 form {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+.pw-generator-section-2 form label {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+
+.pw-range-input {
+  cursor: pointer;
+  min-width: 50%;
+  margin-left: 1rem;
+  outline: none;
+  border: none;
+  border-radius: 20px;
+  height: 20px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff8800));
+  background: linear-gradient(#ff8800);
+  background-color: var(--grey-background-2);
+  background-size: 10%;
+  background-repeat: no-repeat;
+}
+
+.pw-range-input::-webkit-slider-thumb {
+  background: #ff8800;
+  height: 33px;
+  width: 33px;
+  border-radius: 50%;
+  -webkit-transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
+}
+
+.pw-number-input {
+  padding: 0.5rem;
+  outline: none;
+  border: none;
+  border: var(--div-border);
+  font-size: 2.5rem;
+}
+
+.pw-options-container {
+  margin-top: 3rem;
+}
+
+.pw-option {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin: 1rem 0;
+}
+.pw-option p {
+  margin: 0 0 0 1rem;
+}
+.pw-option p span {
+  color: red;
+  font-weight: 700;
+}
+
+.option-checkbox {
+  min-height: 2rem;
+  min-width: 2rem;
+  border: 1px solid var(--color-black);
+  cursor: pointer;
+}
+
+.option-checkbox--active {
+  background-color: var(--color-black);
+}
+
+.pw-generator-tooltip {
+  font-size: 1.5rem;
+  background-color: white;
+  color: var(--color-black);
+  border: 1px solid var(--color-black);
+  padding: 0.5rem 1.5rem;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+}
+
+@media (max-width: 655.98px) {
+  .output-wrapper {
+    padding: 1rem;
+  }
+  .pw-generator-section-2 {
+    padding: 1rem;
+  }
+}
+@media (max-width: 388.98px) {
+  .pw-output {
+    font-size: 2.2rem;
+  }
+  .pw-generator-section-2 form {
+    display: block;
+  }
+  .pw-range-input {
+    min-width: 100%;
+    margin-top: 2rem;
+    margin-left: 0;
   }
 }
 @media (max-width: 1366.98px) {

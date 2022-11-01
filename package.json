@@ -1,0 +1,23 @@
+{
+  "name": "maciejkuran.com",
+  "version": "1.0.0",
+  "description": "➡️ [Live website](https://maciejkuran.com/)",
+  "scripts": {
+    "start": "parcel ./*.html ./blog/*.html",
+    "build": "parcel ./*.html blog/*.html --dist-dir ./production --no-optimize"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maciejkuran/maciejkuran.com.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maciejkuran/maciejkuran.com/issues"
+  },
+  "homepage": "https://github.com/maciejkuran/maciejkuran.com#readme",
+  "dependencies": {
+    "super-strong-password-generator-es": "^2.0.1"
+  },
+  "devDependencies": {}
+}

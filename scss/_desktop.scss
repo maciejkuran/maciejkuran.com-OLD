@@ -252,17 +252,11 @@
 .tag-primary {
   background-color: var(--grey-tag-background);
   border: 1px solid var(--grey-tag-border);
-  font-size: 2rem;
+  font-size: 1.5rem;
   padding: 0.6rem 1.3rem;
   margin-right: 2rem;
   margin-bottom: 2rem;
   border-radius: 10px;
-}
-
-.education {
-  padding-bottom: 2rem;
-  border-bottom: solid 1px var(--grey-tag-border);
-  margin-bottom: 2rem;
 }
 
 .about-img-banner {
@@ -830,6 +824,14 @@
 .yellow-highlight {
   background-color: yellow;
   padding: 0.2rem;
+}
+
+.design-tools {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 1rem 0;
+  padding-bottom: 1rem;
+  border-bottom: var(--header-border-bottom);
 }
 
 //Keep this class at the bottom to let override other styles

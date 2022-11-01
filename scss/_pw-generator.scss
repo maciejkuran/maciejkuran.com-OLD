@@ -57,10 +57,11 @@
 .pw-output {
   max-width: 70rem;
   margin-right: 1rem;
+  white-space: nowrap;
   overflow: auto;
 }
 
-.pw-power-meter {
+.pw-strength-meter {
   margin-top: 2rem;
   position: relative;
   width: 100%;
@@ -69,7 +70,6 @@
 
   div {
     position: absolute;
-    width: 50%;
     height: 100%;
     background-color: #4bff9c;
     transition: width 0.8s, background-color 0.1s;
@@ -110,7 +110,7 @@
   height: 20px;
   background: linear-gradient(#ff8800);
   background-color: var(--grey-background-2);
-  background-size: 10%;
+  background-size: 30% 100%;
   background-repeat: no-repeat;
 }
 
@@ -161,12 +161,39 @@
 }
 
 .pw-generator-tooltip {
+  z-index: 3;
+  position: fixed;
+  transform: translateY(-4rem);
   font-size: 1.5rem;
   background-color: white;
   color: var(--color-black);
   border: 1px solid var(--color-black);
-  padding: 0.5rem 1.5rem;
+  padding: 0.5rem 1rem;
   max-width: max-content;
+}
+
+.clipboard-alert {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: var(--grey-background);
+  border: var(--color-black) 1px solid;
+
+  p {
+    font-size: 1.4rem;
+    margin-bottom: 0;
+    padding: 1.5rem;
+
+    span {
+      color: red;
+    }
+  }
+
+  button {
+    position: absolute;
+    top: 1%;
+    right: 1%;
+  }
 }
 
 @media (max-width: 655.98px) {

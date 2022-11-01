@@ -542,17 +542,11 @@ input[type=range]::-ms-track, textarea[type=range]::-ms-track {
 .tag-primary {
   background-color: var(--grey-tag-background);
   border: 1px solid var(--grey-tag-border);
-  font-size: 2rem;
+  font-size: 1.5rem;
   padding: 0.6rem 1.3rem;
   margin-right: 2rem;
   margin-bottom: 2rem;
   border-radius: 10px;
-}
-
-.education {
-  padding-bottom: 2rem;
-  border-bottom: solid 1px var(--grey-tag-border);
-  margin-bottom: 2rem;
 }
 
 .about-img-banner img {
@@ -1228,6 +1222,14 @@ input[type=range]::-ms-track, textarea[type=range]::-ms-track {
   padding: 0.2rem;
 }
 
+.design-tools {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 1rem 0;
+  padding-bottom: 1rem;
+  border-bottom: var(--header-border-bottom);
+}
+
 .hide {
   display: none;
 }
@@ -1568,19 +1570,19 @@ input[type=range]::-ms-track, textarea[type=range]::-ms-track {
 .pw-output {
   max-width: 70rem;
   margin-right: 1rem;
+  white-space: nowrap;
   overflow: auto;
 }
 
-.pw-power-meter {
+.pw-strength-meter {
   margin-top: 2rem;
   position: relative;
   width: 100%;
   background-color: var(--grey-background-2);
   height: 10px;
 }
-.pw-power-meter div {
+.pw-strength-meter div {
   position: absolute;
-  width: 50%;
   height: 100%;
   background-color: #4bff9c;
   -webkit-transition: width 0.8s, background-color 0.1s;
@@ -1630,7 +1632,7 @@ input[type=range]::-ms-track, textarea[type=range]::-ms-track {
   background: -webkit-gradient(linear, left top, left bottom, from(#ff8800));
   background: linear-gradient(#ff8800);
   background-color: var(--grey-background-2);
-  background-size: 10%;
+  background-size: 30% 100%;
   background-repeat: no-repeat;
 }
 
@@ -1690,14 +1692,39 @@ input[type=range]::-ms-track, textarea[type=range]::-ms-track {
 }
 
 .pw-generator-tooltip {
+  z-index: 3;
+  position: fixed;
+  -webkit-transform: translateY(-4rem);
+          transform: translateY(-4rem);
   font-size: 1.5rem;
   background-color: white;
   color: var(--color-black);
   border: 1px solid var(--color-black);
-  padding: 0.5rem 1.5rem;
+  padding: 0.5rem 1rem;
   max-width: -webkit-max-content;
   max-width: -moz-max-content;
   max-width: max-content;
+}
+
+.clipboard-alert {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: var(--grey-background);
+  border: var(--color-black) 1px solid;
+}
+.clipboard-alert p {
+  font-size: 1.4rem;
+  margin-bottom: 0;
+  padding: 1.5rem;
+}
+.clipboard-alert p span {
+  color: red;
+}
+.clipboard-alert button {
+  position: absolute;
+  top: 1%;
+  right: 1%;
 }
 
 @media (max-width: 655.98px) {

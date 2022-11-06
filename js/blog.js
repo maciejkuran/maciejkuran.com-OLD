@@ -262,6 +262,14 @@ const post_26 = new Post(
   ['JavaScript']
 );
 
+const post_27 = new Post(
+  './implementing-pagination-javascript',
+  '/img/icons/javascript.png',
+  'implementing pagination with vanilla javascript',
+  'Implementing pagination.',
+  ['JavaScript']
+);
+
 ////Blog page - search filter based on user input (tag or title)
 const searchInput = document.querySelector('.posts-search-input');
 const allPosts = document.querySelectorAll('.post');

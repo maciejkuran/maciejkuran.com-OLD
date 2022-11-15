@@ -89,7 +89,7 @@
           </p>
           <pre>
               <code class="language-js">
-                  const specialWords = ['and','an','a','or','the','is','of', 'but','on',];
+const specialWords = ['and','an','a','or','the','is','of', 'but','on',];
               </code>
           </pre>
           <p>So what this program does? Please check the example below.</p>
@@ -139,20 +139,20 @@
           </p>
           <pre>
               <code class="language-js">
-                  const convertString = string =&gt; {
-                      const correctOutput = output =&gt; output.at(0).toUpperCase() + output.slice(1);
-        
-                      const output = string
-                      .toLowerCase()
-                      .split(' ')
-                      .map(word =&gt; (specialWords.includes(word) ? word : correctOutput(word)))
-                      .join(' ');
-        
-                      return correctOutput(output);
-                      };
-        
-                      console.log(convertString('The best of the best')); // The Best of the Best
-                      console.log(convertString('The beginning of the road')); //The Beginning of the Road
+const convertString = string =&gt; {
+    const correctOutput = output =&gt; output.at(0).toUpperCase() + output.slice(1);
+
+    const output = string
+    .toLowerCase()
+    .split(' ')
+    .map(word =&gt; (specialWords.includes(word) ? word : correctOutput(word)))
+    .join(' ');
+
+    return correctOutput(output);
+  };
+
+    console.log(convertString('The best of the best')); // The Best of the Best
+    console.log(convertString('The beginning of the road')); //The Beginning of the Road
               </code>
           </pre>
         </section>

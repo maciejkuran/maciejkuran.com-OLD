@@ -82,19 +82,18 @@
           <p>I am working on this string.</p>
           <pre>
               <code class="language-js">
-        const flights = 
-        '_Delayed_Departure;mao25678109;bon1463757340;12:30+_Arrival;lon0945634522;mon93764345;20:45+_Delayed_Arrival;ams2136549680;bra100766409;18:15+_Departure;syd10564306;por564343677;20:30+_Arrival;lon10444376;war3333567;23:30';
-        
+const flights = 
+'_Delayed_Departure;mao25678109;bon1463757340;12:30+_Arrival;lon0945634522;mon93764345;20:45+_Delayed_Arrival;ams2136549680;bra100766409;18:15+_Departure;syd10564306;por564343677;20:30+_Arrival;lon10444376;war3333567;23:30';     
               </code>
           </pre>
           <p>Final output expected.</p>
           <pre>
               <code class="language-js">
-                🔴 Delayed Departure from MAO to BON (12h30)
-        🟢 Arrival from LON to MON (20h45)
-        🔴 Delayed Arrival from AMS to BRA (18h15)
-        🟢 Departure from SYD to POR (20h30)
-        🟢 Arrival from LON to WAR (23h30)
+🔴 Delayed Departure from MAO to BON (12h30)
+🟢 Arrival from LON to MON (20h45)
+🔴 Delayed Arrival from AMS to BRA (18h15)
+🟢 Departure from SYD to POR (20h30)
+🟢 Arrival from LON to WAR (23h30)
         
               </code>
         
@@ -102,21 +101,19 @@
           <p>Final code.</p>
           <pre>
             <code class="language-js">
-              const flightsInfo = string =&gt; {
-                const stringToArray = string.split('+');
-        
-        
-                for (let i = 0; i &lt; stringToArray.length; i++) {
-                // console.log(stringToArray[i]);
-                const [status, from, to, time] = stringToArray[i].split(';');
-                //destructuring array and saving values to seperate variables
-        
-        
-                console.log(`${status.includes('Delayed') ? '🔴' : '🟢'} ${status.trim().replaceAll('_', ' ')} from ${from.slice(0, 3).toUpperCase()} to ${to.slice(0, 3).toUpperCase()} (${time.replaceAll(':', 'h')})`);
-                }
-                };
-        
-                flightsInfo(flights);
+const flightsInfo = string =&gt; {
+  const stringToArray = string.split('+');
+
+  for (let i = 0; i &lt; stringToArray.length; i++) {
+  // console.log(stringToArray[i]);
+  const [status, from, to, time] = stringToArray[i].split(';');
+  //destructuring array and saving values to seperate variables
+
+  console.log(`${status.includes('Delayed') ? '🔴' : '🟢'} ${status.trim().replaceAll('_', ' ')} from ${from.slice(0, 3).toUpperCase()} to ${to.slice(0, 3).toUpperCase()} (${time.replaceAll(':', 'h')})`);
+  }
+  };
+
+  flightsInfo(flights);
         
             </code>
         </pre>

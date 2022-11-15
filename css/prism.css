@@ -14,7 +14,10 @@ pre[class*='language-'] {
   font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
   font-size: 1.6rem;
   text-align: left;
-  white-space: pre-line;
+  white-space: pre;
+  /* it does the responsive trick (width: 0 and min-width: 100%) */
+  width: 0;
+  min-width: 100%;
   word-spacing: normal;
   word-break: normal;
   word-wrap: normal;
@@ -43,14 +46,12 @@ pre[class*='language-'] {
 :not(pre) > code[class*='language-'],
 pre[class*='language-'] {
   background: #222222;
-  /* margin: 2rem 0; */
 }
 
 /* Inline code */
 :not(pre) > code[class*='language-'] {
   padding: 0.1em;
   border-radius: 0.3em;
-  white-space: normal;
 }
 
 .token.comment,
@@ -312,10 +313,3 @@ div.code-toolbar > .toolbar > .toolbar-item > span:focus {
     font-size: 1.3rem;
   }
 }
-
-/* @media (max-width: 498.98px) {
-  :not(pre) > code[class*='language-'],
-  pre[class*='language-'] {
-    padding-top: 2.5rem;
-  }
-} */

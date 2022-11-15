@@ -76,35 +76,31 @@
           <p>If yes, a specific notification will be returned to a user.</p>
           <pre>
               <code class="language-js">
-                  const forbiddenWords = ['email', '@', 'tel'];
-                  let notification = '';
-        
-                  const textChecker = (text, arr) =&gt; {
-                  const input = text.toLowerCase();
-                  if (arr.some(word =&gt; input.includes(word))) {
-                  notification = `Forbidden words: ${arr
-                  .join(' ')
-                  .replaceAll(' ', ', ')}`;
-                  } else {
-                  notification = 'Successfully submitted';
-                  }
-                  return notification;
-                  };
-        
+const forbiddenWords = ['email', '@', 'tel'];
+let notification = '';
+
+const textChecker = (text, arr) =&gt; {
+const input = text.toLowerCase();
+if (arr.some(word =&gt; input.includes(word))) {
+notification = `Forbidden words: ${arr
+.join(' ')
+.replaceAll(' ', ', ')}`;
+} else {
+notification = 'Successfully submitted';
+}
+return notification;
+};
               </code>
-        
           </pre>
           <pre>
               <code class="language-js">
-                  const string1 = 'Hi there, How are you ?';
-                  console.log(textChecker(string1, forbiddenWords));
-                  //OUTPUT: Successfully submitted
-                  const string2 = 'Hi ! This is my email adddress: something@gmail.com';
-                  console.log(textChecker(string2, forbiddenWords));
-                  //OUTPUT: Forbidden words: email, @, tel
-        
+const string1 = 'Hi there, How are you ?';
+console.log(textChecker(string1, forbiddenWords));
+//OUTPUT: Successfully submitted
+const string2 = 'Hi ! This is my email adddress: something@gmail.com';
+console.log(textChecker(string2, forbiddenWords));
+//OUTPUT: Forbidden words: email, @, tel
               </code>
-        
           </pre>
         </section>
       </article>

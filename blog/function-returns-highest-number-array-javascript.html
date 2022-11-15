@@ -81,24 +81,24 @@
           <p>I am creating a sample array. Let's find out what is the highest number.</p>
           <pre>
               <code class="language-js">
-                  const array = [1, 5, 2, 7, 99, 10, 50, 555];
+const array = [1, 5, 2, 7, 99, 10, 50, 555];
               </code>
           </pre>
           <pre>
               <code class="language-js">
-                  const findHighestNumber = arr =&gt; {
-                      const highestNumber = arr.reduce((previousNumber, number) =&gt; {
-                      if (previousNumber &gt; number) {
-                      return previousNumber;
-                      } else {
-                      return number;
-                      }
-                      }, arr.at(0));
-        
-                      return highestNumber;
-                      };
-        
-                      console.log(findHighestNumber(array)); //OUTPUT: 555
+const findHighestNumber = arr =&gt; {
+    const highestNumber = arr.reduce((previousNumber, number) =&gt; {
+    if (previousNumber &gt; number) {
+    return previousNumber;
+    } else {
+    return number;
+    }
+    }, arr.at(0));
+
+    return highestNumber;
+    };
+
+    console.log(findHighestNumber(array)); //OUTPUT: 555
               </code>
           </pre>
         </section>
@@ -116,12 +116,12 @@
           </p>
           <pre>
               <code class="language-js">
-                  const array = [1, 5, 2, 7, 99, 10, 50, 555];
-                  const findHighestNumber = arr =&gt; {
-                  return arr.sort((a, b) =&gt; b - a).at(0);
-                  };
-        
-                  console.log(findHighestNumber(array)); //OUTPUT: 555
+const array = [1, 5, 2, 7, 99, 10, 50, 555];
+const findHighestNumber = arr =&gt; {
+return arr.sort((a, b) =&gt; b - a).at(0);
+};
+
+console.log(findHighestNumber(array)); //OUTPUT: 555
               </code>
           </pre>
         </section>
@@ -133,12 +133,12 @@
           </p>
           <pre>
               <code class="language-js">
-                  const array = [1, 5, 2, 7, 99, 10, 50, 555];
-                  const findHighestNumber = arr =&gt; {
-                  return arr.sort((a, b) =&gt; b - a).at(arr.length - 1);
-                  };
-        
-                  console.log(findHighestNumber(array)); //OUTPUT: 1
+const array = [1, 5, 2, 7, 99, 10, 50, 555];
+const findHighestNumber = arr =&gt; {
+return arr.sort((a, b) =&gt; b - a).at(arr.length - 1);
+};
+
+console.log(findHighestNumber(array)); //OUTPUT: 1
               </code>
           </pre>
         </section>

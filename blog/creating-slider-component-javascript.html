@@ -98,146 +98,146 @@
           <div class="tab-component-content-wrapper">
             <pre class="tab-content">
                   <code class="language-html">
-                    &lt;div class=&quot;slider-wrapper&quot;&gt;
-                    &lt;div class=&quot;slide&quot;&gt;
-                    &lt;img src=&quot;/img/img-1.jpg&quot; alt=&quot;&quot; /&gt;
-                    &lt;/div&gt;
-                    &lt;div class=&quot;slide&quot;&gt;
-                    &lt;img src=&quot;/img/img-2.jpg&quot; alt=&quot;&quot; /&gt;
-                    &lt;/div&gt;
-                    &lt;div class=&quot;slide&quot;&gt;
-                    &lt;img src=&quot;/img/img-3.jpg&quot; alt=&quot;&quot; /&gt;
-                    &lt;/div&gt;
-                    &lt;div class=&quot;slide&quot;&gt;
-                    &lt;img src=&quot;/img/img-4.jpg&quot; alt=&quot;&quot; /&gt;
-                    &lt;/div&gt;
-                    &lt;button class=&quot;slider-btn slide-img-left-btn&quot;&gt;&lt;i class=&quot;fa-solid fa-arrow-left-long&quot;&gt;&lt;/i&gt;&lt;/button&gt;
-            &lt;button class=&quot;slider-btn slide-img-right-btn&quot;&gt;&lt;i class=&quot;fa-solid fa-arrow-right-long&quot;&gt;&lt;/i&gt;&lt;/button&gt;
-                    &lt;p class=&quot;instruction-slider-label&quot;&gt;use arrows to slide&lt;/p&gt;
-                    &lt;/div&gt;
+&lt;div class=&quot;slider-wrapper&quot;&gt;
+&lt;div class=&quot;slide&quot;&gt;
+&lt;img src=&quot;/img/img-1.jpg&quot; alt=&quot;&quot; /&gt;
+&lt;/div&gt;
+&lt;div class=&quot;slide&quot;&gt;
+&lt;img src=&quot;/img/img-2.jpg&quot; alt=&quot;&quot; /&gt;
+&lt;/div&gt;
+&lt;div class=&quot;slide&quot;&gt;
+&lt;img src=&quot;/img/img-3.jpg&quot; alt=&quot;&quot; /&gt;
+&lt;/div&gt;
+&lt;div class=&quot;slide&quot;&gt;
+&lt;img src=&quot;/img/img-4.jpg&quot; alt=&quot;&quot; /&gt;
+&lt;/div&gt;
+&lt;button class=&quot;slider-btn slide-img-left-btn&quot;&gt;&lt;i class=&quot;fa-solid fa-arrow-left-long&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;button class=&quot;slider-btn slide-img-right-btn&quot;&gt;&lt;i class=&quot;fa-solid fa-arrow-right-long&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;p class=&quot;instruction-slider-label&quot;&gt;use arrows to slide&lt;/p&gt;
+&lt;/div&gt;
                   </code>
               </pre>
             <pre class="tab-content hide">
                   <code class="language-css">
-                    .slider-wrapper {
-                      position: relative;
-                      min-height: 55rem;
-                      width: 100%;
-                      overflow: hidden;
-        
-                      p {
-                      position: absolute;
-                      top: 5%;
-                      right: 3%;
-                      font-weight: 600;
-                      color: var(--clr-white);
-                      }
-                      }
-        
-                      .slide {
-                      position: absolute;
-                      height: 100%;
-                      width: 100%;
-                      // border-radius: 10px;
-                      transition: transform 1s;
-        
-                      img {
-                      filter: none;
-                      width: 100%;
-                      height: 100%;
-                      object-fit: cover;
-                      border-radius: 0;
-                      }
-                      }
-        
-                      .slider-btn {
-                      z-index: 3;
-                      position: absolute;
-                      border-radius: 500%;
-                      margin: 0;
-                      padding: 1rem;
-                      background-color: var(--clr-grey4);
-                      border: none;
-                      }
-        
-                      .slider-btn:hover {
-                      border: none;
-                      background-color: var(--clr-grey5);
-                      transition: 500ms;
-                      }
-        
-                      .slide-img-left-btn {
-                      left: 5%;
-                      top: 50%;
-                      }
-        
-                      .slide-img-right-btn {
-                      right: 5%;
-                      top: 50%;
-                      }
-        
-                      @media (max-width: 823.98px) {
-                      .slider-wrapper {
-                      min-height: 40rem;
-                      }
-                      }
-        
-                      @media (max-width: 575.98px) {
-                      .slider-wrapper {
-                      min-height: 25rem;
-        
-                      p {
-                      font-size: 1.3rem;
-                      }
-                      }
-                      }
+.slider-wrapper {
+position: relative;
+min-height: 55rem;
+width: 100%;
+overflow: hidden;
+
+p {
+position: absolute;
+top: 5%;
+right: 3%;
+font-weight: 600;
+color: var(--clr-white);
+}
+}
+
+.slide {
+position: absolute;
+height: 100%;
+width: 100%;
+// border-radius: 10px;
+transition: transform 1s;
+
+img {
+filter: none;
+width: 100%;
+height: 100%;
+object-fit: cover;
+border-radius: 0;
+}
+}
+
+.slider-btn {
+z-index: 3;
+position: absolute;
+border-radius: 500%;
+margin: 0;
+padding: 1rem;
+background-color: var(--clr-grey4);
+border: none;
+}
+
+.slider-btn:hover {
+border: none;
+background-color: var(--clr-grey5);
+transition: 500ms;
+}
+
+.slide-img-left-btn {
+left: 5%;
+top: 50%;
+}
+
+.slide-img-right-btn {
+right: 5%;
+top: 50%;
+}
+
+@media (max-width: 823.98px) {
+.slider-wrapper {
+min-height: 40rem;
+}
+}
+
+@media (max-width: 575.98px) {
+.slider-wrapper {
+min-height: 25rem;
+
+p {
+font-size: 1.3rem;
+}
+}
+}
                   </code>
               </pre>
             <pre class="tab-content hide">
                   <code class="language-js">
-                    const slides = document.querySelectorAll('.slide');
-        const slideRightBtn = document.querySelector('.slide-img-right-btn');
-        const slideLeftBtn = document.querySelector('.slide-img-left-btn');
-        const instructionSlider = document.querySelector('.instruction-slider-label');
-        
-        let currentSlide = 0;
-        const maxSlides = slides.length;
-        
-        //setting slide
-        const setSlide = (slide) =&gt; {
-        slides.forEach((sl, i) =&gt; {
-        sl.style.transform = `translateX(${100 * (i - slide)}%)`;
-        });
-        };
-        
-        setSlide(0);
-        
-        //Changing to next slide
-        const nextSlide = () =&gt; {
-        if (currentSlide === maxSlides - 1) {
-        currentSlide = 0;
-        } else {
-        currentSlide++;
-        }
-        
-        setSlide(currentSlide);
-        };
-        
-        //Changing to previous slide
-        
-        const previousSlide = () =&gt; {
-        if (currentSlide === 0) {
-        currentSlide = maxSlides - 1;
-        } else {
-        currentSlide--;
-        }
-        setSlide(currentSlide);
-        };
-        
-        //Handlers
-        slideRightBtn.addEventListener('click', nextSlide);
-        
-        slideLeftBtn.addEventListener('click', previousSlide);
+const slides = document.querySelectorAll('.slide');
+const slideRightBtn = document.querySelector('.slide-img-right-btn');
+const slideLeftBtn = document.querySelector('.slide-img-left-btn');
+const instructionSlider = document.querySelector('.instruction-slider-label');
+
+let currentSlide = 0;
+const maxSlides = slides.length;
+
+//setting slide
+const setSlide = (slide) =&gt; {
+slides.forEach((sl, i) =&gt; {
+sl.style.transform = `translateX(${100 * (i - slide)}%)`;
+  });
+};
+
+setSlide(0);
+
+//Changing to next slide
+const nextSlide = () =&gt; {
+if (currentSlide === maxSlides - 1) {
+currentSlide = 0;
+} else {
+currentSlide++;
+}
+
+setSlide(currentSlide);
+};
+
+//Changing to previous slide
+
+const previousSlide = () =&gt; {
+if (currentSlide === 0) {
+currentSlide = maxSlides - 1;
+} else {
+currentSlide--;
+}
+setSlide(currentSlide);
+};
+
+//Handlers
+slideRightBtn.addEventListener('click', nextSlide);
+
+slideLeftBtn.addEventListener('click', previousSlide);
                   </code>
               </pre>
           </div>

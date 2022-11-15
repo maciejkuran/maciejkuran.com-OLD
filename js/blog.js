@@ -298,18 +298,6 @@ const filterBasedOnTag = e => {
 
 categoryTags.forEach(tag => tag.addEventListener('click', filterBasedOnTag));
 
-//Removing blank lines in <pre> HTML
-const code = document.querySelectorAll('pre code');
-
-const removeBlankLines = () => {
-  [...code].forEach(el => {
-    // el.textContent = el.textContent.replace(/^\s+/gm, '');
-    el.textContent = el.textContent.trim();
-  });
-};
-
-removeBlankLines();
-
 const codeTags = document.querySelectorAll('code');
 
 ////----Slider component - blog post exercise -----------
@@ -367,6 +355,7 @@ slideLeftBtn?.addEventListener('click', previousSlide);
 ////-----Tab component - blog post exercise ------
 const tabBtns = document.querySelectorAll('.tab-btn');
 const tabContent = document.querySelectorAll('.tab-content');
+const code = document.querySelectorAll('pre code');
 
 const switchTabs = e => {
   let clickedIndex = [...tabBtns].indexOf(e.target);

@@ -77,26 +77,23 @@
           </p>
           <pre>
               <code class="language-js">
-                  const poland = {
-                      country: 'Poland',
-                      population: 40000000,
-                      foreignerPercentage: function (foreignerNationality, number) {
-                      const percCalc = (number * 100) / this.population;
-                      console.log(
-                      `In ${this.country} live ${this.population} people. Among this population live ${number} of ${foreignerNationality} people. It is ${percCalc}%. `
-                      );
-                      },
-                      };
-        
+const poland = {
+    country: 'Poland',
+    population: 40000000,
+    foreignerPercentage: function (foreignerNationality, number) {
+    const percCalc = (number * 100) / this.population;
+    console.log(`In ${this.country} live ${this.population} people. Among this population live ${number} of ${foreignerNationality} people. It is ${percCalc}%. `);
+      },
+    };
               </code>
         
           </pre>
           <pre>
               <code class="language-js">
-                  const germany = {
-                      country: 'Germany',
-                      population: 80000000,
-                      };
+const germany = {
+    country: 'Germany',
+    population: 80000000,
+    };
               </code>
           </pre>
           <p>
@@ -106,7 +103,7 @@
           <p>I am assigning the object method to a variable.</p>
           <pre>
               <code class="language-js">
-                  const calcPercentage = poland.foreignerPercentage;
+const calcPercentage = poland.foreignerPercentage;
               </code>
           </pre>
         </section>
@@ -120,9 +117,9 @@
           </p>
           <pre>
               <code class="language-js">
-                  calcPercentage.call(germany, 'Turkish', 800000);
-        //OUTPUT:
-        // In Germany live 80000000 people. Among this population live 800000 Turkish people. It is 1%.
+calcPercentage.call(germany, 'Turkish', 800000);
+//OUTPUT:
+// In Germany live 80000000 people. Among this population live 800000 Turkish people. It is 1%.
               </code>
           </pre>
         </section>
@@ -134,10 +131,10 @@
           </p>
           <pre>
               <code class="language-js">
-                  const portugal = ['Portuguese', 80000];
-                  calcPercentage.apply(germany, portugal);
-                  //OUTPUT:
-                  // In Germany live 80000000 people. Among this population live 80000 Portuguese people. It is 0.1%.
+const portugal = ['Portuguese', 80000];
+calcPercentage.apply(germany, portugal);
+//OUTPUT:
+// In Germany live 80000000 people. Among this population live 80000 Portuguese people. It is 0.1%.
               </code>
           </pre>
           <p>
@@ -147,10 +144,10 @@
           </p>
           <pre>
               <code class="language-js">
-                  const portugal = ['Portuguese', 80000];
-        calcPercentage.call(germany, …portugal);
-        //OUTPUT:
-        // In Germany live 80000000 people. Among this population live 80000 Portuguese people. It is 0.1%.
+const portugal = ['Portuguese', 80000];
+calcPercentage.call(germany, …portugal);
+//OUTPUT:
+// In Germany live 80000000 people. Among this population live 80000 Portuguese people. It is 0.1%.
               </code>
           </pre>
         </section>
@@ -165,10 +162,10 @@
           </p>
           <pre>
               <code class="language-js">
-                  const spain = calcPercentage.bind(germany, 'Spanish');
-        spain(160000);
-        //OUTPUT:
-        // In Germany live 80000000 people. Among this population live 160000 Spanish people. It is 0.2%.
+const spain = calcPercentage.bind(germany, 'Spanish');
+spain(160000);
+//OUTPUT:
+// In Germany live 80000000 people. Among this population live 160000 Spanish people. It is 0.2%.
               </code>
           </pre>
         </section>

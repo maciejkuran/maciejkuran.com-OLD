@@ -74,18 +74,16 @@
           </p>
           <pre>
               <code class="language-js">
-                  const ticketNumberGenerator = () =&gt; {
-                      const letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'];
-                      const randomLetter = Math.floor(Math.random() * letters.length);
-                      const numbers = Math.floor(Math.random() * 100000);
-        
-                      return letters[randomLetter].toUpperCase() + numbers;
-                      };
-        
-                      console.log(ticketNumberGenerator()); //OUTPUT H64912
-        
-              </code>
-        
+const ticketNumberGenerator = () =&gt; {
+    const letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'];
+    const randomLetter = Math.floor(Math.random() * letters.length);
+    const numbers = Math.floor(Math.random() * 100000);
+
+    return letters[randomLetter].toUpperCase() + numbers;
+    };
+
+    console.log(ticketNumberGenerator()); //OUTPUT H64912
+              </code>   
           </pre>
         </section>
       </article>

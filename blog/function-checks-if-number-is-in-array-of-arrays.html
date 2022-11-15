@@ -80,11 +80,7 @@
           <p>I am creating the array <code class="highlight">arr</code> that contains other nested arrays.</p>
           <pre>
               <code class="language-js">
-                  const arr = [
-              [6, 18, 22],
-              [44, 55, 88, 150],
-              [3, 111],
-              ];
+const arr = [[6, 18, 22],[44, 55, 88, 150],[3, 111]];
               </code>
           </pre>
           <p>
@@ -98,20 +94,21 @@
           </p>
           <pre>
               <code class="language-js">
-                  const isNumberInArrayOfArrays = (number, array) =&gt; {
-                      let found = false;
-        
-                      array.forEach(innerArray =&gt; {
-                      if (innerArray.indexOf(number) !== -1) {
-                      found = true;
-                      }
-                      });
-        
-                      return found;
-                      };
-                      console.log(isNumberInArrayOfArrays(18, arr)); //true
-        console.log(isNumberInArrayOfArrays(111, arr)); //true
-        console.log(isNumberInArrayOfArrays(87, arr)); //false
+const isNumberInArrayOfArrays = (number, array) =&gt; {
+    let found = false;
+
+    array.forEach(innerArray =&gt; {
+    if (innerArray.indexOf(number) !== -1) {
+    found = true;
+    }
+    });
+
+    return found;
+  };
+
+console.log(isNumberInArrayOfArrays(18, arr)); //true
+console.log(isNumberInArrayOfArrays(111, arr)); //true
+console.log(isNumberInArrayOfArrays(87, arr)); //false
               </code>
           </pre>
         </section>
@@ -126,22 +123,18 @@
           </p>
           <pre>
               <code class="language-js">
-                  const arr = [
-        [6, 18, 22],
-        [44, 55, 88, 150],
-        [3, 111],
-        ];
-        
-        const isNumberInArrayOfArrays = (number, array) =&gt; {
-        const flatArr = array.flat();
-        console.log(flatArr); // [6, 18, 22, 44, 55, 88, 150, 3, 111]
-        const checkNumber = flatArr.some(nb =&gt; nb === number);
-        return checkNumber;
-        };
-        
-        console.log(isNumberInArrayOfArrays(55, arr)); //true
-        console.log(isNumberInArrayOfArrays(111, arr)); //true
-        console.log(isNumberInArrayOfArrays(1000, arr)); //false
+const arr = [[6, 18, 22],[44, 55, 88, 150],[3, 111]];
+
+const isNumberInArrayOfArrays = (number, array) =&gt; {
+  const flatArr = array.flat();
+  console.log(flatArr); // [6, 18, 22, 44, 55, 88, 150, 3, 111]
+  const checkNumber = flatArr.some(nb =&gt; nb === number);
+  return checkNumber;
+};
+
+console.log(isNumberInArrayOfArrays(55, arr)); //true
+console.log(isNumberInArrayOfArrays(111, arr)); //true
+console.log(isNumberInArrayOfArrays(1000, arr)); //false
               </code>
           </pre>
         </section>
@@ -153,20 +146,21 @@
           </p>
           <pre>
               <code class="language-js">
-                  const isNumberInArrayOfArrays = (number, array) =&gt; {
-                      let found = false;
-        
-                      array.map(innerArray =&gt; {
-                      if (innerArray.some(nb =&gt; nb === number)) {
-                      found = true;
-                      }
-                      });
-        
-                      return found;
-                      };
-                      console.log(isNumberInArrayOfArrays(0, arr)); //false
-        console.log(isNumberInArrayOfArrays(1000, arr)); //false
-        console.log(isNumberInArrayOfArrays(111, arr)); //true
+const isNumberInArrayOfArrays = (number, array) =&gt; {
+    let found = false;
+
+    array.map(innerArray =&gt; {
+    if (innerArray.some(nb =&gt; nb === number)) {
+    found = true;
+    }
+    });
+
+    return found;
+  };
+
+    console.log(isNumberInArrayOfArrays(0, arr)); //false
+    console.log(isNumberInArrayOfArrays(1000, arr)); //false
+    console.log(isNumberInArrayOfArrays(111, arr)); //true
               </code>
           </pre>
         </section>

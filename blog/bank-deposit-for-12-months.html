@@ -94,65 +94,65 @@
           <p>The results of this program are logged to the console.</p>
           <pre>
               <code class="language-js">
-                  // bank deposit
-                  //12 months obligatory - get 1.5 % / month
-        
-                  const annualBankDepositProfit = amount =&gt; {
-                  const profit = ((amount * 1.5) / 100) * 12;
-                  return profit;
-                  };
-        
-                  const annualDepositCost = amount =&gt; {
-                  const depositCost = (amount * 3) / 100;
-                  return depositCost;
-                  };
-        
-                  const finalRevenue = amount =&gt; {
-                  const finalRevenue = annualBankDepositProfit(amount) - annualDepositCost(amount);
-                  return finalRevenue;
-                  };
-        
-                  const taxPaidOutOfProfit = amount =&gt; {
-                  const tax = (finalRevenue(amount) * 18) / 100; //TAX 18 %
-                  return tax;
-                  };
-        
-                  const terminationDepositPenalty = amount =&gt; {
-                  const penalty = (amount * 20) / 100;
-                  return penalty;
-                  };
+// bank deposit
+//12 months obligatory - get 1.5 % / month
+
+const annualBankDepositProfit = amount =&gt; {
+const profit = ((amount * 1.5) / 100) * 12;
+return profit;
+};
+
+const annualDepositCost = amount =&gt; {
+const depositCost = (amount * 3) / 100;
+return depositCost;
+};
+
+const finalRevenue = amount =&gt; {
+const finalRevenue = annualBankDepositProfit(amount) - annualDepositCost(amount);
+return finalRevenue;
+};
+
+const taxPaidOutOfProfit = amount =&gt; {
+const tax = (finalRevenue(amount) * 18) / 100; //TAX 18 %
+return tax;
+};
+
+const terminationDepositPenalty = amount =&gt; {
+const penalty = (amount * 20) / 100;
+return penalty;
+};
               </code>
           </pre>
           <pre>
               <code class="language-js">
-                  //Higher-order Function
-        const newBankOffer = (amount, fn1, fn2, fn3, fn4, fn5) =&gt; {
-        if (amount &gt;= 5000) {
-        //5000 $ is a minimum deposit
-        console.log(`${amount}$ qualifies for our savings program. Your annual income will be ${fn1(amount)}$. We charge an annual fee for the deposit of ${fn2(amount)}$. So in your case, the final revenue will be ${fn3(amount)}$. Under current law, a citizen is required to pay income tax. In the case of income: ${fn3(amount)}$, the tax will be: ${fn4(amount)}$. \n\nThe contract is signed for 12 months, which means you cannot break the deposit before 12 months. If you break it, the penalty will be 20% out of ${amount}$: ${fn5(amount)}$, and in addition the earned income will be canceled. \n\nIf you have any questions or concerns, contact office@yellowbank.com `);
-        } else {
-        console.log(`Unfortunately ${amount}$ does not qualify for our savings program. The deposit must be equal to or greater than the value of 5000$. If you have any questions or concerns, contact office@yellowbank.com`);
-        }
-        };
-        
-        newBankOffer(
-        10000,
-        annualBankDepositProfit,
-        annualDepositCost,
-        finalRevenue,
-        taxPaidOutOfProfit,
-        terminationDepositPenalty
-        );
+//Higher-order Function
+const newBankOffer = (amount, fn1, fn2, fn3, fn4, fn5) =&gt; {
+if (amount &gt;= 5000) {
+//5000 $ is a minimum deposit
+console.log(`${amount}$ qualifies for our savings program. Your annual income will be ${fn1(amount)}$. We charge an annual fee for the deposit of ${fn2(amount)}$. So in your case, the final revenue will be ${fn3(amount)}$. Under current law, a citizen is required to pay income tax. In the case of income: ${fn3(amount)}$, the tax will be: ${fn4(amount)}$. \n\nThe contract is signed for 12 months, which means you cannot break the deposit before 12 months. If you break it, the penalty will be 20% out of ${amount}$: ${fn5(amount)}$, and in addition the earned income will be canceled. \n\nIf you have any questions or concerns, contact office@yellowbank.com `);
+} else {
+console.log(`Unfortunately ${amount}$ does not qualify for our savings program. The deposit must be equal to or greater than the value of 5000$. If you have any questions or concerns, contact office@yellowbank.com`);
+}
+};
+
+newBankOffer(
+10000,
+annualBankDepositProfit,
+annualDepositCost,
+finalRevenue,
+taxPaidOutOfProfit,
+terminationDepositPenalty
+);
               </code>
           </pre>
           <pre>
               <code class="language-js">
-                  //OUTPUT:
-                  // $10000 qualifies for our savings program. Your annual income will be $1800. We charge an annual fee for the deposit of 300$. So in your case, the final revenue will be $1500. Under current law, a citizen is required to pay income tax. In the case of income: $1500, the tax will be: $270.
-        
-                  // The contract is signed for 12 months, which means you cannot break the deposit before 12 months. If you break it, the penalty will be 20% out of $10000: $2000, and in addition the earned income will be canceled.
-        
-                  // If you have any questions or concerns, contact office@yellowbank.com
+//OUTPUT:
+// $10000 qualifies for our savings program. Your annual income will be $1800. We charge an annual fee for the deposit of 300$. So in your case, the final revenue will be $1500. Under current law, a citizen is required to pay income tax. In the case of income: $1500, the tax will be: $270.
+
+// The contract is signed for 12 months, which means you cannot break the deposit before 12 months. If you break it, the penalty will be 20% out of $10000: $2000, and in addition the earned income will be canceled.
+
+// If you have any questions or concerns, contact office@yellowbank.com
               </code>
           </pre>
         </section>

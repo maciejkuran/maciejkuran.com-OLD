@@ -88,14 +88,13 @@
           <p>I am writing the function that returns another function and does calculation.</p>
           <pre>
               <code class="language-js">
-                  const taxCalc = rate =&gt; {
-                      return function (value) {
-                      const tax = (value * rate) / 100;
-                      console.log(`Value: ${value}zl\nTax rate: ${rate}%\nYour tax: ${tax}zl`);
-                      };
-                      };
+const taxCalc = rate =&gt; {
+    return function (value) {
+    const tax = (value * rate) / 100;
+    console.log(`Value: ${value}zl\nTax rate: ${rate}%\nYour tax: ${tax}zl`);
+    };
+    };
               </code>
-        
           </pre>
           <p>
             In Poland, there's a VAT tax. It is an additional value that is added to any goods that you buy. There are
@@ -104,9 +103,8 @@
           <p>The currency in Poland is 'Zloty' – zl.</p>
           <pre>
               <code class="language-js">
-                  const VATPoland = taxCalc(23);
-              </code>
-        
+const VATPoland = taxCalc(23);
+              </code>     
           </pre>
           <p>
             I created the constant variable <code class="highlight">VATPoland</code> and assigned a higher-order
@@ -119,13 +117,12 @@
           </p>
           <pre>
               <code class="language-js">
-                  VATPoland(100);
-                  //OUTPUT:
-                  // Value: 100zl
-                  // Tax rate: 23%
-                  // Your tax: 23zl
-              </code>
-        
+VATPoland(100);
+//OUTPUT:
+// Value: 100zl
+// Tax rate: 23%
+// Your tax: 23zl
+              </code>  
           </pre>
           <p>
             The function <code class="highlight">taxCalc()</code> we can save to any variable anytime. I also want to
@@ -133,12 +130,12 @@
           </p>
           <pre>
               <code class="language-js">
-                  const VATGermany = taxCalc(19);
-                  VATGermany(100);
-                  //OUTPUT:
-                  // Value: 100zl
-                  // Tax rate: 19%
-                  // Your tax: 19zl
+const VATGermany = taxCalc(19);
+VATGermany(100);
+//OUTPUT:
+// Value: 100zl
+// Tax rate: 19%
+// Your tax: 19zl
               </code>
           </pre>
           <p>

@@ -81,23 +81,23 @@
           </p>
           <pre>
               <code class="language-js">
-                  const John = {
-                      age: 42,
-                      job: true,
-                      income: [1200, 800, 2000, 5000, 980, 14000, 5000],
-                      };
-        
-                      const Barbara = {
-                      age: 39,
-                      job: true,
-                      income: [250, 3000, 2000, 5400, 350, 7000, 2000],
-                      };
-        
-                      const Katie = {
-                      age: 18,
-                      job: false,
-                      income: [],
-                      };
+const John = {
+    age: 42,
+    job: true,
+    income: [1200, 800, 2000, 5000, 980, 14000, 5000],
+    };
+
+    const Barbara = {
+    age: 39,
+    job: true,
+    income: [250, 3000, 2000, 5400, 350, 7000, 2000],
+    };
+
+    const Katie = {
+    age: 18,
+    job: false,
+    income: [],
+    };
               </code>
           </pre>
           <p>
@@ -106,7 +106,7 @@
           </p>
           <pre>
               <code class="language-js">
-                  const familyMembers = [John, Barbara, Katie];
+const familyMembers = [John, Barbara, Katie];
               </code>
           </pre>
         </section>
@@ -120,16 +120,16 @@
           </p>
           <pre>
                   <code class="language-js">
-                      const checkIncome = array =&gt; {
-                          const totalIncome = array
-                          .map(member =&gt; member.income)
-                          .flat()
-                          .reduce((previousIncome, income) =&gt; previousIncome + income, 0);
-        
-                          return totalIncome;
-                          };
-        
-                          console.log(checkIncome(familyMembers)); //OUTPUT: 48980
+const checkIncome = array =&gt; {
+    const totalIncome = array
+    .map(member =&gt; member.income)
+    .flat()
+    .reduce((previousIncome, income) =&gt; previousIncome + income, 0);
+
+    return totalIncome;
+  };
+
+    console.log(checkIncome(familyMembers)); //OUTPUT: 48980
                   </code>
               </pre>
         </section>
@@ -144,15 +144,15 @@
           </p>
           <pre>
               <code class="language-js">
-                  const checkIncome = array =&gt; {
-                      const totalIncome = array
-                      .flatMap(member =&gt; member.income)
-                      .reduce((previousIncome, income) =&gt; previousIncome + income, 0);
-        
-                      return totalIncome;
-                      };
-        
-                      console.log(checkIncome(familyMembers)); //OUTPUT: 48980
+const checkIncome = array =&gt; {
+    const totalIncome = array
+    .flatMap(member =&gt; member.income)
+    .reduce((previousIncome, income) =&gt; previousIncome + income, 0);
+
+    return totalIncome;
+  };
+
+    console.log(checkIncome(familyMembers)); //OUTPUT: 48980
               </code>
           </pre>
         </section>

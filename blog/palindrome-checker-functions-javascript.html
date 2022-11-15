@@ -116,23 +116,23 @@
           </p>
           <pre>
               <code class="language-js">
-                  const checkPalindrome = (text) =&gt; {
-                      const inputToLowerCase = String(text.toLowerCase());
-                      const newString = inputToLowerCase.split('').reverse().join('');
-        
-                      inputToLowerCase === newString
-                      ? console.log(`Input: ${inputToLowerCase}\nOutput: ${newString}\n${inputToLowerCase} is a palindrome !`)
-                      : console.log(`Input: ${inputToLowerCase}\nOutput: ${newString}\n${inputToLowerCase} is NOT a palindrome !`);
-                      };
+const checkPalindrome = (text) =&gt; {
+    const inputToLowerCase = String(text.toLowerCase());
+    const newString = inputToLowerCase.split('').reverse().join('');
+
+    inputToLowerCase === newString
+    ? console.log(`Input: ${inputToLowerCase}\nOutput: ${newString}\n${inputToLowerCase} is a palindrome !`)
+    : console.log(`Input: ${inputToLowerCase}\nOutput: ${newString}\n${inputToLowerCase} is NOT a palindrome !`);
+    };
               </code>
           </pre>
           <pre>
               <code class="language-js">
-                  checkPalindrome('Mom');
-        //OUTPUT
-        // Input: mom
-        // Output: mom
-        // mom is a palindrome !
+checkPalindrome('Mom');
+//OUTPUT
+// Input: mom
+// Output: mom
+// mom is a palindrome !
               </code>
           </pre>
         </section>
@@ -149,27 +149,27 @@
           <p>With the help of the ternary operator, the result will be logged to the console.</p>
           <pre>
               <code class="language-js">
-                  const checkPalindrome = (text) =&gt; {
-                      const inputToLowerCase = String(text.toLowerCase());
-                      let newString = '';
-        
-                      for (let i = inputToLowerCase.length - 1; i &gt;= 0; i--) {
-                      newString = newString + inputToLowerCase.at(i);
-                      }
-        
-                      inputToLowerCase === newString
-                      ? console.log(`Input: ${inputToLowerCase}\nOutput: ${newString}\n${inputToLowerCase} is a palindrome !`)
-                      : console.log(`Input: ${inputToLowerCase}\nOutput: ${newString}\n${inputToLowerCase} is NOT a palindrome !`);
-                      };
+const checkPalindrome = (text) =&gt; {
+    const inputToLowerCase = String(text.toLowerCase());
+    let newString = '';
+
+    for (let i = inputToLowerCase.length - 1; i &gt;= 0; i--) {
+    newString = newString + inputToLowerCase.at(i);
+    }
+
+    inputToLowerCase === newString
+    ? console.log(`Input: ${inputToLowerCase}\nOutput: ${newString}\n${inputToLowerCase} is a palindrome !`)
+    : console.log(`Input: ${inputToLowerCase}\nOutput: ${newString}\n${inputToLowerCase} is NOT a palindrome !`);
+    };
               </code>
           </pre>
           <pre>
               <code class="language-js">
-                  checkPalindrome('MOM');
-                  //OUTPUT
-                  // Input: mom
-                  // Output: mom
-                  // mom is a palindrome !
+checkPalindrome('MOM');
+//OUTPUT
+// Input: mom
+// Output: mom
+// mom is a palindrome !
               </code>
           </pre>
         </section>

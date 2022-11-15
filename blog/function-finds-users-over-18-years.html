@@ -79,25 +79,25 @@
           </p>
           <pre>
               <code class="language-js">
-                  const user1 = {
-                      name: 'Valentina',
-                      age: 16,
-                      };
-        
-                      const user2 = {
-                      name: 'John',
-                      age: 18,
-                      };
-        
-                      const user3 = {
-                      name: 'Eva',
-                      age: 32,
-                      };
-        
-                      const user4 = {
-                      name: 'Nick',
-                      age: 14,
-                      };
+const user1 = {
+    name: 'Valentina',
+    age: 16,
+    };
+
+    const user2 = {
+    name: 'John',
+    age: 18,
+    };
+
+    const user3 = {
+    name: 'Eva',
+    age: 32,
+    };
+
+    const user4 = {
+    name: 'Nick',
+    age: 14,
+    };
               </code>
           </pre>
           <p>
@@ -107,7 +107,7 @@
           </p>
           <pre>
               <code class="language-js">
-                  const users = [user1, user2, user3, user4];
+const users = [user1, user2, user3, user4];
               </code>
           </pre>
           <p>
@@ -116,11 +116,11 @@
           </p>
           <pre>
               <code class="language-js">
-                  (4) [{…}, {…}, {…}, {…}]
-                  1. 0: {name: 'Valentina', age: 16}
-                  2. 1: {name: 'John', age: 18}
-                  3. 2: {name: 'Eva', age: 32}
-                  4. 3: {name: 'Nick', age: 14}
+(4) [{…}, {…}, {…}, {…}]
+1. 0: {name: 'Valentina', age: 16}
+2. 1: {name: 'John', age: 18}
+3. 2: {name: 'Eva', age: 32}
+4. 3: {name: 'Nick', age: 14}
               </code>
           </pre>
           <p>
@@ -134,23 +134,23 @@
           <p>Then I log the results using the ternary operator checking who's &gt;= 18 years old.</p>
           <pre>
               <code class="language-js">
-                  const checkAdults = users =&gt; {
-                      users.map(user =&gt; {
-                      const [name, age] = Object.values(user);
-                      console.log(`${age &gt;= 18 ? '🟢' : '🔴'} ${name}: ${age} years old`);
-                      });
-                      };
-        
-                      checkAdults(users);
+const checkAdults = users =&gt; {
+    users.map(user =&gt; {
+    const [name, age] = Object.values(user);
+    console.log(`${age &gt;= 18 ? '🟢' : '🔴'} ${name}: ${age} years old`);
+    });
+    };
+
+    checkAdults(users);
               </code>
           </pre>
           <pre>
               <code class="language-js">
-                  //OUTPUT:
-                  // 🔴 Valentina: 16 years old
-                  // 🟢 John: 18 years old
-                  // 🟢 Eva: 32 years old
-                  // 🔴 Nick: 14 years old
+//OUTPUT:
+// 🔴 Valentina: 16 years old
+// 🟢 John: 18 years old
+// 🟢 Eva: 32 years old
+// 🔴 Nick: 14 years old
               </code>
           </pre>
         </section>

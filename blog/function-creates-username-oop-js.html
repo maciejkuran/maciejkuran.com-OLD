@@ -75,30 +75,28 @@
           </p>
           <pre>
               <code class="language-js">
-                  const User = function (name, lastName) {
-                      this.name = name;
-                      this.lastName = lastName;
-                    };
-        
-                    //Creating 2 objects - 'User' instances
-                    const user1 = new User('Maciej', 'Kuran-Janowski');
-                    const user2 = new User('John', 'Kowalski');
-        
+const User = function (name, lastName) {
+    this.name = name;
+    this.lastName = lastName;
+  };
+
+  //Creating 2 objects - 'User' instances
+  const user1 = new User('Maciej', 'Kuran-Janowski');
+  const user2 = new User('John', 'Kowalski');
               </code>
           </pre>
           <pre>
               <code class="language-js">
-                  //Creating a prototype that is linked to 'User'
-        User.prototype.username = function () {
-          const username =
-            this.name.toLowerCase().slice(0, 3) +
-            this.lastName.toLowerCase().slice(0, 3);
-          console.log(username);
-        };
-        
-        user1.username(); //mackur
-        user2.username(); // johkow
-        
+//Creating a prototype that is linked to 'User'
+User.prototype.username = function () {
+const username =
+this.name.toLowerCase().slice(0, 3) +
+this.lastName.toLowerCase().slice(0, 3);
+console.log(username);
+};
+
+user1.username(); //mackur
+user2.username(); // johkow
               </code>
           </pre>
         </section>
@@ -110,31 +108,28 @@
           </p>
           <pre>
               <code class="language-js">
-                  const User = class {
-                      constructor(name, lastName) {
-                        this.name = name;
-                        this.lastName = lastName;
-                      }
-        
-                      username() {
-                        const username =
-                          this.name.toLowerCase().slice(0, 3) +
-                          this.lastName.toLowerCase().slice(0, 3);
-                        console.log(username);
-                      }
-                    };
-        
-        
+const User = class {
+    constructor(name, lastName) {
+      this.name = name;
+      this.lastName = lastName;
+    }
+
+    username() {
+      const username =
+        this.name.toLowerCase().slice(0, 3) +
+        this.lastName.toLowerCase().slice(0, 3);
+      console.log(username);
+    }
+  };
               </code>
           </pre>
           <pre>
               <code class="language-js">
-                  const user1 = new User('Maciej', 'Kuran-Janowski');
-                  const user2 = new User('John', 'Kowalski');
-        
-                  user1.username(); //mackur
-                  user2.username(); //johkow
-        
+const user1 = new User('Maciej', 'Kuran-Janowski');
+const user2 = new User('John', 'Kowalski');
+
+user1.username(); //mackur
+user2.username(); //johkow
               </code>
           </pre>
         </section>

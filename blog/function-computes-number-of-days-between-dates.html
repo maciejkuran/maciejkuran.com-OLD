@@ -75,37 +75,28 @@
           </p>
           <pre>
               <code class="language-js">
-                  const january = {
-                      events: [
-                      '2023-01-01T19:30:00.000Z',
-                      '2023-01-10T20:30:00.000Z',
-                      '2023-01-30T21:30:00.000Z',
-                      ],
-                      };
-        
+const january = {
+    events: [
+    '2023-01-01T19:30:00.000Z',
+    '2023-01-10T20:30:00.000Z',
+    '2023-01-30T21:30:00.000Z',
+    ],
+    };
               </code>
-        
           </pre>
           <pre>
               <code class="language-js">
-                  const calcDays = (date1, date2) =&gt;
-                  Math.round(
-                  Math.abs(+new Date(date1) - +new Date(date2)) / (1000 * 60 * 60 * 24)
-                  );
-        
-        
+const calcDays = (date1, date2) =&gt; Math.round(Math.abs(+new Date(date1) - +new Date(date2)) / (1000 * 60 * 60 * 24));
               </code>
-        
           </pre>
           <pre>
               <code class="language-js">
-                  //Calculating the days between the 1st and 2nd event
-                  console.log(calcDays(january.events.at(0), january.events.at(1))); //9 DAYS
-        
-                  //Calculating the days between the 1st and 3rd event
-                  console.log(calcDays(january.events.at(0), january.events.at(2))); // 29 DAYS
+//Calculating the days between the 1st and 2nd event
+console.log(calcDays(january.events.at(0), january.events.at(1))); //9 DAYS
+
+//Calculating the days between the 1st and 3rd event
+console.log(calcDays(january.events.at(0), january.events.at(2))); // 29 DAYS
               </code>
-        
           </pre>
         </section>
       </article>

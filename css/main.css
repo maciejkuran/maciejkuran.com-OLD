@@ -108,10 +108,7 @@ textarea {
 }
 
 pre {
-  position: relative;
-  max-width: 93vw;
   max-height: 45rem;
-  overflow: auto;
   border: 3px solid var(--color-black);
 }
 
@@ -1002,6 +999,7 @@ input[type=range]::-ms-track, textarea[type=range]::-ms-track {
   padding: 0.2rem 0.5rem;
   border-radius: 5px;
   border: solid 1px var(--grey-tag-border);
+  font-size: 1.7rem;
 }
 
 .copied-alert-label, .cleared-alert-label {

@@ -82,70 +82,70 @@
           <div class="tab-component-content-wrapper">
             <pre class="tab-content">
                   <code class="language-html">
-                      &lt;div class=&quot;tab-component-btns-wrapper&quot;&gt;
-                      &lt;button class=&quot;primary-button tab-btn tab-btn--active&quot;&gt;HTML&lt;/button&gt;
-                      &lt;button class=&quot;primary-button tab-btn&quot;&gt;SCSS&lt;/button&gt;
-                      &lt;button class=&quot;primary-button tab-btn&quot;&gt;JS&lt;/button&gt;
-                    &lt;/div&gt;
-        
-                    &lt;div class=&quot;tab-component-content-wrapper&quot;&gt;
-                      &lt;pre class=&quot;tab-content&quot;&gt;
-                            &lt;code class=&quot;language-html&quot;&gt;
-                                //HTML code
-                            &lt;/code&gt;
-                        &lt;/pre&gt;
-                      &lt;pre class=&quot;tab-content hide&quot;&gt;
-                            &lt;code class=&quot;language-css&quot;&gt;
-                                //SCSS code
-                            &lt;/code&gt;
-                        &lt;/pre&gt;
-                      &lt;pre class=&quot;tab-content hide&quot;&gt;
-                            &lt;code class=&quot;language-js&quot;&gt;
-                                //JS code
-                            &lt;/code&gt;
-                        &lt;/pre&gt;
-                    &lt;/div&gt;
+&lt;div class=&quot;tab-component-btns-wrapper&quot;&gt;
+&lt;button class=&quot;primary-button tab-btn tab-btn--active&quot;&gt;HTML&lt;/button&gt;
+&lt;button class=&quot;primary-button tab-btn&quot;&gt;SCSS&lt;/button&gt;
+&lt;button class=&quot;primary-button tab-btn&quot;&gt;JS&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;tab-component-content-wrapper&quot;&gt;
+&lt;pre class=&quot;tab-content&quot;&gt;
+      &lt;code class=&quot;language-html&quot;&gt;
+          //HTML code
+      &lt;/code&gt;
+  &lt;/pre&gt;
+&lt;pre class=&quot;tab-content hide&quot;&gt;
+      &lt;code class=&quot;language-css&quot;&gt;
+          //SCSS code
+      &lt;/code&gt;
+  &lt;/pre&gt;
+&lt;pre class=&quot;tab-content hide&quot;&gt;
+      &lt;code class=&quot;language-js&quot;&gt;
+          //JS code
+      &lt;/code&gt;
+  &lt;/pre&gt;
+&lt;/div&gt;
                   </code>
               </pre>
             <pre class="tab-content hide">
                   <code class="language-css">
-                      .tab-component-btns-wrapper {
-                          margin: 3rem 0;
-                          @include flexCenter();
-                        }
-        
-                        .tab-component-content-wrapper {
-                          position: relative;
-                          min-width: 100%;
-                          min-height: 40rem;
-                        }
-        
-                        .tab-content {
-                          position: absolute;
-                          min-width: 100%;
-                          min-height: 100%;
-                        }
-        
-                        .tab-btn--active {
-                          background-color: var(--grey-background-2);
-                        }
+.tab-component-btns-wrapper {
+    margin: 3rem 0;
+    @include flexCenter();
+  }
+
+  .tab-component-content-wrapper {
+    position: relative;
+    min-width: 100%;
+    min-height: 40rem;
+  }
+
+  .tab-content {
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+  }
+
+  .tab-btn--active {
+    background-color: var(--grey-background-2);
+  }
                   </code>
               </pre>
             <pre class="tab-content hide">
                   <code class="language-js">
-                      const tabBtns = document.querySelectorAll('.tab-btn');
-                      const tabContent = document.querySelectorAll('.tab-content');
-        
-                      const switchTabs = e =&gt; {
-                        let clickedIndex = [...tabBtns].indexOf(e.target);
-                        tabContent.forEach(tab =&gt; tab.classList.add('hide'));
-                        tabBtns.forEach(btn =&gt; btn.classList.remove('tab-btn--active'));
-        
-                        tabContent[clickedIndex].classList.remove('hide');
-                        tabBtns[clickedIndex].classList.add('tab-btn--active');
-                      };
-        
-                      tabBtns.forEach(btn =&gt; btn.addEventListener('click', switchTabs));
+const tabBtns = document.querySelectorAll('.tab-btn');
+const tabContent = document.querySelectorAll('.tab-content');
+
+const switchTabs = e =&gt; {
+  let clickedIndex = [...tabBtns].indexOf(e.target);
+  tabContent.forEach(tab =&gt; tab.classList.add('hide'));
+  tabBtns.forEach(btn =&gt; btn.classList.remove('tab-btn--active'));
+
+  tabContent[clickedIndex].classList.remove('hide');
+  tabBtns[clickedIndex].classList.add('tab-btn--active');
+};
+
+tabBtns.forEach(btn =&gt; btn.addEventListener('click', switchTabs));
                   </code>
               </pre>
           </div>

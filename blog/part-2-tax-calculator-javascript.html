@@ -96,11 +96,10 @@
           </p>
           <pre>
               <code class="language-js">
-                  const taxCalc = (rate, value) =&gt; {
-                      const tax = (value * rate) / 100;
-                      console.log(`Value: ${value}zl\nTax rate: ${rate}%\nYour tax: ${tax}zl`);
-                      };
-        
+const taxCalc = (rate, value) =&gt; {
+    const tax = (value * rate) / 100;
+    console.log(`Value: ${value}zl\nTax rate: ${rate}%\nYour tax: ${tax}zl`);
+    };
               </code>
           </pre>
           <p>
@@ -111,17 +110,17 @@
           </p>
           <pre>
               <code class="language-js">
-                  const VATPoland = taxCalc.bind(null, 23);
+const VATPoland = taxCalc.bind(null, 23);
               </code>
           </pre>
           <p>I am calling the function.</p>
           <pre>
               <code class="language-js">
-                  VATPoland(100);
-        //OUTPUT
-        // Value: 100zl
-        // Tax rate: 23%
-        // Your tax: 23zl
+VATPoland(100);
+//OUTPUT
+// Value: 100zl
+// Tax rate: 23%
+// Your tax: 23zl
               </code>
           </pre>
         </section>

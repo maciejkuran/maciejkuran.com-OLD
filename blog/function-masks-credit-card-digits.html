@@ -86,29 +86,26 @@
           </ul>
           <pre>
               <code class="language-js">
-                  //sample primitive string created, but the Function works with any argument passed
+//sample primitive string created, but the Function works with any argument passed
         
-        const creditCard = '1234567891011123';
-        console.log(creditCard.length); //16 digits
-        
-        const hidingDigits = digits =&gt; {
-        digits.trim();
-        const slicedDigits = digits.slice(-4); //last 4 digits
-        const hidingDigits = slicedDigits.padStart(digits.length, '*'); //1st argument - string characters quantity, 2nd - value that the string will be completed with
-        
-        return hidingDigits;
-        };
-        
+const creditCard = '1234567891011123';
+console.log(creditCard.length); //16 digits
+
+const hidingDigits = digits =&gt; {
+digits.trim();
+const slicedDigits = digits.slice(-4); //last 4 digits
+const hidingDigits = slicedDigits.padStart(digits.length, '*'); //1st argument - string characters quantity, 2nd - value that the string will be completed with
+
+return hidingDigits;
+};
               </code>
           </pre>
           <pre>
               <code class="language-js">
-                  console.log(hidingDigits(creditCard)); //OUTPUT: ************1123
-                  console.log(hidingDigits('9999999999999999')); //OUTPUT: ************9999
-                  console.log(hidingDigits('12346666')); //OUTPUT: ****6666
-        
-              </code>
-        
+console.log(hidingDigits(creditCard)); //OUTPUT: ************1123
+console.log(hidingDigits('9999999999999999')); //OUTPUT: ************9999
+console.log(hidingDigits('12346666')); //OUTPUT: ****6666
+              </code>    
           </pre>
         </section>
       </article>

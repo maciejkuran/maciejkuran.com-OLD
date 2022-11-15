@@ -84,7 +84,7 @@
           <p>I am creating an empty array defining the length.</p>
           <pre>
               <code class="language-js">
-                  const emptyArray = new Array(10); //OUTPUT: [empty × 10]
+const emptyArray = new Array(10); //OUTPUT: [empty × 10]
               </code>
           </pre>
           <p>
@@ -94,24 +94,24 @@
           </p>
           <pre>
               <code class="language-js">
-                  //Adding the last 5 values
-        emptyArray.fill(2, 5, 10);
-        console.log(emptyArray); //OUTPUT: [empty × 5, 2, 2, 2, 2, 2]
+//Adding the last 5 values
+emptyArray.fill(2, 5, 10);
+console.log(emptyArray); //OUTPUT: [empty × 5, 2, 2, 2, 2, 2]
               </code>
           </pre>
           <pre>
               <code class="language-js">
-                  //Adding the first 5 values
-        emptyArray.fill(1, 0, 5);
-        console.log(emptyArray); //OUTPUT: [1, 1, 1, 1, 1, 2, 2, 2, 2, 2]
+//Adding the first 5 values
+emptyArray.fill(1, 0, 5);
+console.log(emptyArray); //OUTPUT: [1, 1, 1, 1, 1, 2, 2, 2, 2, 2]
               </code>
           </pre>
           <p>Let's check how to mutate the existing array.</p>
           <pre>
               <code class="language-js">
-                  const existingArr = [99, 99, 99];
-                  existingArr.fill(1, 0).fill(2, 1).fill(3, 2);
-                  console.log(existingArr); //OUTPUT: [1, 2, 3]
+const existingArr = [99, 99, 99];
+existingArr.fill(1, 0).fill(2, 1).fill(3, 2);
+console.log(existingArr); //OUTPUT: [1, 2, 3]
               </code>
           </pre>
         </section>
@@ -122,15 +122,15 @@
           </p>
           <pre>
               <code class="language-js">
-                  const newArray = Array.from({ length: 5 }, (_, i) =&gt; i + 1);
-                  console.log(newArray); //OUTPUT: [1, 2, 3, 4, 5]
+const newArray = Array.from({ length: 5 }, (_, i) =&gt; i + 1);
+console.log(newArray); //OUTPUT: [1, 2, 3, 4, 5]
               </code>
           </pre>
           <p>Now, let's manipulate values in <code class="highlight">newArray</code>, adding +10 to each number.</p>
           <pre>
               <code class="language-js">
-                  const manipulateArr = Array.from(newArray, (nb, _) =&gt; nb + 10);
-                  console.log(manipulateArr); //OUTPUT: [11, 12, 13, 14, 15]
+const manipulateArr = Array.from(newArray, (nb, _) =&gt; nb + 10);
+console.log(manipulateArr); //OUTPUT: [11, 12, 13, 14, 15]
               </code>
           </pre>
         </section>
@@ -143,12 +143,9 @@
           </p>
           <pre>
               <code class="language-js">
-                  const randomNumbers = Array.from(
-                      { length: 100 },
-                      () =&gt; Math.trunc(Math.random() * 10) + 1
-                      );
-        
-                      console.log(randomNumbers); //OUTPUT: [10, 1, 10, 10, 8, 6, 4, 5, 1, 8, 3, 8, 9, 5, 2, 6, 10, 9, 5, 9, 6, 10, 10, 10, 1, 1, 4, 9, 7, 3, 7, 3, 10, 8, 7, 1, 9, 7, 7, 9, 4, 8, 6, 8, 4, 1, 6, 6, 3, 3, 1, 4, 5, 4, 9, 10, 5, 8, 3, 6, 5, 2, 1, 5, 1, 3, 9, 5, 8, 1, 6, 8, 9, 5, 8, 9, 9, 8, 5, 7, 4, 8, 2, 1, 10, 10, 8, 6, 4, 3, 4, 7, 5, 2, 2, 6, 5, 6, 6, 6]
+const randomNumbers = Array.from({ length: 100 }, () =&gt; Math.trunc(Math.random() * 10) + 1);
+
+console.log(randomNumbers); //OUTPUT: [10, 1, 10, 10, 8, 6, 4, 5, 1, 8, 3, 8, 9, 5, 2, 6, 10, 9, 5, 9, 6, 10, 10, 10, 1, 1, 4, 9, 7, 3, 7, 3, 10, 8, 7, 1, 9, 7, 7, 9, 4, 8, 6, 8, 4, 1, 6, 6, 3, 3, 1, 4, 5, 4, 9, 10, 5, 8, 3, 6, 5, 2, 1, 5, 1, 3, 9, 5, 8, 1, 6, 8, 9, 5, 8, 9, 9, 8, 5, 7, 4, 8, 2, 1, 10, 10, 8, 6, 4, 3, 4, 7, 5, 2, 2, 6, 5, 6, 6, 6]
               </code>
           </pre>
         </section>

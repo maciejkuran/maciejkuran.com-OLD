@@ -1831,12 +1831,12 @@ input[type=range]::-ms-track, textarea[type=range]::-ms-track {
     font-size: 4rem;
   }
   h2,
-h3 {
+  h3 {
     font-size: 2.8rem;
   }
   p,
-.primary-button,
-li {
+  .primary-button,
+  li {
     font-size: 1.8rem;
   }
   p a {
@@ -2012,7 +2012,7 @@ li {
 }
 @media (max-width: 500.98px) {
   h2,
-h3 {
+  h3 {
     font-size: 2.5rem;
   }
   .home-container {
@@ -2025,7 +2025,7 @@ h3 {
     font-size: 3.5rem;
   }
   p,
-li {
+  li {
     font-size: 1.6rem;
   }
   p a {
